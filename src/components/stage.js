@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default ({ image, title, description }) =>
+const Stage = ({ image, title, description }) =>
   (<div className="stage">
     <div className="container container--stage">
       <div className="row">
@@ -23,3 +24,13 @@ export default ({ image, title, description }) =>
       </div>
     </div>
   </div>);
+Stage.propTypes = {
+  image: PropTypes.shape({
+    src: PropTypes.string,
+    alt: PropTypes.string,
+  }).isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+
+export default Stage;
