@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Layout from '../layouts/default-layout';
+import Layout from '../layouts';
 import Stage from '../components/stage';
 import Teaser from '../components/teaser';
 import CaseTeaser from '../components/case-teaser';

@@ -5,16 +5,10 @@ import PropTypes from 'prop-types';
 const items = [
   { href: '/projekte', label: 'Projekte' },
   { href: '/agentur', label: 'Agentur' },
-  { href: '/kontakt', label: 'Kontakt' }
+  { href: '/kontakt', label: 'Kontakt' },
 ];
 
-function getClassNames(currentRoute, item) {
-  const classes = [item.css ? item.css : null, currentRoute === item.href ? 'is-active' : null];
-
-  return classes.filter(Boolean).join(' ');
-}
-
-const Header = ({ currentRoute }) =>
+const Header = () =>
   (<header className="header">
     <div className="container">
       <div className="row middle-lg">
@@ -29,13 +23,19 @@ const Header = ({ currentRoute }) =>
             <ul>
               {items.map(item =>
                 (<li key={item.label}>
-                  <Link to={item.href} className={getClassNames(currentRoute, item)}>
+                  <Link to={item.href} activeClassName="is-active">
                     {item.label}
                   </Link>
                 </li>),
               )}
               <li>
-                <Link className="navigation-item--medium" to="https://blog.smartive.ch" target="_blank">Blog</Link>
+                <Link
+                  className="navigation-item--medium"
+                  to="https://blog.smartive.ch"
+                  target="_blank"
+                >
+                  Blog
+                </Link>
               </li>
             </ul>
           </nav>
@@ -43,8 +43,5 @@ const Header = ({ currentRoute }) =>
       </div>
     </div>
   </header>);
-Header.propTypes = {
-  currentRoute: PropTypes.string.isRequired,
-};
 
 export default Header;

@@ -8,24 +8,29 @@ import '../scss/main.scss';
 const defaultDescription = '';
 const defaultTitle = '';
 
-export default ({ title, description, currentRoute, children }) =>
-  (<div>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
-      <meta name="viewport" content="width=device-width,initial-scale=1" />
+export default ({ title, description, children }) => {
+  // console.log(children);
 
-      <meta name="description" content={description || defaultDescription} />
-      <title>
-        {title || defaultTitle}
-      </title>
-    </Helmet>
+  return (
+    <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <Header currentRoute={currentRoute} />
+        <meta name="description" content={description || defaultDescription} />
+        <title>
+          {title || defaultTitle}
+        </title>
+      </Helmet>
 
-    <main>
-      {children}
-    </main>
+      <Header />
 
-    <Footer />
-  </div>);
+      <main>
+        {children()}
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
