@@ -15,7 +15,7 @@ export default function Agency() {
             src: teamStageSrc,
             alt: 'Zwei smartive Mitarbeiter bei einer Besprechung',
           }}
-          title={'<h1>Im <em>Herzen</em> von Zürich.</h1>'}
+          title={'Im <em>Herzen</em> von Zürich.'}
           description="Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen weiterzuentwickeln."
         />
       </div>

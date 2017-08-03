@@ -6,6 +6,7 @@ import CaseTeaser from '../components/case-teaser';
 import MediumTeasers from '../components/medium-teasers';
 
 import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
+import homeImage from '../data/home.jpg';
 
 const teasers = [
   {
@@ -28,7 +29,14 @@ const teasers = [
 const Index = ({ data }) => (
   <div>
     <div className="stage--left-highlighted stage--landing-page">
-      <Stage />
+      <Stage
+        image={{
+          src: homeImage,
+          alt: 'Zwei smartive Mitarbeiter bei einer Besprechung',
+        }}
+        title={'Zukunfts­weisende <em>Web­applikationen</em> für anspruchs­volle Unternehmen.'}
+        description="Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die Realisierung zeitgemässer Weblösungen gehört genauso zu unserer Passion, wie die konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden. Gerne begleiten wir Sie von der ersten Idee über die Konzeption bis hin zur Umsetzung."
+      />
     </div>
     <div className="teaser-list">
       <div className="container">
