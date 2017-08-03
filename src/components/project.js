@@ -1,18 +1,34 @@
-import Link from 'next/link';
+import React from 'react';
+import Link from 'gatsby-link';
+import PropTypes from 'prop-types';
 
-export default ({ image, subline, title, description, caseUrl }) => (
+const Project = ({ image, subline, title, description, caseUrl }) => (
+  <div>
     <div className="project col-xs-12 col-md-6">
-        <img className="project__img" src={image.src} alt={image.alt} />
-        <div className="project__text">
-            <h2><small>{subline}</small> {title}</h2>
+      <img className="project__img" src={image.src} alt={image.alt} />
+      <div className="project__text">
+        <h2><small>{subline}</small> {title}</h2>
 
-            <div dangerouslySetInnerHTML={{ __html: description }} />
+        <div dangerouslySetInnerHTML={{ __html: description }} />
 
-            {caseUrl
-                ? <Link href={caseUrl}>
-                      <a className="button button--primary">Case anschauen</a>
-                  </Link>
-                : null}
-        </div>
+        {caseUrl
+          ? <Link to={caseUrl} className="button button--primary">
+            Case anschauen
+                    </Link>
+          : null}
+      </div>
     </div>
+  </div>
 );
+Project.propTypes = {
+  image: PropTypes.shape({
+    src: PropTypes.string,
+    alt: PropTypes.string,
+  }).isRequired,
+  subline: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  caseUrl: PropTypes.string.isRequired,
+};
+
+export default Project;
