@@ -1,8 +1,9 @@
 import React from 'react';
-import Layout from '../layouts';
 import Stage from '../components/stage';
-// import TeamMember from '../components/team-member';
+import TeamMember from '../components/team-member';
 import MediumTeaser from '../components/medium-teaser';
+
+import { team } from '../data/team';
 
 export default function Agency() {
   return (
@@ -10,17 +11,28 @@ export default function Agency() {
       <div className="stage--gradient stage--right-highlighted">
         <Stage
           image={{
-            src: 'https://smartive.ch/images/services-c1ad2a9a.jpg',
-            alt:
-              'Zwei smartive Mitarbeiter bei einer Besprechung. smartive Wandlogo im Hintergrund.',
+            src:
+              'https://prismic-io.s3.amazonaws.com/smartive/d12b7e81c6ea7d07260cf81ade530b35bee62f1e_team-babd8d3b.jpg',
+            alt: 'Drei smartive Mitarbeiter bei einer Besprechung',
           }}
-          title={'<h1>Zuhause im <em>Internet</em>.</h1>'}
-          description="Als Digital Natives fühlen wir uns in einem Request-Response Umfeld, und allem was mit HTTP zu tun hat, am wohlsten. Unsere Expertise reicht dabei von effizienter Datenaggregation und -verarbeitung über moderne, leistungsfähige APIs und wiederverwendbaren UI Pattern Libraries bis hin zu skalierbares DevOps Lösungen. Kurzum: wir sind zuhause im Internet."
+          title={'<h1>Im <em>Herzen</em> von Zürich.</h1>'}
+          description="Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen weiterzuentwickeln."
         />
       </div>
 
       <div className="container">
-        <div className="row" />
+        <div className="row">
+          {team.map(member =>
+            (<TeamMember
+              {...member}
+              key={member.name}
+              image={{
+                src: member.img,
+                alt: member.name,
+              }}
+            />),
+          )}
+        </div>
       </div>
 
       <MediumTeaser
