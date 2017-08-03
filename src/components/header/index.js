@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Headroom from 'react-headroom';
 
-import logo from './smartive.svg';
+import logo from '../../data/smartive.svg';
 
 const items = [
   { href: '/projekte', label: 'Projekte' },
