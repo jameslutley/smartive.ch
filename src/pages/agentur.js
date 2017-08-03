@@ -34,14 +34,6 @@ export default function Agency() {
           )}
         </div>
       </div>
-
-      <MediumTeaser
-        backgroundImage="https://smartive.ch/assets/images/react-native-blog-teaser.png"
-        url="https://blog.smartive.ch/react-native-ready-or-not-c599bf273e2d"
-        subline="Ready or Not"
-        title="React Native"
-        lead="React Native allows developers to create cross-platform apps on a familiar stack. But can you start using it productively today?"
-      />
     </div>
   );
 }
