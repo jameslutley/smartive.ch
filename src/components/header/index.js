@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import PropTypes from 'prop-types';
+
+import logo from './smartive.svg';
 
 const items = [
   { href: '/projekte', label: 'Projekte' },
@@ -14,7 +15,7 @@ const Header = () =>
       <div className="row middle-lg">
         <div className="header__col--logo col-xs-12 col-md-6">
           <Link to="/" className="logo">
-            <img src="/static/smartive.svg" alt="smartive" />
+            <img src={logo} alt="smartive" />
           </Link>
         </div>
 
