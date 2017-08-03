@@ -1,67 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-// import Link from 'gatsby-link';
-
-import '../scss/main.scss';
+import { Helmet } from 'react-helmet';
 
 import Header from '../components/header';
+import Footer from '../components/footer';
+import '../scss/main.scss';
 
-// const Header = () => (
-//   <div
-//     style={{
-//       background: 'rebeccapurple',
-//       marginBottom: '1.45rem',
-//     }}
-//   >
-//     <div
-//       style={{
-//         margin: '0 auto',
-//         maxWidth: 960,
-//         padding: '1.45rem 1.0875rem',
-//       }}
-//     >
-//       <h1 style={{ margin: 0 }}>
-//         <Link
-//           to="/"
-//           style={{
-//             color: 'white',
-//             textDecoration: 'none',
-//           }}
-//         >
-//           Gatsby
-//             </Link>
-//       </h1>
-//     </div>
-//   </div>
-// )
+const defaultDescription = '';
+const defaultTitle = '';
 
-const TemplateWrapper = ({
-  children,
-}) => (
-    <div>
-      <Helmet
-        title="Gatsby Default Starter"
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
-      <Header />
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0px 1.0875rem 1.45rem',
-          paddingTop: 0,
-        }}
-      >
-        {children()}
-      </div>
-    </div>
-  )
+export default ({ title, description, currentRoute, children }) =>
+  (<div>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
+      <meta name="description" content={description || defaultDescription} />
+      <title>
+        {title || defaultTitle}
+      </title>
+    </Helmet>
 
-export default TemplateWrapper;
+    <Header currentRoute={currentRoute} />
+
+    <main>
+      {children}
+    </main>
+
+    <Footer />
+  </div>);
