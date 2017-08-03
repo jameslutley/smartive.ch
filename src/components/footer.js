@@ -28,17 +28,17 @@ export default () => (
           <p>
             Schiffbaustrasse 7<br />
             Ch-8005 Zürich
-                    </p>
+          </p>
         </div>
         <div className="contact col-xs-12 col-md-3">
           <p>
-            <Link to="tel:+41 44 533 59 53">
-              <a>+41 44 533 59 53</a>
-            </Link>
+            <a href="tel:+41 44 533 59 53">
+              +41 44 533 59 53
+            </a>
             <br />
-            <Link to="mailto:hello@smartive.ch">
-              <a>hello@smartive.ch</a>
-            </Link>
+            <a href="mailto:hello@smartive.ch">
+              hello@smartive.ch
+            </a>
           </p>
         </div>
         <div className="footer__navigation col-xs-12 col-md-6">
@@ -46,9 +46,9 @@ export default () => (
             <ul className="row">
               {items.map(item => (
                 <li key={item.href} className="col-xs">
-                  <Link to={item.href}>
-                    <a><img src={item.src} alt={item.alt} /></a>
-                  </Link>
+                  <a href={item.href}>
+                    <img src={item.src} alt={item.alt} />
+                  </a>
                 </li>
               ))}
             </ul>

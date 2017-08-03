@@ -1,7 +1,5 @@
 import React from 'react';
-import Layout from '../layouts';
 import Stage from '../components/stage';
-// import TeamMember from '../components/team-member';
 import MediumTeaser from '../components/medium-teaser';
 
 export default function Agency() {

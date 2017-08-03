@@ -9,9 +9,7 @@ const CaseTeaser = ({ url, title, subline, image, body }) => (
         <div className="case-teaser__col--img col-xs-12 col-lg-7 last-lg">
           <figure>
             <Link to={url}>
-              <a>
-                <img className="case-image" src={image.src} alt={image.alt} />
-              </a>
+              <img className="case-image" src={image.src} alt={image.alt} />
             </Link>
           </figure>
         </div>
@@ -27,12 +25,8 @@ const CaseTeaser = ({ url, title, subline, image, body }) => (
               dangerouslySetInnerHTML={{ __html: body }}
             />
             <div className="case-teaser__actions">
-              <Link to={url}>
-                <a className="button button--primary">Case anschauen</a>
-              </Link>
-              <Link to="/arbeiten">
-                <a className="button">alle unsere Arbeiten</a>
-              </Link>
+              <Link to={url} className="button button--primary">Case anschauen</Link>
+              <Link to="/arbeiten" className="button">alle unsere Arbeiten</Link>
             </div>
           </div>
         </div>
