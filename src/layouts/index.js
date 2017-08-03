@@ -1,36 +1,36 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import 'flexboxgrid/dist/flexboxgrid.min.css';
+
 import Header from '../components/header';
 import Footer from '../components/footer';
+
 import '../scss/main.scss';
 
 const defaultDescription = '';
 const defaultTitle = '';
 
-export default ({ title, description, children }) => {
+export default ({ title, description, children }) =>
   // console.log(children);
 
-  return (
-    <div>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+  (<div>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <meta name="description" content={description || defaultDescription} />
-        <title>
-          {title || defaultTitle}
-        </title>
-      </Helmet>
+      <meta name="description" content={description || defaultDescription} />
+      <title>
+        {title || defaultTitle}
+      </title>
+    </Helmet>
 
-      <Header />
+    <Header />
 
-      <main>
-        {children()}
-      </main>
+    <main>
+      {children()}
+    </main>
 
-      <Footer />
-    </div>
-  );
-};
+    <Footer />
+  </div>);
