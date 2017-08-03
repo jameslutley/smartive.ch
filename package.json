@@ -9,6 +9,7 @@
     "gatsby-link": "^1.0.1",
     "gatsby-plugin-react-helmet": "^1.0.1",
     "gatsby-plugin-sass": "^1.0.1",
+    "react-google-maps": "next",
     "react-headroom": "^2.1.6"
   },
   "keywords": [
