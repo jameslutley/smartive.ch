@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 const items = [
   { href: 'https://github.com/smartive', src: '/static/github.svg', alt: 'smartive auf GitHub' },

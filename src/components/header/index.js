@@ -32,13 +32,13 @@ const Header = () =>
                   </li>),
                 )}
                 <li>
-                  <Link
+                  <a
                     className="navigation-item--medium"
-                    to="https://blog.smartive.ch"
+                    href="https://blog.smartive.ch"
                     target="_blank"
                   >
                     Blog
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </nav>
