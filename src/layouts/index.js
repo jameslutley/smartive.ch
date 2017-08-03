@@ -31,7 +31,6 @@ const Index = ({ children }) => (
     <Footer />
   </div>
 );
-
 Index.propTypes = {
   children: PropTypes.func.isRequired,
 };
