@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 import Layout from '../layouts/default-layout';
-import Stage from '../layouts/stage';
-import Teaser from '../layouts/teaser';
-import CaseTeaser from '../layouts/case-teaser';
-import MediumTeaser from '../layouts/medium-teaser';
+import Stage from '../components/stage';
+import Teaser from '../components/teaser';
+import CaseTeaser from '../components/case-teaser';
+import MediumTeaser from '../components/medium-teaser';
 
 export default class Index extends Component {
   render() {

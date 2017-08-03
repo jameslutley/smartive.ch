@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from '../layouts/default-layout';
-import Stage from '../layouts/stage';
+import Stage from '../components/stage';
 
 const services = [];
 

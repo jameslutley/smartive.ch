@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Layout from '../layouts/default-layout';
-import Stage from '../layouts/stage';
-import TeamMember from '../layouts/team-member';
-import MediumTeaser from '../layouts/medium-teaser';
+import Stage from '../components/stage';
+import TeamMember from '../components/team-member';
+import MediumTeaser from '../components/medium-teaser';
 
 // import { getTeamPage, getAllMembers } from '../services';
 

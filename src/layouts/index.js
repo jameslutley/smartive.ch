@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+// import Link from 'gatsby-link';
 
 import '../scss/main.scss';
 
-import Header from './header';
+import Header from '../components/header';
 
 // const Header = () => (
 //   <div

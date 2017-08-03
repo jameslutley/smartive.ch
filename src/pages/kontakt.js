@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from '../layouts/default-layout';
-import ContactBox from '../layouts/contact-box';
+import ContactBox from '../components/contact-box';
 
 export default class Contact extends Component {
     render() {
