@@ -8,7 +8,8 @@
     "gatsby": "^1.0.1",
     "gatsby-link": "^1.0.1",
     "gatsby-plugin-react-helmet": "^1.0.1",
-    "gatsby-plugin-sass": "^1.0.1"
+    "gatsby-plugin-sass": "^1.0.1",
+    "react-headroom": "^2.1.6"
   },
   "keywords": [
     "gatsby"

@@ -1,6 +1,14 @@
 @import '../../colors';
 @import '../../responsive';
 
+.headroom--scrolled {
+  .header {
+    @media #{$large-up} {
+      padding: 0;
+    }
+  }
+}
+
 .header {
   background-color: $white;
   padding: .5rem 0;
@@ -12,15 +20,9 @@
 
   @media #{$large-up} {
     box-shadow: none;
-    padding: 1rem 0;
+    padding: 2.5rem 0;
     position: fixed;
   }
-
-  // &.headroom--not-top {
-  //   @media #{$large-up} {
-  //     padding: 0;
-  //   }
-  // }
 
   .header__logo-suffix {
     color: $smartive-blue;
