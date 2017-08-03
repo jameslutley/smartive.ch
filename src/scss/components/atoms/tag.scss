@@ -1,0 +1,12 @@
+@import "../../colors";
+
+.tag {
+  display: inline-block;
+  border-radius: .125rem;
+  border: .0625rem solid $light-gray;
+  background: $white;
+  color: $smartive-blue;
+  padding: .1rem .5rem;
+  margin: .25rem .1rem;
+  font-size: .8rem;
+}

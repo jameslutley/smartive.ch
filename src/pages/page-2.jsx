@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 
 const SecondPage = () => (
   <div>
@@ -9,4 +9,4 @@ const SecondPage = () => (
   </div>
 )
 
-export default SecondPage
+export default SecondPage;

@@ -1,0 +1,93 @@
+@import "../../colors";
+@import "../../responsive";
+
+.case-teaser {
+  margin: 0 0 5rem;
+
+  @media #{$large-up} {
+    margin: 5rem 0 7.5rem;
+  }
+
+
+  @media #{$xlarge-up} {
+    margin: 5rem 0 12.5rem;
+  }
+
+  .container--case {
+    background: $smartive-dark-blue;
+    color: $white;
+  }
+
+  h2 {
+    small { color: $smartive-blue; }
+  }
+
+  &__text {
+    padding: 2rem 2.5rem;
+    font-weight: 300;
+
+    @media #{$medium-up} {
+      padding: 0 2.5rem 5rem;
+    }
+
+    @media #{$xlarge-up} {
+      padding: 8rem 0 8rem 6rem;
+    }
+  }
+
+  &__body {
+    margin: 2.5rem 0;
+  }
+
+  &__actions {
+    .button {
+      @media #{$small-up} {
+        margin: 0 .5rem;
+      }
+
+
+      &:first-of-type {
+        @media #{$small-up} {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  figure {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: block;
+
+    @media #{$large-up} {
+      height: 100%;
+    }
+
+    .case-image {
+      display: block;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+
+      @media #{$large-up} {
+        margin-top: -15%;
+      }
+
+      @media #{$xlarge-up} {
+        margin-top: 0;
+        position: relative;
+        bottom: -8rem;
+      }
+    }
+  }
+
+  &__col--img {
+    position: relative;
+    padding-top: 2.5rem;
+
+    @media #{$large-up} {
+      padding-top: 0;
+    }
+  }
+}

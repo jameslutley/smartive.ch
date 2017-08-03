@@ -1,0 +1,60 @@
+@import "../../colors";
+@import "../../responsive";
+
+.footer {
+  color: $smartive-dark-blue;
+  font-size: 1.25rem;
+  font-weight: 300;
+  background: $white;
+  padding: 2.5rem 0;
+
+  .logo {
+    height: 1.5rem;
+    width: auto;
+
+    @media #{$large-up}  {
+      height: 2rem;
+    }
+  }
+
+  .footer__row--logo {
+    display: none;
+
+    @media #{$large-up} {
+      display: flex;
+    }
+  }
+
+  .footer__row--contact {
+    margin-bottom: 2.5rem;
+  }
+
+  a {
+    color: $smartive-dark-blue;
+    font-weight: 300;
+    text-decoration: none;
+  }
+
+  .social {
+    a {
+      border-bottom: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      a {
+        line-height: 1;
+        text-align: center;
+        display: block;
+        height: 100%;
+
+        img {
+          height: 2rem;
+        }
+      }
+    }
+  }
+}

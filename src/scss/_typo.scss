@@ -1,0 +1,102 @@
+a {
+  color: $smartive-blue;
+  text-decoration: none;
+  border-bottom: .0625rem solid transparent;
+  transition: border-bottom-color .2s ease-in-out;
+
+  &:hover {
+    border-bottom: .0625rem solid $light-gray;
+  }
+}
+
+h1,
+h1 p {
+  font-size: 1.9rem;
+  line-height: 1.25em;
+  font-weight: 800;
+  word-wrap: break-word;
+
+  @media #{$medium-up} {
+    font-size: 2.5rem;
+    line-height: 1.125em;
+  }
+
+  @media #{$large-up} {
+    font-size: 3.5rem;
+    line-height: 1.25em;
+  }
+
+  @media #{$xxlarge-up} {
+    font-size: 4.25rem;
+  }
+}
+
+h1,
+h2 {
+  small {
+    display: block;
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: .0625rem;
+    font-weight: 400;
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 1.25em;
+  word-wrap: break-word;
+  margin: 0 0 1rem;
+  font-weight: 700;
+
+  @media #{$large-up} {
+    font-size: 2.25rem;
+    line-height: 1.25em;
+  }
+
+  &.is-blue {
+    color: $smartive-blue;
+  }
+}
+
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.15em;
+  word-wrap: break-word;
+
+  @media #{$medium-up} {
+    font-size: 1.5rem;
+    line-height: 1.25em;
+  }
+
+  @media #{$large-up} {
+    font-size: 1.75rem;
+  }
+}
+
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.1em;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 0;
+}
+
+ul,
+ol,
+p,
+a {
+  margin: 1rem 0;
+  line-height: 1.75;
+  font-weight: 300;
+}

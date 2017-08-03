@@ -1,0 +1,154 @@
+@import "colors";
+@import "responsive";
+
+html, body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  background-color: $white;
+  color: $smartive-dark-blue;
+  font-family: $font-stack;
+}
+
+main {
+  position: relative;
+  display: block;
+
+  padding-bottom: 3.5rem;
+
+  @media #{$large-up} {
+    padding: 7rem 0 0;
+  }
+}
+
+.container {
+  /* stylelint-disable */
+  max-width: 1600px;
+  /* stylelint-enable */
+
+  @media #{$large-up} {
+    width: 90%;
+  }
+}
+
+// https://github.com/kristoferjoseph/flexboxgrid/issues/177
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  > .col-xs-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+figure {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+}
+
+.chart--migros-search {
+  margin-bottom: 2.5rem;
+
+  @media #{$large-up} {
+    margin-bottom: 7.5rem;
+  }
+
+  @media #{$xlarge-up} {
+    max-width: 90%;
+    margin-bottom: 0;
+  }
+
+  .ct-series .ct-bar {
+    stroke-width: 100px;
+  }
+
+  .ct-series-a .ct-bar,
+  .ct-series-b .ct-bar {
+    transition: stroke .2s;
+  }
+
+  .ct-series-a .ct-bar {
+    stroke: #D6D6D6;
+
+    &:hover {
+      stroke: darken(#D6D6D6, 10%);
+    }
+  }
+  .ct-series-b .ct-bar {
+    stroke: $smartive-blue;
+
+    &:hover {
+      stroke: darken($smartive-blue, 10%);
+    }
+  }
+
+  .ct-label-name-es {
+    fill: $smartive-blue;
+    font-size: 1.1rem;
+    font-weight: 700;
+    stroke: none;
+  }
+
+  .ct-label-name-existing {
+    fill: $white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    stroke: none;
+  }
+
+  .ct-label-description-es {
+    fill: $smartive-dark-blue;
+    font-size: 1rem;
+    font-weight: 400;
+    stroke: none;
+  }
+
+  .ct-label-description-existing {
+    fill: $white;
+    font-size: 1rem;
+    font-weight: 400;
+    stroke: none;
+  }
+}
+
+.error-page {
+  &.error-page--404 {
+    background: url(http://i.imgur.com/qhMbkGi.jpg) no-repeat center bottom;
+  }
+
+  .error__text {
+    max-width: 90%;
+    padding: 0 0 30rem;
+    margin: 2.5rem auto 0;
+    color: $smartive-dark-blue;
+    text-align: center;
+
+    @media #{$large-up} {
+      max-width: 60rem;
+      text-align: left;
+      margin: 5rem auto 0;
+    }
+
+    h1 {
+      margin-bottom: 2.5rem;
+
+      @media #{$large-up} {
+        margin-bottom: 5rem;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+  }
+}
