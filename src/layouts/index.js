@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
 
 import 'flexboxgrid/dist/flexboxgrid.min.css';
 
@@ -8,21 +9,16 @@ import Footer from '../components/footer';
 
 import '../scss/main.scss';
 
-const defaultDescription = '';
-const defaultTitle = '';
-
-export default ({ title, description, children }) =>
-  // console.log(children);
-
-  (<div>
+const Index = ({ children }) => (
+  <div>
     <Helmet>
       <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-      <meta name="description" content={description || defaultDescription} />
+      <meta name="description" content={'description' || 'asdf'} />
       <title>
-        {title || defaultTitle}
+        {'title' || 'asdf'}
       </title>
     </Helmet>
 
@@ -33,4 +29,11 @@ export default ({ title, description, children }) =>
     </main>
 
     <Footer />
-  </div>);
+  </div>
+);
+
+Index.propTypes = {
+  children: PropTypes.func.isRequired,
+};
+
+export default Index;

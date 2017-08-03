@@ -36,6 +36,7 @@ const Header = () =>
                     className="navigation-item--medium"
                     href="https://blog.smartive.ch"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Blog
                   </a>

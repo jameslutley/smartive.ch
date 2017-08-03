@@ -9,7 +9,9 @@ const Teaser = ({ title, subline, description }) => (
         {title}
       </h2>
 
-      <div className="description" dangerouslySetInnerHTML={{ __html: description }} />
+      <div className="description">
+        <p dangerouslySetInnerHTML={{ __html: description }} />
+      </div>
     </div>
   </div>
 );

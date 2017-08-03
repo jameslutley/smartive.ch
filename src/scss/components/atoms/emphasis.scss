@@ -7,13 +7,7 @@
 }
 
 @media #{$large-up} {
-  h1 > em {
-    border-bottom: .25rem solid $smartive-blue;
-    font-style: normal;
-  }
+  h1 > .emphasis { border-bottom: .25rem solid $smartive-blue; }
 
-  h2 > em {
-    border-bottom: .2rem solid $smartive-blue;
-    font-style: normal;
-  }
+  h2 > .emphasis { border-bottom: .2rem solid $smartive-blue; }
 }

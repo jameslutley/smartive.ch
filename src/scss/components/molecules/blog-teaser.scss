@@ -26,6 +26,15 @@
     }
   }
 
+  p {
+    color: $white;
+    display: none;
+
+    @media #{$large-up} {
+      display: block;
+    }
+  }
+
   &.blog-teaser--image {
     background-size: cover;
     background-position: center center;
@@ -39,13 +48,13 @@
       height: 100%;
       top: 0;
       left: 0;
-      background: rgba($smartive-blue, .2);
+      background: rgba($smartive-dark-blue, .7);
       transition: background .2s;
     }
 
     &:hover {
       &:before {
-        background: rgba($smartive-blue, .4);
+        background: rgba($smartive-dark-blue, .6);
       }
     }
 
@@ -62,15 +71,6 @@
       .blog-teaser__content {
         @media #{$xlarge-up} {
           padding: 7rem 6rem 8rem;
-        }
-      }
-
-      p {
-        color: $white;
-        display: none;
-
-        @media #{$large-up} {
-          display: block;
         }
       }
 

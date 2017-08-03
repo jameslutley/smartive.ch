@@ -1,71 +1,96 @@
-import React, { Component } from 'react';
-
-import Layout from '../layouts';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Stage from '../components/stage';
 import Teaser from '../components/teaser';
 import CaseTeaser from '../components/case-teaser';
-import MediumTeaser from '../components/medium-teaser';
+import MediumTeasers from '../components/medium-teasers';
 
-export default class Index extends Component {
-  render() {
-    // const {
-    //   title,
-    //   titleHtml,
-    //   lead,
-    //   stage,
-    //   teasers,
-    //   featuredCase
-    // } = this.props.doc;
-    let title = titleHtml = lead = stage = 'asdf';
+import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
 
-    return (
-      <Layout title={`${title} - smartive AG`} description={lead} currentRoute={this.props.url.pathname}>
-        <div className="stage--left-highlighted stage--landing-page">
-          <Stage
-            image={{
-              src: stage.main.url,
-              alt: stage.main.alt
-            }}
-            title={titleHtml}
-            description={lead}
-          />
+const teasers = [
+  {
+    title: 'Die akkurate Daten­aufbereitung.',
+    subline: 'API-Entwicklung',
+    description: 'Machen Sie das Beste aus Ihren Daten. Wir aggregieren und vereinheitlichen Ihre Systeme und machen sie so zu einer standardisierten Schnittstelle für die Verwendung im Web.',
+  },
+  {
+    title: 'Eine grossartige Präsen­tation.',
+    subline: 'Webapplikationen',
+    description: 'Da wir mit massgeschneiderten Applikationen, CRMs und interaktiven Visualisierungen arbeiten, können wir Ihnen genau die Lösung anbieten, die vollkommen an Ihre Bedürfnisse angepasst ist.',
+  },
+  {
+    title: 'Mit kompetenter Unter­stützung.',
+    subline: 'Konzeption und Beratung',
+    description: 'Profitieren Sie von unseren fundierten Ausbildungen und von unserer langjährigen Erfahrung. Wir unterstützen Sie in der Konzeption und der Umsetzung und begleiten Ihr Projekt von Ihrer ersten Idee bis zur fertigen Umsetzung im Web.',
+  },
+];
+
+const Index = ({ data }) => (
+  <div>
+    <div className="stage--left-highlighted stage--landing-page">
+      <Stage />
+    </div>
+    <div className="teaser-list">
+      <div className="container">
+        <div className="row center-sm left-lg">
+          {teasers.map(teaser => (
+            <Teaser
+              key={teaser.title}
+              title={teaser.title}
+              subline={teaser.subline}
+              description={teaser.description}
+            />
+          ))}
         </div>
+      </div>
+    </div>
+    <CaseTeaser
+      url="/cases/migros-filialfinder/"
+      title="Auf der Suche nach der nächsten Migros Filiale"
+      subline="Case"
+      image={{
+        src: caseImage,
+        alt: 'Auf der Suche nach der nächsten Migros Filiale',
+      }}
+      body="Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt."
+    />
+    <MediumTeasers posts={data.allMediumPost} users={data.allMediumUser} />
+  </div>
+);
+Index.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
 
-        <div className="teaser-list">
-          <div className="container">
-            <div className="row center-sm left-lg">
-              {teasers.map(teaser => (
-                <Teaser
-                  key={teaser.title}
-                  title={teaser.title}
-                  subline={teaser.subline}
-                  description={teaser.description}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+export default Index;
 
-        <CaseTeaser
-          url={featuredCase.url}
-          title={featuredCase.title}
-          subline={featuredCase.subline}
-          image={{
-            src: featuredCase.image.url,
-            alt: featuredCase.image.alt
-          }}
-          body={featuredCase.body}
-        />
-
-        <MediumTeaser
-          backgroundImage="https://smartive.ch/assets/images/react-native-blog-teaser.png"
-          url="https://blog.smartive.ch/react-native-ready-or-not-c599bf273e2d"
-          subline="Ready or Not"
-          title="React Native"
-          lead="React Native allows developers to create cross-platform apps on a familiar stack. But can you start using it productively today?"
-        />
-
-      </Layout>
-    );
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMediumPost(
+      limit: 2
+      sort: { fields: [createdAt], order: DESC }
+    ) {
+      edges {
+        node {
+          title
+          creatorId
+          slug
+          uniqueSlug
+          virtuals {
+            subtitle
+            previewImage {
+              imageId
+            }
+          }
+        }
+      }
+    }
+    allMediumUser {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
   }
-}
+`;
