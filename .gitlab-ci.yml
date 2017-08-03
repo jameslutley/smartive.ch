@@ -1,0 +1,7 @@
+stages:
+  - deploy
+
+deploy to Docker Cloud:
+  stage: deploy
+  script:
+    - echo "Hallo Robert!"
