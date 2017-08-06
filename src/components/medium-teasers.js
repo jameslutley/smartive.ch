@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const getMediumPostData = (post, mediumUsers) => ({
-  backgroundImage: `https://cdn-images-1.medium.com/max/1200/${post.virtuals.previewImage.imageId}`,
+  backgroundImage: post.virtuals.previewImage.imageId ? `https://cdn-images-1.medium.com/max/1200/${post.virtuals.previewImage.imageId}` : '',
   url: `https://blog.smartive.ch/${post.uniqueSlug}`,
   subline: mediumUsers.edges.filter(edge => edge.node.id === post.creatorId)[0].node.name,
   title: post.title,
