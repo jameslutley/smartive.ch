@@ -3,7 +3,7 @@ import Stage from '../components/stage';
 import TeamMember from '../components/team-member';
 import { getSiteHeader } from '../layouts';
 
-import { team } from '../data/team';
+import team from '../data/team';
 
 import teamStageSrc from '../data/team/thilo-peter-meeting.jpg';
 

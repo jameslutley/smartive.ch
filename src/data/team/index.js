@@ -7,7 +7,7 @@ import dominique from './portrait-dominique.jpg';
 import nicola from './portrait-nicola.jpg';
 import robert from './portrait-robert.jpg';
 
-export const team = [
+export default [
   {
     img: peter,
     job: 'Partner',
