@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
+import WebFont from 'webfontloader';
 
 import 'flexboxgrid/dist/flexboxgrid.min.css';
 
@@ -9,28 +10,40 @@ import Footer from '../components/footer';
 
 import '../scss/main.scss';
 
-const Index = ({ children }) => (
-  <div>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
-      <meta name="viewport" content="width=device-width,initial-scale=1" />
+class Index extends React.Component {
+  componentWillMount() {
+    WebFont.load({
+      google: {
+        families: ['Roboto:300,400,700,900'],
+      },
+    });
+  }
 
-      <meta name="description" content={'description' || 'asdf'} />
-      <title>
-        {'title' || 'asdf'}
-      </title>
-    </Helmet>
+  render() {
+    return (
+      <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <Header />
+          <meta name="description" content={'description' || 'asdf'} />
+          <title>
+            {'title' || 'asdf'}
+          </title>
+        </Helmet>
 
-    <main>
-      {children()}
-    </main>
+        <Header />
 
-    <Footer />
-  </div>
-);
+        <main>
+          {this.props.children()}
+        </main>
+
+        <Footer />
+      </div>
+    );
+  }
+}
 Index.propTypes = {
   children: PropTypes.func.isRequired,
 };

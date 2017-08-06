@@ -13,7 +13,8 @@
     "react": "^15.6.1",
     "react-google-maps": "next",
     "react-headroom": "^2.1.6",
-    "react-helmet": "^5.1.3"
+    "react-helmet": "^5.1.3",
+    "webfontloader": "^1.6.28"
   },
   "keywords": [
     "gatsby"
