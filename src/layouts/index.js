@@ -11,7 +11,7 @@ import Footer from '../components/footer';
 import '../scss/main.scss';
 
 class Index extends React.Component {
-  componentWillMount() {
+  componentDidMount() {
     WebFont.load({
       google: {
         families: ['Roboto:300,400,700,900'],
