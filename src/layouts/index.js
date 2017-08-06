@@ -27,10 +27,8 @@ class Index extends React.Component {
           <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-          <meta name="description" content={'description' || 'asdf'} />
-          <title>
-            {'title' || 'asdf'}
-          </title>
+          <meta name="description" content="Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die Realisierung zeitgemässer Weblösungen gehört genauso zu unserer Passion, wie die konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden." />
+          <title>smartive AG - Zukunftsweisende Webapplikationen für anspruchsvolle Unternehmen</title>
         </Helmet>
 
         <Header />
@@ -49,3 +47,10 @@ Index.propTypes = {
 };
 
 export default Index;
+
+export const getSiteHeader = (siteTitle, description) => (
+  <Helmet>
+    <title>{`${siteTitle} | smartive AG`}</title>
+    <meta name="description" content={description} />
+  </Helmet>
+);
