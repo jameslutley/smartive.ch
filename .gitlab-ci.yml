@@ -1,9 +1,32 @@
-image: node:8
+variables:
+  DOCKER_DRIVER: overlay
+
+services:
+- docker:dind
 
 stages:
+  - build
   - deploy
 
-deploy to Docker Cloud:
-  stage: deploy
+build:static_files:
+  stage: build
+  image: node:8
   script:
-    - echo "Hallo Robert!"
+    - yarn install
+    - yarn build
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 day
+
+deploy:docker_cloud:
+  stage: deploy
+  image: docker:latest
+  script:
+    - docker build --tag smrtv/docker-image:ch-smartive-stage .
+    - docker login -u $DOCKER_ID_USER -p $DOCKER_ID_PASSWORD
+    - docker push smrtv/docker-image:ch-smartive-stage
+  only:
+    - master
+  dependencies:
+    - build:static_files
