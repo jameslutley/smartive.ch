@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import WebFont from 'webfontloader';
+// import WebFont from 'webfontloader';
 
 import 'flexboxgrid/dist/flexboxgrid.min.css';
 
@@ -12,11 +12,22 @@ import '../scss/main.scss';
 
 class Index extends React.Component {
   componentDidMount() {
-    WebFont.load({
-      google: {
-        families: ['Roboto:300,400,700,900'],
-      },
-    });
+    if (!document.getElementById('webfontloader')) {
+      const wf = document.createElement('script');
+      const s = document.scripts[0];
+      wf.src = 'webfont-1.6.26.js';
+      wf.async = true;
+      wf.id = 'webfontloader';
+      wf.onload = () => {
+        WebFont.load({
+          google: {
+            families: ['Roboto:300,400,700,900'],
+          },
+        });
+      };
+
+      s.parentNode.insertBefore(wf, s);
+    }
   }
 
   render() {
@@ -27,7 +38,10 @@ class Index extends React.Component {
           <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-          <meta name="description" content="Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die Realisierung zeitgemässer Weblösungen gehört genauso zu unserer Passion, wie die konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden." />
+          <meta
+            name="description"
+            content="Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die Realisierung zeitgemässer Weblösungen gehört genauso zu unserer Passion, wie die konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden."
+          />
           <title>smartive AG - Zukunftsweisende Webapplikationen für anspruchsvolle Unternehmen</title>
         </Helmet>
 
@@ -48,9 +62,8 @@ Index.propTypes = {
 
 export default Index;
 
-export const getSiteHeader = (siteTitle, description) => (
-  <Helmet>
+export const getSiteHeader = (siteTitle, description) =>
+  (<Helmet>
     <title>{`${siteTitle} | smartive AG`}</title>
     <meta name="description" content={description} />
-  </Helmet>
-);
+  </Helmet>);
