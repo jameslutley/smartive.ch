@@ -8,7 +8,7 @@ const Project = ({ image, category, title, description, caseUrl }) => (
     <div className="project__text">
       <h2><small>{category}</small> {title}</h2>
 
-      <p dangerouslySetInnerHTML={{ __html: description }} />
+      <div dangerouslySetInnerHTML={{ __html: description }} />
 
       {caseUrl
         ? <Link to={caseUrl} className="button button--primary">
