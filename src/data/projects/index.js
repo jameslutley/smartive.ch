@@ -25,6 +25,7 @@ export default [
       src: filialfinder,
       alt: 'Filialfinder',
     },
+    caseUrl: '/cases/migros-filialfinder',
   },
   {
     title: 'Cosmopolitan',
@@ -35,6 +36,7 @@ export default [
       src: cosmopolitan,
       alt: 'Filialfinder',
     },
+    caseUrl: '/cases/cosmo-crm',
   },
   {
     title: 'Stellenbörse',

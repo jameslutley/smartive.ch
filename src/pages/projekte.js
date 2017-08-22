@@ -2,13 +2,18 @@ import React from 'react';
 import Stage from '../components/stage';
 import Project from '../components/project';
 import projects from '../data/projects';
+import CaseTeaser from '../components/case-teaser';
 import { getSiteHeader } from '../layouts';
 
+import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
 import workImage from '../data/work.png';
 
-export default () => (
-  <div>
-    {getSiteHeader('Projekte', 'Wir lieben es, unsere Erfahrungen und unser Wissen mit Ihnen zu teilen und schrecken nicht vor anspruchsvollen Aufgaben innerhalb der Umsetzung ehrgeiziger Projekte zurück.')}
+export default () =>
+  (<div>
+    {getSiteHeader(
+      'Projekte',
+      'Wir lieben es, unsere Erfahrungen und unser Wissen mit Ihnen zu teilen und schrecken nicht vor anspruchsvollen Aufgaben innerhalb der Umsetzung ehrgeiziger Projekte zurück.',
+    )}
     <div className="stage--gradient">
       <Stage
         image={{
@@ -20,21 +25,24 @@ export default () => (
       />
     </div>
 
-    <div className="container">
-    </div>
+    <CaseTeaser
+      url="/cases/migros-filialfinder"
+      title="Auf der Suche nach der nächsten Migros Filiale"
+      subline="Case"
+      image={{
+        src: caseImage,
+        alt: 'Auf der Suche nach der nächsten Migros Filiale',
+      }}
+      body="<p>Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt.</p>"
+    />
+
     <div className="project-list">
       <div className="container">
         <div className="row">
-          {projects.map(project => (
-            <Project
-              title={project.title}
-              category={project.category}
-              description={project.description}
-              image={project.image}
-            />
-          ))}
+          {projects.map(project =>
+            <Project title={project.title} category={project.category} description={project.description} image={project.image} caseUrl={project.caseUrl} />,
+          )}
         </div>
       </div>
     </div>
-  </div>
-);
+  </div>);

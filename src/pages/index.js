@@ -53,7 +53,7 @@ const Index = ({ data }) => (
       </div>
     </div>
     <CaseTeaser
-      url="/cases/migros-filialfinder/"
+      url="/cases/migros-filialfinder"
       title="Auf der Suche nach der nächsten Migros Filiale"
       subline="Case"
       image={{
@@ -61,7 +61,9 @@ const Index = ({ data }) => (
         alt: 'Auf der Suche nach der nächsten Migros Filiale',
       }}
       body="Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt."
+      showAllLink
     />
+
     <MediumTeasers posts={data.allMediumPost} users={data.allMediumUser} />
   </div>
 );

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 
-const CaseTeaser = ({ url, title, subline, image, body }) => (
+const CaseTeaser = ({ url, title, subline, image, body, showAllLink }) => (
   <div className="case-teaser">
     <div className="container container--case">
       <div className="row">
@@ -26,7 +26,7 @@ const CaseTeaser = ({ url, title, subline, image, body }) => (
             />
             <div className="case-teaser__actions">
               <Link to={url} className="button button--primary">Case anschauen</Link>
-              <Link to="/arbeiten" className="button">alle unsere Arbeiten</Link>
+              {showAllLink ? <Link to="/projekte" className="button">alle unsere Arbeiten</Link> : null}
             </div>
           </div>
         </div>
