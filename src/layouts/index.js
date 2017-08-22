@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-// import WebFont from 'webfontloader';
 
 import 'flexboxgrid/dist/flexboxgrid.min.css';
 
@@ -30,7 +29,31 @@ class Index extends React.Component {
     }
   }
 
+  renderJobs() {
+    return (
+      <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE-edge,chrome=1" />
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
+          <link rel="icon" type="image/png" href="/favicon.png" />
+
+          <meta
+            name="description"
+            content="Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die Realisierung zeitgemässer Weblösungen gehört genauso zu unserer Passion, wie die konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden."
+          />
+          <title>smartive AG - Zukunftsweisende Webapplikationen für anspruchsvolle Unternehmen</title>
+        </Helmet>
+        {this.props.children()}
+        <Footer />
+      </div>
+    );
+  }
+
   render() {
+    if (this.props.location.pathname === '/jobs') {
+      return this.renderJobs();
+    }
     return (
       <div>
         <Helmet>

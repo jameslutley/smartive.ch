@@ -32,7 +32,7 @@ export default () =>
         <div className="address col-xs-12 col-md-3">
           <p>
             Schiffbaustrasse 7<br />
-            Ch-8005 Zürich
+            CH-8005 Zürich
           </p>
         </div>
         <div className="contact col-xs-12 col-md-3">
