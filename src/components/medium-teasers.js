@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { BlogTeaser } from './molecules';
+
 const getMediumPostData = (post, mediumUsers) => ({
   backgroundImage: post.virtuals.previewImage.imageId ? `https://cdn-images-1.medium.com/max/1200/${post.virtuals.previewImage.imageId}` : '',
   url: `https://blog.smartive.ch/${post.uniqueSlug}`,
@@ -17,32 +19,8 @@ const MediumTeasers = ({ posts, users }) => {
     <div className="blog-list">
       <div className="container">
         <div className="row">
-          <div
-            className="blog-teaser blog-teaser--image col-xs-12 col-lg-7"
-            style={{ backgroundImage: `url(${firstPost.backgroundImage})` }}
-          >
-            <a className="blog-teaser__link" href={firstPost.url} target="_blank">
-              <div className="blog-teaser__content">
-                <h2>
-                  <small>{firstPost.subline}</small>
-                  {firstPost.title}
-                </h2>
-                <p>{firstPost.lead}</p>
-              </div>
-            </a>
-          </div>
-
-          <div className="blog-teaser col-xs-12 col-lg-5 first-lg">
-            <a className="blog-teaser__link" href={secondPost.url} target="_blank">
-              <div className="blog-teaser__content">
-                <h2>
-                  <small>{secondPost.subline}</small>
-                  {secondPost.title}
-                </h2>
-                <p>{secondPost.lead}</p>
-              </div>
-            </a>
-          </div>
+          <BlogTeaser url={firstPost.url} subline={firstPost.subline} title={firstPost.title} lead={firstPost.lead} img={firstPost.backgroundImage} />
+          <BlogTeaser url={secondPost.url} subline={secondPost.subline} title={secondPost.title} lead={secondPost.lead} />
         </div>
       </div>
     </div>
