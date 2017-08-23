@@ -63,6 +63,8 @@ http {
     autoindex off;
     charset off;
 
+    error_page 404 /404.html;
+
     location /team {
         return 301 /agentur;
     }
