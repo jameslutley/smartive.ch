@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TeamMember = ({ image, job, name, description, education, links }) =>
+import './member.scss';
+
+export const Member = ({ name, job, image, education, children, links }) =>
   (<div className="member col-xs-12 col-md-6 col-lg-4">
     <img className="member__portrait" src={image.src} alt={image.alt} />
     <div className="member__text">
@@ -11,7 +13,7 @@ const TeamMember = ({ image, job, name, description, education, links }) =>
       <h3>
         {education}
       </h3>
-      <p dangerouslySetInnerHTML={{ __html: description }} />
+      {children}
       <p>
         {links
           .map(link =>
@@ -24,16 +26,25 @@ const TeamMember = ({ image, job, name, description, education, links }) =>
     </div>
   </div>);
 
-TeamMember.propTypes = {
+Member.propTypes = {
+  name: PropTypes.string.isRequired,
+  job: PropTypes.string.isRequired,
   image: PropTypes.shape({
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
   }).isRequired,
-  job: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
   education: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  links: PropTypes.arrayOf(PropTypes.shape({ url: PropTypes.string.isRequired, text: PropTypes.string.isRequired })).isRequired,
+  children: PropTypes.element.isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
-export default TeamMember;
+Member.defaultProps = {
+  links: [],
+};
+
+export default Member;

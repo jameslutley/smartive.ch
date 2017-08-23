@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Stage from '../components/stage';
-import TeamMember from '../components/team-member';
 import MediumTeasers from '../components/medium-teasers';
 import { getSiteHeader } from '../layouts';
+import { Member } from '../components/molecules';
 
 import team from '../data/team';
 
@@ -29,14 +29,19 @@ const Agency = ({ data }) =>
     <div className="container">
       <div className="row">
         {team.map(member =>
-          (<TeamMember
-            {...member}
+          (<Member
             key={member.name}
+            name={member.name}
+            job={member.job}
             image={{
               src: member.img,
               alt: member.name,
             }}
-          />),
+            education={member.education}
+            links={member.links}
+          >
+            <p dangerouslySetInnerHTML={{ __html: member.description }} />
+          </Member>),
         )}
       </div>
     </div>

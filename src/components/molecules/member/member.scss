@@ -1,12 +1,13 @@
-@import "../../colors";
-@import "../../responsive";
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
 
 .member {
   margin-bottom: $padding-sm-v;
 
   &.col-lg-4 {
     @media #{$large-up} {
-      padding: 0 ($padding-lg-h/2);
+      /* Sorry about that, but flexgrid */
+      padding: 0 ($padding-lg-h/2) !important;
     }
   }
 

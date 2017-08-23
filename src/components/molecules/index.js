@@ -7,3 +7,5 @@ export { CaseTeaser } from './case-teaser';
 export { Facts } from './facts';
 
 export { Map } from './map';
+
+export { Member } from './member';
