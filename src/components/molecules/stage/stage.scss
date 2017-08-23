@@ -1,5 +1,5 @@
-@import "../../colors";
-@import "../../responsive";
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
 
 .stage--gradient > .stage .container--stage   {
   background: linear-gradient(to bottom, $light-blue 0%, $white 100%);

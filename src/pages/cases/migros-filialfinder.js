@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Stage from '../../components/stage';
-import { CaseBlock, Facts } from '../../components/molecules';
+import { CaseBlock, Facts, Stage } from '../../components/molecules';
 
 import stageImg from '../../data/cases/migros-filialfinder/case-study-migros.png';
 import aggregationImg from '../../data/cases/migros-filialfinder/data-aggregation.png';
@@ -10,16 +9,32 @@ import chartImg from '../../data/cases/migros-filialfinder/chart.png';
 
 const MigrosFilialfinderCase = () =>
   (<div>
-    <div className="stage--gradient stage--case">
-      <Stage
-        image={{
-          src: stageImg,
-          alt: 'Migros Logo auf einem Laptop',
-        }}
-        title="Auf der Suche nach der nächsten <em>Migros-Filiale</em>."
-        descriptionHtml="<p>Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt. Ziel war es, eine responsive und ansprechende Lösung zu entwickeln, die es dem Kunden erlaubt, zu Hause oder unterwegs für ihn interessante Informationen zu Filialen in der Nähe schnell und einfach abrufen zu können.</p><ul><li>Elasticsearch</li><li>Varnish</li><li>SEO</li><li>BackboneJS</li><li>Symfony2</li><li>Google Maps mit Clustering</li></ul>"
-      />
-    </div>
+    <Stage
+      modifiers={['gradient', 'case']}
+      image={{
+        src: stageImg,
+        alt: 'Migros Logo auf einem Laptop',
+      }}
+      title={
+        <h1>
+          Auf der Suche nach der nächsten <em>Migros-Filiale</em>.
+        </h1>
+      }
+    >
+      <p>
+        Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt. Ziel war es, eine
+        responsive und ansprechende Lösung zu entwickeln, die es dem Kunden erlaubt, zu Hause oder unterwegs für ihn interessante Informationen zu
+        Filialen in der Nähe schnell und einfach abrufen zu können.
+      </p>
+      <ul>
+        <li>Elasticsearch</li>
+        <li>Varnish</li>
+        <li>SEO</li>
+        <li>BackboneJS</li>
+        <li>Symfony2</li>
+        <li>Google Maps mit Clustering</li>
+      </ul>
+    </Stage>
 
     <div className="container">
       <Facts title="Facts & Figures">

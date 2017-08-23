@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Stage from '../components/stage';
 import MediumTeasers from '../components/medium-teasers';
 import { getSiteHeader } from '../layouts';
-import { Member } from '../components/molecules';
+import { Member, Stage } from '../components/molecules';
 
 import team from '../data/team';
 
@@ -15,16 +14,23 @@ const Agency = ({ data }) =>
       'Agentur',
       'Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen weiterzuentwickeln.',
     )}
-    <div className="stage--gradient stage--right-highlighted">
-      <Stage
-        image={{
-          src: teamStageSrc,
-          alt: 'Zwei smartive Mitarbeiter bei einer Besprechung',
-        }}
-        title="Creating a <em>smarter</em> web, together."
-        description="Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen weiterzuentwickeln."
-      />
-    </div>
+    <Stage
+      modifiers={['gradient', 'right-highlighted']}
+      image={{
+        src: teamStageSrc,
+        alt: 'Zwei smartive Mitarbeiter bei einer Besprechung',
+      }}
+      title={
+        <h1>
+          Creating a <em>smarter</em> web, together.
+        </h1>
+      }
+    >
+      <p>
+        Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie
+        dabei, sich und Ihr Unternehmen weiterzuentwickeln.
+      </p>
+    </Stage>
 
     <div className="container">
       <div className="row">

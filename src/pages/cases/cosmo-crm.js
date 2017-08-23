@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Stage from '../../components/stage';
-import { CaseBlock, Facts } from '../../components/molecules';
+import { CaseBlock, Facts, Stage } from '../../components/molecules';
 
 import stageImg from '../../data/cases/cosmo-crm/case-study-cosmo.png';
 import featureImg from '../../data/cases/cosmo-crm/feature-stack-cosmo.png';
@@ -9,16 +8,28 @@ import techImg from '../../data/cases/cosmo-crm/cosmo-tech-stack.png';
 
 const CosmoCrmCase = () =>
   (<div>
-    <div className="stage--gradient stage--case">
-      <Stage
-        image={{
-          src: stageImg,
-          alt: 'Cosmopolitan Logo auf einem Laptop',
-        }}
-        title="Digitale Geschäftsprozesse als <em>Herzstück</em>."
-        descriptionHtml="<p>Für die Cosmopolitan Vermögensverwaltungs AG konzipierten wir ein CRM System, welches die spezifischen Geschäftsprozesse genau abbildet. Der Wunsch, die Daten von einigen Excel Files in eine ausgereifte Datenstruktur zu überführen, hat zu einer Webapplikation geführt, welche mittlerweile das Herzstück der Firma bildet - alle Daten werden zentral und einheitlich verwaltet.</p><p>Die Webapplikation bietet, unter anderen, die folgenden Features:</p><ul><li>Erfassungsassistenten</li><li>Datenprüfungen mit Aufgaben-, und Warnsystem</li><li>SIX API-Anbindung (Aktienkurse)</li><li>Verwaltung von Anlagen</li><li>Reports</li></ul>"
-      />
-    </div>
+    <Stage
+      modifiers={['gradient', 'case']}
+      image={{
+        src: stageImg,
+        alt: 'Cosmopolitan Logo auf einem Laptop',
+      }}
+      title={<h1>Digitale Geschäftsprozesse als <em>Herzstück</em>.</h1>}
+    >
+      <p>
+        Für die Cosmopolitan Vermögensverwaltungs AG konzipierten wir ein CRM System, welches die spezifischen Geschäftsprozesse genau abbildet. Der
+        Wunsch, die Daten von einigen Excel Files in eine ausgereifte Datenstruktur zu überführen, hat zu einer Webapplikation geführt, welche
+        mittlerweile das Herzstück der Firma bildet - alle Daten werden zentral und einheitlich verwaltet.
+      </p>
+      <p>Die Webapplikation bietet, unter anderen, die folgenden Features:</p>
+      <ul>
+        <li>Erfassungsassistenten</li>
+        <li>Datenprüfungen mit Aufgaben-, und Warnsystem</li>
+        <li>SIX API-Anbindung (Aktienkurse)</li>
+        <li>Verwaltung von Anlagen</li>
+        <li>Reports</li>
+      </ul>
+    </Stage>
 
     <div className="container">
       <Facts title="Insights">

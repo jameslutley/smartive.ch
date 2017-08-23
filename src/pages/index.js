@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Stage from '../components/stage';
 import Teaser from '../components/teaser';
-import { CaseTeaser } from '../components/molecules';
+import { CaseTeaser, Stage } from '../components/molecules';
 import MediumTeasers from '../components/medium-teasers';
 
 import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
@@ -31,16 +30,24 @@ const teasers = [
 
 const Index = ({ data }) =>
   (<div>
-    <div className="stage--left-highlighted stage--landing-page">
-      <Stage
-        image={{
-          src: homeImage,
-          alt: 'Zwei smartive Mitarbeiter bei einer Besprechung',
-        }}
-        title={'Zukunfts­weisende <em>Web­applikationen</em> für anspruchs­volle Unternehmen.'}
-        description="Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die Realisierung zeitgemässer Weblösungen gehört genauso zu unserer Passion, wie die konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden. Gerne begleiten wir Sie von der ersten Idee über die Konzeption bis hin zur Umsetzung."
-      />
-    </div>
+    <Stage
+      modifiers={['landing-page', 'left-highlighted']}
+      image={{
+        src: homeImage,
+        alt: 'Zwei smartive Mitarbeiter bei einer Besprechung',
+      }}
+      title={
+        <h1>
+          Zukunfts­weisende <em>Web­applikationen</em> für anspruchs­volle Unternehmen.
+        </h1>
+      }
+    >
+      <p>
+        Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die Realisierung zeitgemässer Weblösungen gehört genauso zu
+        unserer Passion, wie die konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden. Gerne begleiten wir Sie von der ersten Idee über die
+        Konzeption bis hin zur Umsetzung.
+      </p>
+    </Stage>
     <div className="teaser-list">
       <div className="container">
         <div className="row center-sm left-lg">

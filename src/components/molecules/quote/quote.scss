@@ -1,5 +1,5 @@
-@import "../../colors";
-@import "../../responsive";
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
 
 .quote {
     max-width: 60rem;
@@ -26,7 +26,7 @@
         &:before {
             content: '«';
             margin-left: -1.25rem;
-            
+
             @media #{$large-up} {
                 margin-left: -2rem;
             }
