@@ -11,7 +11,7 @@ const items = [
 ];
 
 const Header = () =>
-  (<Headroom>
+  (<Headroom disableInlineStyles>
     <header className="header">
       <div className="container">
         <div className="row middle-lg">

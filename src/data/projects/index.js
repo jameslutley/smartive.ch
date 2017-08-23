@@ -49,8 +49,8 @@ export default [
     },
   },
   {
-    title: 'Dataviz',
-    category: 'Global Family Business Index',
+    title: 'Global Family Business Index',
+    category: 'Dataviz',
     description:
       '<p>In Zusammenarbeit mit dem <a href="http://www.cfb.unisg.ch/en?sc_lang=de">Center for Family Business, University of St.Gallen (HSG)</a> und <a href="https://familybusiness.ey-vx.com/home/home.aspx">Global Family Business Center of Excellence von Ernst &amp; Young</a> haben wir die 500 grössten Familienunternehmen aufbereitet und ansprechend visualisiert.</p><p><a href="http://familybusinessindex.com/">familybusinessindex.com</a></p>',
     image: {
@@ -59,8 +59,8 @@ export default [
     },
   },
   {
-    title: 'API und Webapplikation',
-    category: 'MATOOL.com',
+    title: 'MATOOL.com',
+    category: 'API und Webapplikation',
     description:
       '<p>MATOOL.com ist eine innovative Plattform für das Suchen und Anbieten von Maschinenkapazitäten. Grundlegende Maschinendaten werden von der Applikation automatisch importiert, aufbereitet und den Usern mittels Google Maps einfach und verständlich präsentiert. Mittels Geo- und Facettensuche sind für den Benutzer interessante Maschinen einfach zu finden. Die Applikation wurden von Beginn an für hohe Skalierbarkeit ausgelegt und kann in einer AWS Cloud betrieben werden.</p><p><a href="https://matool.com/">matool.com</a></p>',
     image: {
@@ -69,8 +69,8 @@ export default [
     },
   },
   {
-    title: 'CMS / Frontend Entwicklung',
-    category: 'Gebäude­versicherung Graubünden',
+    title: 'Gebäude­versicherung Graubünden',
+    category: 'CMS / Frontend Entwicklung',
     description:
       '<p>Der neue Webauftritt der Gebäudeversicherung Graubünden soll der Bevölkerung den Kontakt zur Verwaltung erleichtern. Wichtige Formulare werden den Benutzenden einfach und verständlich via Web zugänglich gemacht und erlauben es so beispielsweise, eine Schadenmeldung online zu erfassen.</p><p><a href="http://gvg.gr.ch/">gvg.gr.ch</a></p>',
     image: {
@@ -79,8 +79,8 @@ export default [
     },
   },
   {
-    title: 'API und Webapplikation',
-    category: 'Migros FAQ',
+    title: 'Migros FAQ',
+    category: 'API und Webapplikation',
     description:
       '<p>Um ihren Kundinnen und Kunden allmögliche Fragen einfach und direkt beantworten zu können, hat die Migros eine FAQ Seite von uns erstellen lassen. Diese bietet eine Volltextsuche sowie eine Kategorisierung der Fragen. Durch starke Suchmaschinenoptimierungen (SEO) sind die Fragen auch bei renommierten Suchmaschinen gut auffindbar.</p><p><a href="https://faq.migros.ch/">faq.migros.ch</a></p>',
     image: {
@@ -89,8 +89,8 @@ export default [
     },
   },
   {
-    title: 'API',
-    category: 'Migipedia',
+    title: 'Migipedia',
+    category: 'API',
     description:
       '<p>Für Migipedia, die neue Community Plattform der Migros, haben wir neben diverser Lithium-Komponenten die Schnittstelle zu Migros-internen Systemen wie der M-Infoline sowie eine Abstraktion der Lithium-API für die Integration in Drittsysteme entwickelt.</p><p><a href="https://www.migipedia.ch/">migipedia.ch</a></p>',
     image: {
@@ -99,8 +99,8 @@ export default [
     },
   },
   {
-    title: 'API und Webapplikation',
-    category: 'Migros Suche',
+    title: 'Migros Suche',
+    category: 'API und Webapplikation',
     description:
       '<p>Für Migros, die grösste Detailhändlerin der Schweiz, haben wir eine zentrale, aggregierte Suche entwickelt. Sie ermöglicht es den Kundinnen und Kunden, Informationen aus verschiedenen von der Migros betriebenen Drittsystemen zielgerecht zu durchsuchen.</p>',
     image: {
@@ -109,8 +109,8 @@ export default [
     },
   },
   {
-    title: 'Dataviz',
-    category: 'Namenskarte',
+    title: 'Namenskarte',
+    category: 'Dataviz',
     description:
       '<p>Alles Müller oder was? Für den «Tages-Anzeiger» entwickelten wir zusammen mit der <a href="http://www.sotomo.ch/">Forschungsstelle Sotomo</a> der Universität Zürich eine interaktive Karte zur Veranschaulichung der geografischen Auftretenswahrscheinlichkeit von Nachnamen, basierend auf Telefonbucheinträgen.</p><p><a href="http://blog.tagesanzeiger.ch/datenblog/index.php/6859/alles-mueller-oder-was">tagi.ch</a></p>',
     image: {
@@ -119,8 +119,8 @@ export default [
     },
   },
   {
-    title: 'Dataviz',
-    category: 'Einkommen im schweizweiten Vergleich',
+    title: 'Einkommen im schweizweiten Vergleich',
+    category: 'Dataviz',
     description:
       '<p>Wo der Mittelstand prosperiert. Für den «Tages-Anzeiger» entwickelten wir zusammen mit der <a href="http://www.sotomo.ch/">Forschungsstelle Sotomo</a> der Universität Zürich eine interaktive Karte zur Visualisierung der Einkommen im schweizweiten Vergleich.</p><p><a href="http://blog.tagesanzeiger.ch/datenblog/index.php/6683/wo-der-mittelstand-prosperiert">tagi.ch</a></p>',
     image: {
@@ -129,8 +129,8 @@ export default [
     },
   },
   {
-    title: 'Webapplikation',
-    category: 'Kräutergarten',
+    title: 'Kräutergarten',
+    category: 'Webapplikation',
     description:
       '<p>Der Kräutergarten ist eine interaktive Applikation, die es den Kundinnen und Kunden ermöglicht, herauszufinden, für welche Kräuter sie den passenden Standort besitzen und die seinen kulinarischen Vorlieben entsprechen. Unter Verwendung von AngularJS haben wir die Seite für Generation M im responsiven Design kreiert.</p><p><a href="https://generation-m.migros.ch/de/nachhaltig-leben/tipps-tools/kraueter-guide.html">generation-m.migros.ch</a></p>',
     image: {
@@ -139,8 +139,8 @@ export default [
     },
   },
   {
-    title: 'Webapplikation',
-    category: 'Saisontabelle',
+    title: 'Saisontabelle',
+    category: 'Webapplikation',
     description:
       '<p>Für Generation M haben wir eine interaktive Saisontabelle als responsive Applikation, basierend auf AngularJS, erstellt. Für das Design der Applikation zeigt sich <a href="http://www.denkwerk.com/">denkwerk</a> verantwortlich.</p><p><a href="http://www.migros.ch/generation-m/de/essen-und-kochen/gesunde-ernaehrung/saisontabelle.html">generation-m.migros.ch</a></p>',
     image: {
@@ -149,8 +149,8 @@ export default [
     },
   },
   {
-    title: 'Dataviz',
-    category: 'Lebenserwartungs­karte',
+    title: 'Lebenserwartungs­karte',
+    category: 'Dataviz',
     description:
       '<p>Für die «SonntagsZeitung» entwickelten wir zusammen mit der <a href="http://www.sotomo.ch/">Forschungsstelle Sotomo</a> der Universität Zürich eine interaktive Karte, die der Visualisierung der Lebenserwartung im schweizweiten Vergleich dient.</p><p><a href="http://blog.tagesanzeiger.ch/datenblog/index.php/5419/wo-die-schweizer-wie-alt-werden">tagi.ch</a></p>',
     image: {
@@ -159,8 +159,8 @@ export default [
     },
   },
   {
-    title: 'Dataviz',
-    category: 'Unfallkarte',
+    title: 'Unfallkarte',
+    category: 'Dataviz',
     description:
       '<p>Für die «SonntagsZeitung», den «Tages-Anzeiger» und den «Matin Dimanche» entwickelten wir zusammen mit der <a href="http://www.sotomo.ch/">Forschungsstelle Sotomo</a> der Universität Zürich eine Visualisierungskarte der Verkehrsunfälle der Schweiz basierend auf Google Maps.</p>',
     image: {
@@ -169,8 +169,8 @@ export default [
     },
   },
   {
-    title: 'Dataviz',
-    category: 'Steuerrechner',
+    title: 'Steuerrechner',
+    category: 'Dataviz',
     description:
       '<p>Für den «Tages-Anzeiger» entwickelten wir zusammen mit der <a href="http://www.sotomo.ch/">Forschungsstelle Sotomo</a> der Universität Zürich einen interaktiven Steuerrechner zur Visualisierung der Steuerbelastung im schweizweiten Vergleich.</p><p><a href="http://blog.tagesanzeiger.ch/datenblog/index.php/4117/wo-liegt-ihr-steuerparadies">tagi.ch</a></p>',
     image: {

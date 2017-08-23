@@ -15,7 +15,7 @@ const TeamMember = ({ image, job, name, description, education, links }) =>
       <p>
         {links
           .map(link =>
-            (<a href={link.url}>
+            (<a key={link.url} href={link.url}>
               {link.text}
             </a>),
           )
@@ -33,7 +33,7 @@ TeamMember.propTypes = {
   name: PropTypes.string.isRequired,
   education: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  links: PropTypes.string.isRequired,
+  links: PropTypes.arrayOf(PropTypes.shape({ url: PropTypes.string.isRequired, text: PropTypes.string.isRequired })).isRequired,
 };
 
 export default TeamMember;

@@ -6,14 +6,19 @@
   border-bottom: .125rem solid $smartive-blue;
 }
 
-@media #{$large-up} {
-  h1 > .emphasis, h1 > em {
-    border-bottom: .25rem solid $smartive-blue;
-    font-style: normal;
+h1 > .emphasis,
+h1 > em {
+  border-bottom: .125rem solid $smartive-blue;
+  font-style: normal;
+
+  @media #{$small-up} {
+    border-bottom-width: .25rem;
   }
 
-  h2 > .emphasis, h2 > em {
-    border-bottom: .2rem solid $smartive-blue;
-    font-style: normal;
-  }
+}
+
+h2 > .emphasis,
+h2 > em {
+  border-bottom: .2rem solid $smartive-blue;
+  font-style: normal;
 }

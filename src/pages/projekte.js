@@ -40,7 +40,7 @@ export default () =>
       <div className="container">
         <div className="row">
           {projects.map(project =>
-            <Project title={project.title} category={project.category} description={project.description} image={project.image} caseUrl={project.caseUrl} />,
+            <Project key={project.title} title={project.title} category={project.category} description={project.description} image={project.image} caseUrl={project.caseUrl} />,
           )}
         </div>
       </div>

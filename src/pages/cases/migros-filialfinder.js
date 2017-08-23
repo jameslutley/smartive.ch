@@ -83,7 +83,7 @@ const MigrosFilialfinderCase = () =>
       h3="sondern Finden!"
       gfx={
         <picture className="is-highlighted">
-          <img src={frontendImg} alt="Frontend Screenshot" clasName="case-img" />
+          <img src={frontendImg} alt="Frontend Screenshot" className="case-img" />
         </picture>
       }
     >
