@@ -1,13 +1,26 @@
-# gatsby-starter-default
-The default Gatsby starter
+# smartive.ch
+The yet-again-all-new smartive.ch website is built with [Gatsby](https://www.gatsbyjs.org) - a «Blazing-fast static site generator for React».
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+## Structure
+If you look at it at this stage, I'm terribly sorry. At one point it shall be refactored into beautiful components, but now it's kind of a mess from
+writing the code in pug-templates with wintersmith, somehow migrating them to Next.js and finally to Gatsby. Also the content lies in static `data.js`
+files and should at one point be moved to Gatsby's GraphQL approach.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+## Setup
+
 ```
-gatsby new gatsby-example-site
+yarn
 ```
 
-## Deploy
+;-)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## Development
+
+```
+yarn develop
+```
+
+This runs gatsby in dev mode on `localhost:8000` with HMR, etc.
+
+## Deployment
+A CI pipeline has been setup on GitLab. `develop` is automatically deployed to beta.smartive.ch and `master` to smartive.ch.
