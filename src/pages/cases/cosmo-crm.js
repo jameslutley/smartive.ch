@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Stage from '../../components/stage';
-import { CaseBlock } from '../../components/molecules';
+import { CaseBlock, Facts } from '../../components/molecules';
 
 import stageImg from '../../data/cases/cosmo-crm/case-study-cosmo.png';
 import featureImg from '../../data/cases/cosmo-crm/feature-stack-cosmo.png';
@@ -21,22 +21,17 @@ const CosmoCrmCase = () =>
     </div>
 
     <div className="container">
-      <div className="facts">
-        <div className="row">
-          <div className="facts-body col-xs-12">
-            <h2>Insights</h2>
-            <ul>
-              <li>Intelligente Suche</li>
-              <li>Dynamische Kundenprofile</li>
-              <li>Über 20 digitale Geschäftsprozesse</li>
-              <li>Automatisierung von komplexen und zeitintensiven Abläufen</li>
-              <li>Aufbereitung von Reports mittels Mausklick</li>
-              <li>Datenexporte für Drittsysteme</li>
-              <li>Automatisierte Datenkontrollen</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <Facts title="Insights">
+        <ul>
+          <li>Intelligente Suche</li>
+          <li>Dynamische Kundenprofile</li>
+          <li>Über 20 digitale Geschäftsprozesse</li>
+          <li>Automatisierung von komplexen und zeitintensiven Abläufen</li>
+          <li>Aufbereitung von Reports mittels Mausklick</li>
+          <li>Datenexporte für Drittsysteme</li>
+          <li>Automatisierte Datenkontrollen</li>
+        </ul>
+      </Facts>
     </div>
 
     <CaseBlock

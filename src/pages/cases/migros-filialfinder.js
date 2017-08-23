@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Stage from '../../components/stage';
-import { CaseBlock } from '../../components/molecules/case-block';
+import { CaseBlock, Facts } from '../../components/molecules';
 
 import stageImg from '../../data/cases/migros-filialfinder/case-study-migros.png';
 import aggregationImg from '../../data/cases/migros-filialfinder/data-aggregation.png';
@@ -22,21 +22,16 @@ const MigrosFilialfinderCase = () =>
     </div>
 
     <div className="container">
-      <div className="facts">
-        <div className="row">
-          <div className="facts-body col-xs-12">
-            <h2>Facts & Figures</h2>
-            <ul>
-              <li>Mehr als 1000 Filialen aggregiert aus 3 unterschiedlichen Datensystemen</li>
-              <li>
-                {'Suche in < 0.2 Sekunden'}
-              </li>
-              <li>Über 33 Filtermöglichkeiten in 3 Sprachen</li>
-              <li>5 angebundene APIs</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <Facts title="Facts & Figures">
+        <ul>
+          <li>Mehr als 1000 Filialen aggregiert aus 3 unterschiedlichen Datensystemen</li>
+          <li>
+            {'Suche in < 0.2 Sekunden'}
+          </li>
+          <li>Über 33 Filtermöglichkeiten in 3 Sprachen</li>
+          <li>5 angebundene APIs</li>
+        </ul>
+      </Facts>
     </div>
 
     <CaseBlock

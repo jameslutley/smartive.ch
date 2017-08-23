@@ -2,7 +2,7 @@ import React from 'react';
 import Stage from '../components/stage';
 import Project from '../components/project';
 import projects from '../data/projects';
-import CaseTeaser from '../components/case-teaser';
+import { CaseTeaser } from '../components/molecules';
 import { getSiteHeader } from '../layouts';
 
 import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
@@ -33,14 +33,22 @@ export default () =>
         src: caseImage,
         alt: 'Auf der Suche nach der nächsten Migros Filiale',
       }}
-      body="<p>Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt.</p>"
-    />
+    >
+      <p>Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt.</p>
+    </CaseTeaser>
 
     <div className="project-list">
       <div className="container">
         <div className="row">
           {projects.map(project =>
-            <Project key={project.title} title={project.title} category={project.category} description={project.description} image={project.image} caseUrl={project.caseUrl} />,
+            (<Project
+              key={project.title}
+              title={project.title}
+              category={project.category}
+              description={project.description}
+              image={project.image}
+              caseUrl={project.caseUrl}
+            />),
           )}
         </div>
       </div>
