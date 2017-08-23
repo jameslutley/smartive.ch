@@ -9,3 +9,7 @@ export { Facts } from './facts';
 export { Map } from './map';
 
 export { Member } from './member';
+
+export { Navigation } from './navigation';
+
+export { Project } from './project';

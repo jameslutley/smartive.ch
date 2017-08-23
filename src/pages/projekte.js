@@ -1,8 +1,7 @@
 import React from 'react';
 import Stage from '../components/stage';
-import Project from '../components/project';
 import projects from '../data/projects';
-import { CaseTeaser } from '../components/molecules';
+import { CaseTeaser, Project } from '../components/molecules';
 import { getSiteHeader } from '../layouts';
 
 import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
@@ -41,14 +40,9 @@ export default () =>
       <div className="container">
         <div className="row">
           {projects.map(project =>
-            (<Project
-              key={project.title}
-              title={project.title}
-              category={project.category}
-              description={project.description}
-              image={project.image}
-              caseUrl={project.caseUrl}
-            />),
+            (<Project key={project.title} title={project.title} category={project.category} image={project.image} caseUrl={project.caseUrl}>
+              <p dangerouslySetInnerHTML={{ __html: project.description }} />
+            </Project>),
           )}
         </div>
       </div>

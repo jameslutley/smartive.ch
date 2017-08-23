@@ -1,4 +1,5 @@
-@import "../../colors";
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
 
 .navigation {
   @media #{$large-up} {

@@ -48,7 +48,7 @@ CaseTeaser.propTypes = {
   title: PropTypes.string.isRequired,
   subline: PropTypes.string.isRequired,
   children: PropTypes.element.isRequired,
-  allProjects: PropTypes.boolean,
+  allProjects: PropTypes.bool,
 };
 
 CaseTeaser.defaultProps = {
