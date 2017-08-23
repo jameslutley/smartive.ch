@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import Link from 'gatsby-Link';
 
+import './button.scss';
+
 export const Button = ({ url, text, isPrimary }) =>
   (<Link to={url} className={`button${isPrimary ? ' button--primary' : ''}`}>
     {text}
