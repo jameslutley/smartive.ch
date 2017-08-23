@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 
+import { Button } from '../atoms';
+
 const Project = ({ image, category, title, description, caseUrl }) =>
   (<div className="project col-xs-12 col-md-6">
     <img className="project__img" src={image.src} alt={image.alt} />
@@ -12,11 +14,7 @@ const Project = ({ image, category, title, description, caseUrl }) =>
 
       <div dangerouslySetInnerHTML={{ __html: description }} />
 
-      {caseUrl
-        ? <Link to={caseUrl} className="button button--primary">
-            Case anschauen
-          </Link>
-        : null}
+      {caseUrl ? <Button url={caseUrl} text="Case anschauen" isPrimary /> : null}
     </div>
   </div>);
 Project.propTypes = {

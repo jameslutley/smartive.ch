@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import { Button } from './atoms';
 
 const CaseTeaser = ({ url, title, subline, image, body, showAllLink }) => (
   <div className="case-teaser">
@@ -25,8 +26,8 @@ const CaseTeaser = ({ url, title, subline, image, body, showAllLink }) => (
               dangerouslySetInnerHTML={{ __html: body }}
             />
             <div className="case-teaser__actions">
-              <Link to={url} className="button button--primary">Case anschauen</Link>
-              {showAllLink ? <Link to="/projekte" className="button">alle unsere Arbeiten</Link> : null}
+              <Button url={url} text="Case anschauen" isPrimary />
+              {showAllLink ? <Button url="/projekte" text="alle unsere Arbeiten" /> : null}
             </div>
           </div>
         </div>
