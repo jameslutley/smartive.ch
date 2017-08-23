@@ -2,17 +2,11 @@
   "extends": [
     "airbnb"
   ],
-  "plugins": [
-    "react",
-    "jsx-a11y",
-    "import"
-  ],
   "settings": {
     "import/core-modules": []
   },
   "rules": {
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
-    "max-len": ["error", 150]
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
   },
   "env": {
     "browser": true
