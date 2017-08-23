@@ -63,6 +63,25 @@ http {
     autoindex off;
     charset off;
 
+    location /team {
+        return 301 /agentur;
+    }
+    location /arbeiten {
+        return 301 /projekte;
+    }
+    location /does {
+        return 301 /projekte;
+    }
+    location /is {
+        return 301 /agentur;
+    }
+    location /helps {
+        return 301 /kontakt;
+    }
+    location = /cases {
+        return 301 /projekte;
+    }
+
     location ~* \.($CACHE_IGNORE)$ {
         add_header Cache-Control "no-store";
         expires    off;
