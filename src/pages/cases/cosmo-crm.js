@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Stage from '../../components/stage';
-import CaseBlock from '../../components/case-block';
+import { CaseBlock } from '../../components/molecules';
 
 import stageImg from '../../data/cases/cosmo-crm/case-study-cosmo.png';
 import featureImg from '../../data/cases/cosmo-crm/feature-stack-cosmo.png';
@@ -40,9 +40,9 @@ const CosmoCrmCase = () =>
     </div>
 
     <CaseBlock
-      h2="Digitale Transformation"
-      h3="Automatisierung"
-      gfx={
+      title="Digitale Transformation"
+      subtitle="Automatisierung"
+      graphic={
         <picture>
           <img className="case-img" src={featureImg} alt="Funktionalitäten der CRM Applikation" />
         </picture>
@@ -57,9 +57,9 @@ const CosmoCrmCase = () =>
     </CaseBlock>
 
     <CaseBlock
-      h2="Technologische Übersicht"
-      h3="Lose Koppelung"
-      gfx={
+      title="Technologische Übersicht"
+      subtitle="Lose Koppelung"
+      graphic={
         <picture>
           <img src={techImg} alt="Performance Vergleich zwischen alt und neu" className="case-img" />{' '}
         </picture>

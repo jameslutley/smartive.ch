@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Stage from '../../components/stage';
-import CaseBlock from '../../components/case-block';
+import { CaseBlock } from '../../components/molecules/case-block';
 
 import stageImg from '../../data/cases/migros-filialfinder/case-study-migros.png';
 import aggregationImg from '../../data/cases/migros-filialfinder/data-aggregation.png';
@@ -40,9 +40,9 @@ const MigrosFilialfinderCase = () =>
     </div>
 
     <CaseBlock
-      h2="Welche Daten?"
-      h3="Aggregation und Vereinheitlichung im Backend!"
-      gfx={
+      title="Welche Daten?"
+      subtitle="Aggregation und Vereinheitlichung im Backend!"
+      graphic={
         <picture>
           <img className="case-img" src={aggregationImg} alt="Infografik Datenaggregation" />
         </picture>
@@ -60,9 +60,9 @@ const MigrosFilialfinderCase = () =>
     </CaseBlock>
 
     <CaseBlock
-      h2="Warum Elasticsearch und Varnish?"
-      h3="Dynamik und Speed - das Beste von beiden!"
-      gfx={
+      title="Warum Elasticsearch und Varnish?"
+      subtitle="Dynamik und Speed - das Beste von beiden!"
+      graphic={
         <picture>
           <img src={chartImg} alt="Performance Vergleich zwischen alt und neu" className="case-img" />{' '}
         </picture>
@@ -79,9 +79,9 @@ const MigrosFilialfinderCase = () =>
     </CaseBlock>
 
     <CaseBlock
-      h2="Nicht nur Suchen"
-      h3="sondern Finden!"
-      gfx={
+      title="Nicht nur Suchen"
+      subtitle="sondern Finden!"
+      graphic={
         <picture className="is-highlighted">
           <img src={frontendImg} alt="Frontend Screenshot" className="case-img" />
         </picture>
