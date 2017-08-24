@@ -43,6 +43,7 @@ CaseTeaser.propTypes = {
     alt: PropTypes.string,
   }).isRequired,
   body: PropTypes.string.isRequired,
+  showAllLink: PropTypes.bool.isRequired,
 };
 
 export default CaseTeaser;

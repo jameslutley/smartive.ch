@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100%" viewBox="0 0 340 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>api</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="25" cy="26.3157895" rx="25" ry="26.3157895"></ellipse>
+        <ellipse id="path-3" cx="21" cy="22.1052632" rx="20.5" ry="21.5789474"></ellipse>
+        <ellipse id="path-5" cx="15" cy="15.7894737" rx="15" ry="15.7894737"></ellipse>
+        <ellipse id="path-7" cx="15" cy="15.7894737" rx="15" ry="15.7894737"></ellipse>
+        <ellipse id="path-9" cx="15" cy="15.7894737" rx="15" ry="15.7894737"></ellipse>
+        <ellipse id="path-11" cx="15" cy="15.7894737" rx="15" ry="15.7894737"></ellipse>
+        <rect id="path-13" x="0" y="0" width="50" height="52.6315789" rx="8"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="api" transform="translate(6.000000, 0.000000)">
+            <g id="Page-1">
+                <g id="Leistungen-Var-Copy-4">
+                    <g id="API">
+                        <g id="Group-5">
+                            <g id="API">
+                                <path d="M169,95.7894737 L183,183.157895" id="Path-7" stroke="#DCE9F1" stroke-width="6"></path>
+                                <path d="M168,95.7894737 L94,142.105263" id="Path-13" stroke="#DCE9F1" stroke-width="6"></path>
+                                <path d="M146,80 L70,45.2631579" id="Path-14" stroke="#DCE9F1" stroke-width="6"></path>
+                                <path d="M169,94.7368421 L302,143.157895" id="Path-15" stroke="#DCE9F1" stroke-width="6"></path>
+                                <g id="Oval-6-Clipped" transform="translate(279.000000, 116.842105)">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <g id="path-1"></g>
+                                    <g id="Oval-6" mask="url(#mask-2)" stroke="#009FE3" stroke-width="8" fill="#A0DCF0">
+                                        <ellipse id="path-1" cx="25" cy="26.3157895" rx="25" ry="26.3157895"></ellipse>
+                                    </g>
+                                </g>
+                                <path d="M235,45.2631579 L170,95.7894737" id="Path-18" stroke="#DCE9F1" stroke-width="6"></path>
+                                <path d="M154,13.6842105 L169,93.6842105" id="Path-19" stroke="#DCE9F1" stroke-width="6"></path>
+                                <path d="M30.6220689,107.757358 L167.555114,91.5789474" id="Path-16" stroke="#C7D7E2" stroke-dasharray="4,4"></path>
+                                <g id="Oval-2-Clipped" transform="translate(49.000000, 22.105263)">
+                                    <mask id="mask-4" fill="white">
+                                        <use xlink:href="#path-3"></use>
+                                    </mask>
+                                    <g id="path-3"></g>
+                                    <g id="Oval-2" mask="url(#mask-4)" stroke="#C7D7E2" stroke-width="8" fill="#DCE9F1">
+                                        <ellipse id="path-3" cx="21" cy="22.1052632" rx="20.5" ry="21.5789474"></ellipse>
+                                    </g>
+                                </g>
+                                <g id="Oval-2-Copy-Clipped" transform="translate(139.000000, 0.000000)">
+                                    <mask id="mask-6" fill="white">
+                                        <use xlink:href="#path-5"></use>
+                                    </mask>
+                                    <g id="path-5"></g>
+                                    <g id="Oval-2-Copy" mask="url(#mask-6)" stroke="#009FE3" stroke-width="8" fill="#A0DCF0">
+                                        <ellipse id="path-5" cx="15" cy="15.7894737" rx="15" ry="15.7894737"></ellipse>
+                                    </g>
+                                </g>
+                                <g id="Oval-2-Copy-2-Clipped" transform="translate(78.000000, 126.315789)">
+                                    <mask id="mask-8" fill="white">
+                                        <use xlink:href="#path-7"></use>
+                                    </mask>
+                                    <g id="path-7"></g>
+                                    <g id="Oval-2-Copy-2" mask="url(#mask-8)" stroke="#83A6BF" stroke-width="8" fill="#ACC7D5">
+                                        <ellipse id="path-7" cx="15" cy="15.7894737" rx="15" ry="15.7894737"></ellipse>
+                                    </g>
+                                </g>
+                                <ellipse id="Oval-2-Copy-5" stroke="#C7D7E2" stroke-dasharray="4,4" cx="15" cy="109.473684" rx="15" ry="15.7894737"></ellipse>
+                                <g id="Oval-2-Copy-3-Clipped" transform="translate(169.000000, 168.421053)">
+                                    <mask id="mask-10" fill="white">
+                                        <use xlink:href="#path-9"></use>
+                                    </mask>
+                                    <g id="path-9"></g>
+                                    <g id="Oval-2-Copy-3" mask="url(#mask-10)" stroke="#C7D7E2" stroke-width="8" fill="#DCE9F1">
+                                        <ellipse id="path-9" cx="15" cy="15.7894737" rx="15" ry="15.7894737"></ellipse>
+                                    </g>
+                                </g>
+                                <g id="Oval-2-Copy-4-Clipped" transform="translate(220.000000, 28.421053)">
+                                    <mask id="mask-12" fill="white">
+                                        <use xlink:href="#path-11"></use>
+                                    </mask>
+                                    <g id="path-11"></g>
+                                    <g id="Oval-2-Copy-4" mask="url(#mask-12)" stroke="#83A6BF" stroke-width="8" fill="#ACC7D5">
+                                        <ellipse id="path-11" cx="15" cy="15.7894737" rx="15" ry="15.7894737"></ellipse>
+                                    </g>
+                                </g>
+                                <g id="Rectangle-3-Clipped" transform="translate(144.000000, 66.315789)">
+                                    <mask id="mask-14" fill="white">
+                                        <use xlink:href="#path-13"></use>
+                                    </mask>
+                                    <g id="path-13"></g>
+                                    <g id="Rectangle-3" mask="url(#mask-14)" stroke="#C7D7E2" stroke-width="16" fill="#FFFFFF">
+                                        <rect id="path-13" x="0" y="0" width="50" height="52.6315789" rx="8"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

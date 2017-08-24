@@ -5,6 +5,7 @@ import Headroom from 'react-headroom';
 import logo from '../../data/smartive.svg';
 
 const items = [
+  { href: '/leistungen', label: 'Leistungen' },
   { href: '/projekte', label: 'Projekte' },
   { href: '/agentur', label: 'Agentur' },
   { href: '/kontakt', label: 'Kontakt' },
