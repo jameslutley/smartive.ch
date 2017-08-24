@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "smartive AG <hello@smartive.ch>",
   "dependencies": {
+    "axios": "^0.16.2",
     "flexboxgrid": "^6.3.1",
     "gatsby": "^1.8.1",
     "gatsby-link": "^1.6.8",
