@@ -2,10 +2,12 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Headroom from 'react-headroom';
 
-import { Navigation } from '../molecules';
-import logo from '../../data/smartive.svg';
+import { Navigation } from '../../molecules';
+import logo from '../../../data/smartive.svg';
 
-const Header = () =>
+import './header.scss';
+
+export const Header = () =>
   (<Headroom disableInlineStyles>
     <header className="header">
       <div className="container">
