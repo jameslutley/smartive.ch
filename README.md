@@ -1,10 +1,21 @@
 # smartive.ch
-The yet-again-all-new smartive.ch website is built with [Gatsby](https://www.gatsbyjs.org) - a «Blazing-fast static site generator for React».
+The yet-again-all-new smartive.ch website is built with [Gatsby](https://www.gatsbyjs.org)
+- a «Blazing-fast static site generator for React».
 
 ## Structure
-If you look at it at this stage, I'm terribly sorry. At one point it shall be refactored into beautiful components, but now it's kind of a mess from
-writing the code in pug-templates with wintersmith, somehow migrating them to Next.js and finally to Gatsby. Also the content lies in static `data.js`
-files and should at one point be moved to Gatsby's GraphQL approach.
+All files in `pages` represent, surprise surprise, pages/routes on smartive.ch.
+They compose different components into full pages. So if you want to change
+something, that's probably where you start looking.
+
+These components live inside `components` and are structured by an Atomic Design
+approach, which all of us should know by now. It might not be perfect, but it's
+at least something. Relevant SASS files are placed inside the component's folder,
+but there are also some old, legacy SCSS files in `scss`.
+
+## Content
+Currently most of the stuff is statically exported from the `data` directory,
+but if someone wants to do this properly with GraphQL, they're more than welcome
+to do so.
 
 ## Setup
 
@@ -12,7 +23,7 @@ files and should at one point be moved to Gatsby's GraphQL approach.
 yarn
 ```
 
-;-)
+;)
 
 ## Development
 
