@@ -1,24 +1,10 @@
 {
   "name": "gatsby-source-medium",
+  "version": "1.0.0",
   "description": "Gatsby source plugin for building websites using Medium as a data source",
-  "main": "index.js",
   "author": "Robert Vogt <robert@smartive.ch>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.16.2",
-    "crypto": "^0.0.3",
-    "node-fetch": "^1.7.1"
-  },
-  "scripts": {
-    "build": "babel src --out-dir .",
-    "test": "jest test",
-    "watch": "babel -w src --out-dir ."
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-jest": "^20.0.3",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-es2015": "^6.24.1",
-    "jest": "^20.0.4"
+    "axios": "^0.16.2"
   }
 }
