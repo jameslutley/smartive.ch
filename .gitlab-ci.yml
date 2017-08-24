@@ -19,13 +19,25 @@ build:static_files:
       - public/
     expire_in: 1 day
 
-deploy:docker_cloud:
+deploy:docker_cloud:beta:
   stage: deploy
   image: docker:latest
   script:
     - docker build --tag smrtv/docker-image:ch-smartive-stage .
     - docker login -u $DOCKER_ID_USER -p $DOCKER_ID_PASSWORD
     - docker push smrtv/docker-image:ch-smartive-stage
+  only:
+    - develop
+  dependencies:
+    - build:static_files
+
+deploy:docker_cloud:prod:
+  stage: deploy
+  image: docker:latest
+  script:
+    - docker build --tag smrtv/docker-image:ch-smartive-stage .
+    - docker login -u $DOCKER_ID_USER -p $DOCKER_ID_PASSWORD
+    - docker push smrtv/docker-image:ch-smartive-prod
   only:
     - master
   dependencies:
