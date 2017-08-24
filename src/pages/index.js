@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CaseTeaser, Stage, Teaser } from '../components/molecules';
-import { TeaserList } from '../components/organisms';
-import MediumTeasers from '../components/medium-teasers';
+import { MediumTeaser, TeaserList } from '../components/organisms';
 
 import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
 import homeImage from '../data/home.jpg';
@@ -76,7 +75,7 @@ const Index = ({ data }) =>
       </p>
     </CaseTeaser>
 
-    <MediumTeasers posts={data.allMediumPost} users={data.allMediumUser} />
+    <MediumTeaser posts={data.allMediumPost} users={data.allMediumUser} />
   </div>);
 Index.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,

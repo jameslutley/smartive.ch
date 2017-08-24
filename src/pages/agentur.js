@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MediumTeasers from '../components/medium-teasers';
+
 import { getSiteHeader } from '../layouts';
 import { Member, Stage } from '../components/molecules';
+import { MediumTeaser } from '../components/organisms';
 
 import team from '../data/team';
 
@@ -27,8 +28,9 @@ const Agency = ({ data }) =>
       }
     >
       <p>
-        Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie
-        dabei, sich und Ihr Unternehmen weiterzuentwickeln.
+        Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes
+        Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen
+        weiterzuentwickeln.
       </p>
     </Stage>
 
@@ -52,7 +54,7 @@ const Agency = ({ data }) =>
       </div>
     </div>
 
-    <MediumTeasers posts={data.allMediumPost} users={data.allMediumUser} />
+    <MediumTeaser posts={data.allMediumPost} users={data.allMediumUser} />
   </div>);
 
 Agency.propTypes = {
