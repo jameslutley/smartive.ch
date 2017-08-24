@@ -18,25 +18,25 @@ module.exports = {
         trackingId: 'UA-35082807-1',
       },
     },
-    {
-      resolve: 'gatsby-plugin-sitemap',
-      options: {
-        query: `{
-      site {
-        siteMetadata {
-          siteUrl
-        }
-      }
-      allSitePage(filter: {path: {regex: "/^(?!.*?404).*/"}}) {
-        edges {
-          node {
-            path
-          }
-        }
-      }
-    }
-`,
-      },
-    },
+//     {
+//       resolve: 'gatsby-plugin-sitemap',
+//       options: {
+//         query: `{
+//       site {
+//         siteMetadata {
+//           siteUrl
+//         }
+//       }
+//       allSitePage(filter: {path: {regex: "/^(?!.*?404).*/"}}) {
+//         edges {
+//           node {
+//             path
+//           }
+//         }
+//       }
+//     }
+// `,
+//       },
+//     },
   ],
 };
