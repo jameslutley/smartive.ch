@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'smartive',
+    siteUrl: 'https://smartive.ch',
   },
   plugins: [
     {
@@ -11,5 +12,31 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-35082807-1',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `{
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+      allSitePage(filter: {path: {regex: "/^(?!.*?404).*/"}}) {
+        edges {
+          node {
+            path
+          }
+        }
+      }
+    }
+`,
+      },
+    },
   ],
 };
