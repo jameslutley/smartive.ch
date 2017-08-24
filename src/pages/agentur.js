@@ -68,6 +68,7 @@ export const pageQuery = graphql`
     allMediumPost(limit: 2, sort: { fields: [createdAt], order: DESC }) {
       edges {
         node {
+          id
           title
           creatorId
           slug

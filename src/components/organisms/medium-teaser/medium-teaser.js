@@ -11,6 +11,7 @@ const getMediumPostData = (post, mediumUsers) => ({
   subline: mediumUsers.edges.filter(edge => edge.node.id === post.creatorId)[0].node.name,
   title: post.title,
   lead: post.virtuals.subtitle,
+  id: post.id,
 });
 
 export const MediumTeaser = ({ posts, users }) =>
@@ -26,6 +27,7 @@ export const MediumTeaser = ({ posts, users }) =>
               title={post.title}
               lead={post.lead}
               img={index === 0 ? post.backgroundImage : null}
+              key={post.id}
             />
           );
         })}

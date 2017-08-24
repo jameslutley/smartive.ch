@@ -16,19 +16,21 @@ const CosmoCrmCase = () =>
       }}
       title={<h1>Digitale Geschäftsprozesse als <em>Herzstück</em>.</h1>}
     >
-      <p>
-        Für die Cosmopolitan Vermögensverwaltungs AG konzipierten wir ein CRM System, welches die spezifischen Geschäftsprozesse genau abbildet. Der
-        Wunsch, die Daten von einigen Excel Files in eine ausgereifte Datenstruktur zu überführen, hat zu einer Webapplikation geführt, welche
-        mittlerweile das Herzstück der Firma bildet - alle Daten werden zentral und einheitlich verwaltet.
-      </p>
-      <p>Die Webapplikation bietet, unter anderen, die folgenden Features:</p>
-      <ul>
-        <li>Erfassungsassistenten</li>
-        <li>Datenprüfungen mit Aufgaben-, und Warnsystem</li>
-        <li>SIX API-Anbindung (Aktienkurse)</li>
-        <li>Verwaltung von Anlagen</li>
-        <li>Reports</li>
-      </ul>
+      <div>
+        <p>
+          Für die Cosmopolitan Vermögensverwaltungs AG konzipierten wir ein CRM System, welches die spezifischen Geschäftsprozesse genau abbildet. Der
+          Wunsch, die Daten von einigen Excel Files in eine ausgereifte Datenstruktur zu überführen, hat zu einer Webapplikation geführt, welche
+          mittlerweile das Herzstück der Firma bildet - alle Daten werden zentral und einheitlich verwaltet.
+        </p>
+        <p>Die Webapplikation bietet, unter anderen, die folgenden Features:</p>
+        <ul>
+          <li>Erfassungsassistenten</li>
+          <li>Datenprüfungen mit Aufgaben-, und Warnsystem</li>
+          <li>SIX API-Anbindung (Aktienkurse)</li>
+          <li>Verwaltung von Anlagen</li>
+          <li>Reports</li>
+        </ul>
+      </div>
     </Stage>
 
     <div className="container">

@@ -21,19 +21,21 @@ const MigrosFilialfinderCase = () =>
         </h1>
       }
     >
-      <p>
-        Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt. Ziel war es, eine
-        responsive und ansprechende Lösung zu entwickeln, die es dem Kunden erlaubt, zu Hause oder unterwegs für ihn interessante Informationen zu
-        Filialen in der Nähe schnell und einfach abrufen zu können.
-      </p>
-      <ul>
-        <li>Elasticsearch</li>
-        <li>Varnish</li>
-        <li>SEO</li>
-        <li>BackboneJS</li>
-        <li>Symfony2</li>
-        <li>Google Maps mit Clustering</li>
-      </ul>
+      <div>
+        <p>
+          Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt. Ziel war es, eine
+          responsive und ansprechende Lösung zu entwickeln, die es dem Kunden erlaubt, zu Hause oder unterwegs für ihn interessante Informationen zu
+          Filialen in der Nähe schnell und einfach abrufen zu können.
+        </p>
+        <ul>
+          <li>Elasticsearch</li>
+          <li>Varnish</li>
+          <li>SEO</li>
+          <li>BackboneJS</li>
+          <li>Symfony2</li>
+          <li>Google Maps mit Clustering</li>
+        </ul>
+      </div>
     </Stage>
 
     <div className="container">
@@ -58,15 +60,17 @@ const MigrosFilialfinderCase = () =>
         </picture>
       }
     >
-      <p>
-        Um die Daten und Suchabfragen zu optimieren werden die Filialdaten über eine performante Web-Schnittstelle, basierend auf Elasticsearch und
-        Node.js, ausgeliefert.
-      </p>
-      <p>
-        Die Schnittstelle aggregiert und vereinheitlicht Filialdaten aus dem SAP, der Migros-API und weiteren Drittsystemen. Alle relevanten
-        Informationen einer Filiale sind dadurch durchsuchbar und die Resultate können effizient über eine JSON REST Schnittstelle ausgespielt werden.
-        Um die Latenz der Schnittstelle zu verringern wird die API über Varnish gecached und ausgeliefert.
-      </p>
+      <div>
+        <p>
+          Um die Daten und Suchabfragen zu optimieren werden die Filialdaten über eine performante Web-Schnittstelle, basierend auf Elasticsearch und
+          Node.js, ausgeliefert.
+        </p>
+        <p>
+          Die Schnittstelle aggregiert und vereinheitlicht Filialdaten aus dem SAP, der Migros-API und weiteren Drittsystemen. Alle relevanten
+          Informationen einer Filiale sind dadurch durchsuchbar und die Resultate können effizient über eine JSON REST Schnittstelle ausgespielt werden.
+          Um die Latenz der Schnittstelle zu verringern wird die API über Varnish gecached und ausgeliefert.
+        </p>
+      </div>
     </CaseBlock>
 
     <CaseBlock
