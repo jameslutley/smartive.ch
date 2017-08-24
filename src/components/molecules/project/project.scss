@@ -1,0 +1,45 @@
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
+
+.project {
+  margin-bottom: $padding-sm-v;
+
+  @media #{$small-up} {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media #{$large-up} {
+    &:nth-child(odd) {
+      padding-right: 2.5rem !important;
+    }
+
+    &:nth-child(even) {
+      padding-left: 2.5rem !important;
+    }
+
+    margin: 0 0 5rem;
+  }
+
+  .project__img {
+    width: 100%;
+    margin: 0 0 .5rem;
+  }
+
+  .project__text {
+    margin: 0 2rem;
+
+    @media #{$medium-up} {
+      margin: 0;
+    }
+
+    @media #{$xlarge-up} {
+      margin: 0 2rem;
+    }
+
+    h2 small {
+      color: $smartive-blue;
+    }
+  }
+}

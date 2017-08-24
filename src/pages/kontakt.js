@@ -1,33 +1,33 @@
 import React from 'react';
-import ContactBox from '../components/contact-box';
-import Map, { baseUrl } from '../components/map';
+import { Map, Stage } from '../components/molecules';
 import { getSiteHeader } from '../layouts';
+
+import contactImage from '../data/contact.jpg';
 
 export default function Contact() {
   return (
     <div>
-      { getSiteHeader('Kontakt', 'Nehmen Sie mit uns Kontakt auf - wir freuen uns auf Ihren Anruf!') }
-      <div className="stage--left-highlighted stage--contact stage--gradient">
-        <ContactBox />
-      </div>
-      <div className="map">
-        <div className="container">
-          <div className="col-xs-12">
-            <div className="map__container">
-              <Map
-                googleMapURL={baseUrl}
-                loadingElement={<div style={{ height: '100%' }} />}
-                containerElement={<div style={{ height: '100%' }} />}
-                mapElement={
-                  <div className="map__container--loading">
-                    <span className="map__container__loading-text">Karte wird geladen...</span>
-                  </div>
-                }
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      {getSiteHeader('Kontakt', 'Nehmen Sie mit uns Kontakt auf - wir freuen uns auf Ihren Anruf!')}
+
+      <Stage
+        modifiers={['left-highlighted', 'contact', 'gradient']}
+        image={{
+          src: contactImage,
+          alt: 'smartive Büro bei Regen',
+        }}
+      >
+        <h1>
+          <p>
+            smartive AG<br />Schiffbaustrasse 7<br />CH-8005 Zürich
+          </p>
+          <p>
+            <a href="mailto:hello@smartive.ch">hello@smartive.ch</a>
+            <br />
+            <a href="tel:0041445335953">+41 44 533 59 53</a>
+          </p>
+        </h1>
+      </Stage>
+      <Map />
     </div>
   );
 }

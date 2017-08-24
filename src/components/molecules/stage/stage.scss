@@ -1,0 +1,133 @@
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
+
+.stage--gradient > .stage .container--stage   {
+  background: linear-gradient(to bottom, $light-blue 0%, $white 100%);
+}
+
+.stage--gradient .stage {
+  @media #{$large-up} {
+    margin-bottom: 7.5rem;
+  }
+}
+
+.stage--left-highlighted > .stage .img-container {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, .1);
+  line-height: 0;
+
+  @media #{$xlarge-up} {
+    box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, .1);
+    margin-left: -2.5rem;
+  }
+}
+
+.stage--contact {
+  .stage__description p {
+    font-size: 2rem;
+    font-weight: 800;
+    font-size: 1.9rem;
+    line-height: 1.25em;
+    font-weight: 800;
+    word-wrap: break-word;
+
+    @media #{$medium-up} {
+      font-size: 3rem;
+    }
+
+    a {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $smartive-dark-blue;
+      border-bottom: .25rem solid $smartive-blue;
+
+      @media #{$medium-up} {
+        font-size: 3rem;
+      }
+    }
+
+  }
+}
+
+.stage--right-highlighted > .stage {
+  .stage__col--body {
+    @media #{$large-up} {
+      order: -1;
+    }
+  }
+
+  .img-container {
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, .1);
+    line-height: 0;
+
+    @media #{$xlarge-up} {
+      box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, .1);
+      margin-right: -1.5rem;
+    }
+  }
+}
+
+.stage--case h1 {
+  margin-top: -2rem;
+}
+
+.stage {
+  @media #{$large-up} {
+    margin-bottom: 0;
+  }
+
+  .container--stage {
+    background: $white;
+
+    @media #{$xlarge-up} {
+      background: $light-blue;
+      padding: 7.5rem 0;
+    }
+  }
+
+  .img-container {
+    img {
+      width: 100%;
+    }
+  }
+
+  .stage__text {
+    @include box-padding();
+
+    @media #{$xlarge-up} {
+      padding-top: 0;
+    }
+
+    h1 {
+      small { color: $smartive-blue; }
+      @media #{$xlarge-up} {
+        margin-top: 0;
+      }
+
+      @media #{$large-up} {
+        margin: 0 0 2rem;
+      }
+    }
+
+    ul li {
+      margin: 0 2rem;
+      list-style-type: none;
+
+      @media #{large-up} {
+        margin: 0 2.5rem 0 3.5rem;
+      }
+
+      &:before {
+        position: absolute;
+        content: '—';
+        color: $smartive-blue;
+        text-indent: -2rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .stage__description {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+}

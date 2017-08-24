@@ -1,0 +1,53 @@
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
+
+.quote {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-left: 2rem;
+
+    p {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+
+        @media #{$large-up} {
+            font-size: 4.5rem;
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            color: $smartive-blue;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        &:before {
+            content: '«';
+            margin-left: -1.25rem;
+
+            @media #{$large-up} {
+                margin-left: -2rem;
+            }
+        }
+
+        &:after {
+            content: '»';
+        }
+    }
+
+    cite {
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: normal;
+
+        .quote__author {
+            margin-right: .5rem;
+
+            &:after {
+                content: ',';
+            }
+        }
+    }
+}

@@ -1,7 +1,8 @@
 @import "colors";
 @import "responsive";
 
-html, body {
+html,
+body {
   position: relative;
   padding: 0;
   margin: 0;
@@ -76,10 +77,10 @@ figure {
   }
 
   .ct-series-a .ct-bar {
-    stroke: #D6D6D6;
+    stroke: #d6d6d6;
 
     &:hover {
-      stroke: darken(#D6D6D6, 10%);
+      stroke: darken(#d6d6d6, 10%);
     }
   }
   .ct-series-b .ct-bar {
@@ -151,4 +152,25 @@ figure {
       font-weight: 300;
     }
   }
+}
+
+.emphasis {
+  font-style: normal;
+  border-bottom: .125rem solid $smartive-blue;
+}
+
+h1 > .emphasis,
+h1 > em {
+  border-bottom: .125rem solid $smartive-blue;
+  font-style: normal;
+
+  @media #{$small-up} {
+    border-bottom-width: .25rem;
+  }
+}
+
+h2 > .emphasis,
+h2 > em {
+  border-bottom: .2rem solid $smartive-blue;
+  font-style: normal;
 }

@@ -1,0 +1,43 @@
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
+
+.teaser {
+  background: linear-gradient(to bottom, $light-blue 0%, $white 100%);
+
+  @media #{$small-up} {
+    &:last-of-type {
+      background: none;
+    }
+  }
+
+  @media #{$large-up} {
+    &:last-of-type {
+      background: linear-gradient(to bottom, $light-blue 0%, $white 100%);
+    }
+  }
+
+  .teaser__content {
+    padding: 2.5rem 2rem;
+
+    @media #{$large-up} {
+      padding: 5rem 3rem;
+    }
+  }
+
+
+  h2 {
+    small {
+      color: $smartive-blue;
+    }
+  }
+
+  @media #{$large-up} {
+    &:first-of-type {
+      border-right: .5rem solid $white;
+    }
+
+    &:last-of-type {
+      border-left: .5rem solid $white;
+    }
+  }
+}

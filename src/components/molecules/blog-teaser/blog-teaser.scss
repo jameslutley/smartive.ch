@@ -1,0 +1,119 @@
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
+
+.blog-teaser {
+  background: $smartive-blue;
+  position: relative;
+
+  &__content {
+    display: block;
+    padding: 2rem 2.5rem;
+
+    @media #{$large-up} {
+      padding: 5rem 4.5rem;
+    }
+
+    @media #{$xlarge-up} {
+      padding: 8rem 6rem;
+    }
+  }
+
+  h2 {
+    color: $white;
+
+    small {
+      color: $smartive-dark-blue;
+    }
+  }
+
+  p {
+    color: $white;
+    display: none;
+
+    @media #{$large-up} {
+      display: block;
+    }
+  }
+
+  &.blog-teaser--image {
+    background-size: cover;
+    background-position: center center;
+    min-height: 21.5rem;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba($smartive-dark-blue, .7);
+      transition: background .2s;
+    }
+
+    &:hover {
+      &:before {
+        background: rgba($smartive-dark-blue, .6);
+      }
+    }
+
+    .blog-teaser__link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      border: none;
+
+      .blog-teaser__content {
+        @media #{$xlarge-up} {
+          padding: 7rem 6rem 8rem;
+        }
+      }
+
+      &:hover {
+        border: none;
+
+        // h2 {
+        //   transform: translate3d(0, -2rem, 0);
+
+        //   small {
+        //     transform: translate3d(0, 0, 0);
+        //   }
+        // }
+
+        // h2 {
+        //   small {
+        //     opacity: 1;
+        //   }
+        // }
+      }
+    }
+
+    .blog-teaser__content {
+      h2 small {
+        color: $smartive-blue;
+      }
+    }
+
+    // .blog-teaser__content {
+    //   h2,
+    //   h2 small {
+    //     transition: opacity 0.35s, transform 0.35s;
+    //   }
+
+    //   h2 {
+    //     transform: translate3d(0, 0rem, 0);
+
+    //     small {
+    //       color: $smartive-blue;
+    //       transform: translate3d(0, 100%, 0);
+    //       opacity: 0;
+    //     }
+    //   }
+    // }
+  }
+}

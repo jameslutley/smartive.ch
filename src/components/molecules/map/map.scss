@@ -1,0 +1,47 @@
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
+
+.map {
+  margin-top: $padding-lg-v*4;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    min-height: 48rem;
+    background: $light-blue;
+
+    &--loading {
+      height: 100%;
+      display: flex;
+      position: absolute;
+      width: 100%;
+      justify-content: center;
+      align-content: center;
+    }
+
+    &__loading-text {
+      color: $smartive-blue;
+      font-weight: 300;
+      align-self: center;
+    }
+  }
+
+  &__schema-template {
+    display: none;
+  }
+
+  .map-info {
+    font-family: $font-stack;
+    font-size: 400;
+    font-size: 1rem;
+
+    &--name {
+      font-weight: 900;
+      display: block;
+    }
+
+    &--street {
+      display: block;
+    }
+  }
+}

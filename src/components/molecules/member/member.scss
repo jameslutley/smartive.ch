@@ -1,0 +1,36 @@
+@import "../../../scss/colors";
+@import "../../../scss/responsive";
+
+.member {
+  margin-bottom: $padding-sm-v;
+
+  &.col-lg-4 {
+    @media #{$large-up} {
+      /* Sorry about that, but flexgrid */
+      padding: 0 ($padding-lg-h/2) !important;
+    }
+  }
+
+  &__portrait {
+    max-width: 100%;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: $smartive-dark-blue;
+    margin: .5rem 0;
+  }
+
+  &__text {
+    padding: .5rem 2rem 1rem;
+
+    @media #{$large-up} {
+      padding: .5rem 0 1rem;
+    }
+
+    h2 small {
+      color: $smartive-blue;
+    }
+  }
+}

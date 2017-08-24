@@ -1,0 +1,80 @@
+@import '../../../scss/colors';
+@import '../../../scss/responsive';
+
+.headroom--scrolled {
+  .header {
+    @media #{$large-up} {
+      padding: 0;
+    }
+  }
+}
+
+.header {
+  background-color: $white;
+  padding: .5rem 0;
+  position: relative;
+  top: 0;
+  transition: padding .2s ease-in-out;
+  width: 100%;
+  z-index: 100;
+
+  @media #{$large-up} {
+    box-shadow: none;
+    padding: 2.5rem 0;
+    position: fixed;
+  }
+
+  .header__logo-suffix {
+    color: $smartive-blue;
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-left: 1rem;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    display: inline-block;
+    border: none;
+    line-height: 1;
+
+    img {
+      height: 2rem;
+      width: auto;
+    }
+  }
+
+  .header__col--logo {
+    text-align: center;
+    @media #{$large-up} {
+      text-align: left;
+    }
+  }
+
+  .header__col--navigation {
+    position: fixed;
+    background: $white;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    box-shadow: 0 -.25rem 2rem 0.25rem rgba(0, 0, 0, 0.1);
+    @media #{$large-up} {
+      display: block;
+      position: relative;
+      box-shadow: none;
+    }
+
+    .button.button--primary {
+      max-width: 50%;
+      margin: 0.75rem auto;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      @media #{$large-up} {
+        max-width: 100%;
+        margin: 0;
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+      }
+    }
+  }
+}
