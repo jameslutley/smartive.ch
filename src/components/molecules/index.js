@@ -16,6 +16,8 @@ export { Project } from './project';
 
 export { Quote } from './quote';
 
+export { Service } from './service';
+
 export { Stage } from './stage';
 
 export { Teaser } from './teaser';
