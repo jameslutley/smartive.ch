@@ -94,7 +94,7 @@ http {
         expires +$CACHE_PUBLIC_EXPIRATION;
     }
 
-    rewrite ^(.+)/+$ $1 permanent;
+    rewrite ^(.+)/+\$ \$1 permanent;
 
     try_files \$uri \$uri/index.html =404;
   }
