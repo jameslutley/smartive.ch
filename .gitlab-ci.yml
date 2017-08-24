@@ -35,7 +35,7 @@ deploy:docker_cloud:prod:
   stage: deploy
   image: docker:latest
   script:
-    - docker build --tag smrtv/docker-image:ch-smartive-stage .
+    - docker build --tag smrtv/docker-image:ch-smartive-prod .
     - docker login -u $DOCKER_ID_USER -p $DOCKER_ID_PASSWORD
     - docker push smrtv/docker-image:ch-smartive-prod
   only:
