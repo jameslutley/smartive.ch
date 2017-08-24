@@ -17,3 +17,5 @@ export { Project } from './project';
 export { Quote } from './quote';
 
 export { Stage } from './stage';
+
+export { Teaser } from './teaser';

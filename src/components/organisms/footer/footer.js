@@ -1,6 +1,8 @@
 import React from 'react';
 
-import logo from '../../data/smartive.svg';
+import logo from '../../../data/smartive.svg';
+
+import './footer.scss';
 
 import githubImgSrc from './github.svg';
 import twitterImgSrc from './twitter.svg';
@@ -20,7 +22,7 @@ const items = [
   },
 ];
 
-export default () =>
+export const Footer = () =>
   (<footer className="footer">
     <div className="container">
       <div className="footer__row--logo row">
@@ -58,3 +60,5 @@ export default () =>
       </div>
     </div>
   </footer>);
+
+export default Footer;

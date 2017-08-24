@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import 'flexboxgrid/dist/flexboxgrid.min.css';
 
 import Header from '../components/header';
-import Footer from '../components/footer';
+import { Footer } from '../components/organisms';
 
 import '../scss/main.scss';
 

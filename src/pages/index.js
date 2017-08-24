@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Teaser from '../components/teaser';
-import { CaseTeaser, Stage } from '../components/molecules';
+import { CaseTeaser, Stage, Teaser } from '../components/molecules';
 import MediumTeasers from '../components/medium-teasers';
 
 import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
@@ -51,7 +50,13 @@ const Index = ({ data }) =>
     <div className="teaser-list">
       <div className="container">
         <div className="row center-sm left-lg">
-          {teasers.map(teaser => <Teaser key={teaser.title} title={teaser.title} subline={teaser.subline} description={teaser.description} />)}
+          {teasers.map(teaser =>
+            (<Teaser key={teaser.title} title={teaser.title} subline={teaser.subline}>
+              <p>
+                {teaser.description}
+              </p>
+            </Teaser>),
+          )}
         </div>
       </div>
     </div>
