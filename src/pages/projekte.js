@@ -21,7 +21,7 @@ export default () =>
       }}
       title={
         <h1>
-          Let's <em>do</em> it!
+          { 'Let\'s' } <em>do</em> it!
         </h1>
       }
     >
