@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CaseTeaser, Stage, Teaser } from '../components/molecules';
+import { TeaserList } from '../components/organisms';
 import MediumTeasers from '../components/medium-teasers';
 
 import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
@@ -42,24 +43,23 @@ const Index = ({ data }) =>
       }
     >
       <p>
-        Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die Realisierung zeitgemässer Weblösungen gehört genauso zu
-        unserer Passion, wie die konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden. Gerne begleiten wir Sie von der ersten Idee über die
-        Konzeption bis hin zur Umsetzung.
+        Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die
+        Realisierung zeitgemässer Weblösungen gehört genauso zu unserer Passion, wie die
+        konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden. Gerne begleiten wir Sie von
+        der ersten Idee über die Konzeption bis hin zur Umsetzung.
       </p>
     </Stage>
-    <div className="teaser-list">
-      <div className="container">
-        <div className="row center-sm left-lg">
-          {teasers.map(teaser =>
-            (<Teaser key={teaser.title} title={teaser.title} subline={teaser.subline}>
-              <p>
-                {teaser.description}
-              </p>
-            </Teaser>),
-          )}
-        </div>
-      </div>
-    </div>
+
+    <TeaserList>
+      {teasers.map(teaser =>
+        (<Teaser key={teaser.title} title={teaser.title} subline={teaser.subline}>
+          <p>
+            {teaser.description}
+          </p>
+        </Teaser>),
+      )}
+    </TeaserList>
+
     <CaseTeaser
       url="/cases/migros-filialfinder"
       title="Auf der Suche nach der nächsten Migros Filiale"
@@ -70,7 +70,10 @@ const Index = ({ data }) =>
       }}
       allProjects
     >
-      <p>Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt.</p>
+      <p>
+        Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den
+        neuen Filialfinder umgesetzt.
+      </p>
     </CaseTeaser>
 
     <MediumTeasers posts={data.allMediumPost} users={data.allMediumUser} />
