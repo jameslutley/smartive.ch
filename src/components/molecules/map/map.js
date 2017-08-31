@@ -10,7 +10,12 @@ export const baseUrl = 'https://maps.googleapis.com/maps/api/js?v=3.27&libraries
 
 const AsyncGoogleMaps = withScriptjs(
   withGoogleMap(props =>
-    (<GoogleMap ref={props.onMapLoad} defaultZoom={15} defaultCenter={{ lat: 47.3884069, lng: 8.5181335 }}>
+    (<GoogleMap
+      ref={props.onMapLoad}
+      defaultZoom={15}
+      defaultCenter={{ lat: 47.3884069, lng: 8.5181335 }}
+      defaultOptions={{ scrollwheel: false }}
+    >
       <Marker icon={mapMarkerImage} position={{ lat: 47.3884069, lng: 8.5181335 }}>
         <InfoWindow>
           <div className="map__schema" itemScope itemType="https://schema.org/ContactPage">
