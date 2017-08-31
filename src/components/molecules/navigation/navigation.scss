@@ -23,12 +23,12 @@
       flex-grow: 1;
       padding: 0;
 
-      &:last-of-type a {
-        margin-right: 0;
-      }
-
       @media #{$large-up} {
         text-align: right;
+
+        &:last-of-type a {
+          margin-right: 0;
+        }
       }
     }
 
