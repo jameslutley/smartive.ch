@@ -96,14 +96,15 @@
       @media #{$large-up} {
         position: absolute;
         display: inline;
-        height: 2.25rem;
-        width: 2.25rem;
+        height: 1.5rem;
+        width: 1.5rem;
         margin-right: 0;
-        background-image: url('./medium-monogram-100x100.png');
-        background-size: 65%, contain;
+        background-image: url('./medium-monogram.svg');
+        background-size: 100%, contain;
         background-repeat: no-repeat;
         background-position: right center;
-        top: 0;
+        top: .4rem;
+        right: -.5rem;
         content: ' ';
       }
     }
