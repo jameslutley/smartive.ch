@@ -9,8 +9,8 @@ import mapMarkerImage from './map-marker.png';
 export const baseUrl = 'https://maps.googleapis.com/maps/api/js?v=3.27&libraries=places,geometry&key=AIzaSyD1q6iI1c4XGqrbKGBPZfO2bnRTRVaRg04';
 
 const AsyncGoogleMaps = withScriptjs(
-  withGoogleMap(props =>
-    (<GoogleMap
+  withGoogleMap(props => (
+    <GoogleMap
       ref={props.onMapLoad}
       defaultZoom={15}
       defaultCenter={{ lat: 47.3884069, lng: 8.5181335 }}
