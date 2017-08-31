@@ -4,13 +4,19 @@ import { withGoogleMap, GoogleMap, Marker, InfoWindow } from 'react-google-maps'
 import withScriptjs from 'react-google-maps/lib/async/withScriptjs';
 
 import './map.scss';
+import mapMarkerImage from './map-marker.png';
 
 export const baseUrl = 'https://maps.googleapis.com/maps/api/js?v=3.27&libraries=places,geometry&key=AIzaSyD1q6iI1c4XGqrbKGBPZfO2bnRTRVaRg04';
 
 const AsyncGoogleMaps = withScriptjs(
-  withGoogleMap(props =>
-    (<GoogleMap ref={props.onMapLoad} defaultZoom={15} defaultCenter={{ lat: 47.3884069, lng: 8.5181335 }}>
-      <Marker icon="https://smartive.ch/assets/images/map-marker.png" position={{ lat: 47.3884069, lng: 8.5181335 }}>
+  withGoogleMap(props => (
+    <GoogleMap
+      ref={props.onMapLoad}
+      defaultZoom={15}
+      defaultCenter={{ lat: 47.3884069, lng: 8.5181335 }}
+      defaultOptions={{ scrollwheel: false }}
+    >
+      <Marker icon={mapMarkerImage} position={{ lat: 47.3884069, lng: 8.5181335 }}>
         <InfoWindow>
           <div className="map__schema" itemScope itemType="https://schema.org/ContactPage">
             <p className="map-info">
@@ -21,9 +27,11 @@ const AsyncGoogleMaps = withScriptjs(
                 <span className="map-info--street" itemProp="streetAddress">
                   Schiffbaustrasse 7
                 </span>
+                CH-
                 <span className="map-info--zip" itemProp="postalCode">
                   8005
                 </span>
+                &nbsp;
                 <span className="map-info--locality" itemProp="addressLocality">
                   Zürich
                 </span>

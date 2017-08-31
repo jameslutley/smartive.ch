@@ -6,12 +6,22 @@
     "import/core-modules": []
   },
   "rules": {
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "max-len": [
+      "warn", 120, 2, {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ]
   },
   "env": {
     "browser": true
   },
   "globals": {
-    "graphql": false
+    "graphql": false,
+    "WebFont": false
   }
 }

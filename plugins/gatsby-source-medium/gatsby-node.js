@@ -1,56 +1,48 @@
-'use strict';
+const axios = require('axios');
+const crypto = require('crypto');
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+const fetch = (username) => {
+  const url = `https://medium.com/${username}/latest?format=json`;
+  return axios.get(url);
+};
 
-var _crypto = require('crypto');
+const prefix = '])}while(1);</x>';
 
-var _crypto2 = _interopRequireDefault(_crypto);
+const strip = payload => payload.replace(prefix, '');
 
-var _medium = require('./medium');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.sourceNodes = async function (_ref, _ref2) {
-  var boundActionCreators = _ref.boundActionCreators;
-  var username = _ref2.username;
-  var createNode = boundActionCreators.createNode;
+exports.sourceNodes = async ({ boundActionCreators }, { username }) => {
+  const { createNode } = boundActionCreators;
 
   try {
-    var _Array$prototype;
+    const result = await fetch(username);
+    const json = JSON.parse(strip(result.data));
 
-    var response = await (0, _medium.fetchLatestByUser)(username);
-    var textBody = await response.text();
-    var json = JSON.parse((0, _medium.removeXSSIPrefix)(textBody));
+    const { posts } = json.payload;
+    const collectionKeys = Object.keys(json.payload.references.Collection);
+    const userKeys = Object.keys(json.payload.references.User);
 
-    var posts = json.payload.posts;
+    const importableResources = [
+      posts,
+      collectionKeys.map(key => json.payload.references.Collection[key]),
+      userKeys.map(key => json.payload.references.User[key]),
+    ];
 
-    var collectionKeys = Object.keys(json.payload.references.Collection);
-    var userKeys = Object.keys(json.payload.references.User);
+    const resources = Array.prototype.concat(...importableResources);
+    resources.map((resource) => {
+      const digest = crypto.createHash('md5').update(JSON.stringify(resource)).digest('hex');
 
-    var importableResources = [posts, collectionKeys.map(function (key) {
-      return json.payload.references.Collection[key];
-    }), userKeys.map(function (key) {
-      return json.payload.references.User[key];
-    })];
-
-    var resources = (_Array$prototype = Array.prototype).concat.apply(_Array$prototype, importableResources);
-
-    resources.map(function (resource) {
-      var digest = _crypto2.default.createHash('md5').update(JSON.stringify(resource)).digest('hex');
-
-      var node = _extends({}, resource, {
+      const node = Object.assign(resource, {
         id: resource.id ? resource.id : resource.userId,
         parent: '__SOURCE__',
         children: [],
         internal: {
           mediaType: 'application/json',
-          type: 'Medium' + resource.type,
+          type: `Medium${resource.type}`,
           content: resource.title ? resource.title : resource.name,
-          contentDigest: digest
-        }
+          contentDigest: digest,
+        },
       });
 
-      console.info('=> Creating ' + resource.type + ' ' + (resource.title ? resource.title : resource.name));
       createNode(node);
     });
   } catch (error) {

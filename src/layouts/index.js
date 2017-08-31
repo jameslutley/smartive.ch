@@ -81,6 +81,9 @@ class Index extends React.Component {
 }
 Index.propTypes = {
   children: PropTypes.func.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
 };
 
 export default Index;
