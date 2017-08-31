@@ -27,9 +27,11 @@ const AsyncGoogleMaps = withScriptjs(
                 <span className="map-info--street" itemProp="streetAddress">
                   Schiffbaustrasse 7
                 </span>
+                CH-
                 <span className="map-info--zip" itemProp="postalCode">
                   8005
                 </span>
+                &nbsp;
                 <span className="map-info--locality" itemProp="addressLocality">
                   Zürich
                 </span>
