@@ -1,18 +1,19 @@
 exports.onCreatePage = ({ page, boundActionCreators }) => {
   const { createPage, deletePage } = boundActionCreators;
+  const newPage = Object.assign({}, page);
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     // Remove trailing slash
-    const oldPath = page.path;
+    const oldPath = newPage.path;
     // Removing '/' would result in a path that's
     // an empty string which is invalid
-    page.path = page.path === '/' ? page.path : page.path.replace(/\/$/, '');
-    if (page.path !== oldPath) {
+    newPage.path = newPage.path === '/' ? newPage.path : newPage.path.replace(/\/$/, '');
+    if (newPage.path !== oldPath) {
       // Remove the old page
       deletePage({ path: oldPath });
 
       // Add the new page
-      createPage(page);
+      createPage(newPage);
     }
 
     resolve();
