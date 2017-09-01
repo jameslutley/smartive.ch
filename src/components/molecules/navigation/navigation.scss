@@ -61,10 +61,8 @@
   }
 
   .navigation-item--medium {
-    border-bottom: none !important;
-
     &:hover {
-      border-bottom: none !important;
+      border-bottom: .125rem solid $smartive-dark-blue;
     }
 
     &:after {
@@ -74,13 +72,12 @@
         position: absolute;
         display: inline;
         height: 1.5rem;
-        width: 1.5rem;
+        width: 2rem;
         background-image: url('./medium-monogram.svg');
-        background-size: 100%, contain;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: right center;
         top: .4rem;
-        margin-left: 0.5rem;
         content: ' ';
         opacity: 0;
         transition: opacity .2s ease-in-out;
