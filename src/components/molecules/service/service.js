@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Button } from '../../atoms/button';
+import { Button } from '../../atoms';
 
 import './service.scss';
 
