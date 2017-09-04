@@ -32,7 +32,7 @@ const GSA = ({ data }) => {
           </p>
           <p>
             Dieses Setup unterstützt auch die Verwendung von dynamischen JavaScript-Inhalten, mehrsprachigen Webseiten
-            und die Verwendung von Mikroformaten.
+            und die Erkennung von Mikroformaten wie beispielsweise JSON-LD.
           </p>
         </div>
       </Stage>
@@ -40,7 +40,7 @@ const GSA = ({ data }) => {
       <div className="container">
         <TextBlock>
           <p>
-            Eine qualitativ hochwertige All-in-One Lösung, wie von Google zur Verfügung gestellt, ist schwer zu finden.
+            Eine qualitativ hochwertige All-in-One Lösung, wie sie Google bisher angeboten hatte, ist schwer zu finden.
             <strong> Apache Nutch</strong> spielt mit <strong>Elasticsearch</strong> sehr gut zusammen und bietet eine
             gleichwertige Alternative zu Google.
           </p>
