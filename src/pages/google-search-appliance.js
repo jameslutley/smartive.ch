@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import { Button, TextBlock } from '../components/atoms';
 import { BlogTeaser, Stage } from '../components/molecules';
-// import { MediumTeaser } from '../components/organisms';
 
 import stageImage from '../data/laptop-sitzsack.jpg';
 
