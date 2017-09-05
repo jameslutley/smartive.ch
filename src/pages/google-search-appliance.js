@@ -26,9 +26,9 @@ const GSA = ({ data }) => {
       >
         <div>
           <p>
-            Google stellt die Suchdienste GSA und GSS ein. Daher machten wir uns für unsere Kunden auf die Suche nach
-            einer Alternative. Dabei entschieden wir uns für eine Auswahl an Open Source Tools für die Datenbeschaffung,
-            die Indizierung der Daten und die Suche an sich.
+            Google stellt die Suchdienste Google Search Appliance (GSA) und Google Site Search (GSS) ein. Daher machten
+            wir uns für unsere Kunden auf die Suche nach einer Alternative. Dabei entschieden wir uns für eine Auswahl
+            an Open Source Tools für die Datenbeschaffung, die Indizierung der Daten und die Suche an sich.
           </p>
           <p>
             Dieses Setup unterstützt auch die Verwendung von dynamischen JavaScript-Inhalten, mehrsprachigen Webseiten
@@ -41,15 +41,17 @@ const GSA = ({ data }) => {
         <TextBlock>
           <p>
             Eine qualitativ hochwertige All-in-One Lösung, wie sie Google bisher angeboten hatte, ist schwer zu finden.
-            <strong> Apache Nutch</strong> spielt mit <strong>Elasticsearch</strong> sehr gut zusammen und bietet eine
-            gleichwertige Alternative zu Google.
+            Es existieren zahlreiche Tools zur Suche und Indexierung von Webseiten. Mit <strong>Apache Nutch</strong>{' '}
+            als bewährtem Crawler zur Indexierung im Zusammenspiel mit <strong>Elasticsearch</strong> zur Volltextsuche
+            haben wir zwei Open Source Systeme mit weiter Verbreitung gefunden, welche gut harmonieren und somit eine
+            nahezu gleichwertige Alternative zur Google Suche bieten.
           </p>
         </TextBlock>
         <TextBlock>
           <p>
             Mit diesen Technologien werden Webseiten-Inhalte effizient gelesen, gespeichert und durchsucht. Von Google
-            bekannte Funktionen wie «Meinten Sie ...?», Inhaltsunterscheidung nach Sprache oder auch Metadaten können
-            einfach erreicht werden.
+            bekannte Funktionen wie «Meinten Sie ...?», Inhaltsunterscheidung nach Sprache oder auch Metadaten wie
+            Social Media Bilder und Seitenbeschreibungen können einfach erreicht werden.
           </p>
         </TextBlock>
         <TextBlock>
