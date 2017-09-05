@@ -5,8 +5,6 @@ import { getSiteHeader } from '../layouts';
 import { Member, Stage } from '../components/molecules';
 import { MediumTeaser } from '../components/organisms';
 
-import team from '../data/team';
-
 import teamStageSrc from '../data/team/thilo-peter-meeting.jpg';
 
 const Agency = ({ data }) =>
@@ -36,21 +34,21 @@ const Agency = ({ data }) =>
 
     <div className="container">
       <div className="row">
-        {team.map(member =>
+        {data.allMembersJson.edges.map(({ node }) =>
           (<Member
-            key={member.name}
-            name={member.name}
-            job={member.job}
+            key={node.name}
+            name={node.name}
+            job={node.job}
             image={{
-              src: member.img,
-              alt: member.name,
+              src: node.img.childImageSharp.original.src,
+              alt: node.name,
             }}
-            education={member.education}
-            links={member.links}
+            education={node.education}
+            links={node.links}
           >
-            <p dangerouslySetInnerHTML={{ __html: member.description }} />
+            <p dangerouslySetInnerHTML={{ __html: node.description }} />
           </Member>),
-        )}
+          )}
       </div>
     </div>
 
@@ -79,6 +77,27 @@ export const pageQuery = graphql`
             previewImage {
               imageId
             }
+          }
+        }
+      }
+    }
+    allMembersJson {
+      edges {
+        node {
+          img {
+            childImageSharp {
+              original {
+                src
+              }
+            }
+          }
+          job
+          name
+          education
+          description
+          links {
+            text
+            url
           }
         }
       }

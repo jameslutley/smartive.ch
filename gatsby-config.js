@@ -5,6 +5,16 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `team`,
+        path: `${__dirname}/src/data/team/`,
+      },
+    },
+    'gatsby-transformer-json',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
       resolve: 'gatsby-source-medium',
       options: {
         username: 'smartive',
