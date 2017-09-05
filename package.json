@@ -33,7 +33,7 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-jest": "^21.0.0",
-    "enzyme-to-json": "^1.5.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-airbnb-base": "^11.3.2",
