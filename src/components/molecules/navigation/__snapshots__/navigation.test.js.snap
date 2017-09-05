@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation renders correctly 1`] = `
+<nav
+  className="navigation"
+>
+  <ul>
+    <li>
+      <GatsbyLink
+        activeClassName="is-active"
+        to="/leistungen"
+      >
+        Leistungen
+      </GatsbyLink>
+    </li>
+    <li>
+      <GatsbyLink
+        activeClassName="is-active"
+        to="/projekte"
+      >
+        Projekte
+      </GatsbyLink>
+    </li>
+    <li>
+      <GatsbyLink
+        activeClassName="is-active"
+        to="/agentur"
+      >
+        Agentur
+      </GatsbyLink>
+    </li>
+    <li>
+      <GatsbyLink
+        activeClassName="is-active"
+        to="/kontakt"
+      >
+        Kontakt
+      </GatsbyLink>
+    </li>
+    <li>
+      <a
+        className="navigation-item--medium"
+        href="https://blog.smartive.ch"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Blog
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

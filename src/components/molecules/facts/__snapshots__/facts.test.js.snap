@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Facts renders correctly 1`] = `
+<div
+  className="facts"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="facts-body col-xs-12"
+    >
+      <h2>
+        Title
+      </h2>
+      <p>
+        Content
+      </p>
+    </div>
+  </div>
+</div>
+`;
