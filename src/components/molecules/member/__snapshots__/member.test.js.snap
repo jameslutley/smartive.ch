@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Member renders with links 1`] = `
+<div
+  className="member col-xs-12 col-md-6 col-lg-4"
+>
+  <img
+    alt="Example"
+    className="member__portrait"
+    src="image.jpg"
+  />
+  <div
+    className="member__text"
+  >
+    <h2>
+      <small>
+        Bazzer
+      </small>
+       
+      Foo Bar
+    </h2>
+    <h3>
+      Funny dude
+    </h3>
+    <p>
+      Content
+    </p>
+    <p>
+      
+      , 
+      <a
+        href="/foo"
+      >
+        Foo
+      </a>
+      , 
+      <a
+        href="/bar"
+      >
+        Bar
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Member renders without links 1`] = `
+<div
+  className="member col-xs-12 col-md-6 col-lg-4"
+>
+  <img
+    alt="Example"
+    className="member__portrait"
+    src="image.jpg"
+  />
+  <div
+    className="member__text"
+  >
+    <h2>
+      <small>
+        Bazzer
+      </small>
+       
+      Foo Bar
+    </h2>
+    <h3>
+      Funny dude
+    </h3>
+    <p>
+      Content
+    </p>
+    <p>
+      
+    </p>
+  </div>
+</div>
+`;

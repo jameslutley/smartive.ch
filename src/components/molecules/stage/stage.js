@@ -42,9 +42,6 @@ Stage.propTypes = {
 Stage.defaultProps = {
   modifiers: [],
   title: null,
-  isHighlighted: false,
-  left: false,
-  modifier: null,
   children: null,
 };
 

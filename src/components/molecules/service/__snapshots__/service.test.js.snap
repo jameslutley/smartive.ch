@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Service renders correctly 1`] = `
+<div
+  className="service col-xs-12 col-lg-6"
+>
+  <div
+    className="service__content"
+  >
+    <div
+      className="service__image"
+    >
+      <img
+        alt="Example"
+        src="example.jpg"
+      />
+    </div>
+    <h2>
+      <small
+        className="service__catchline"
+      >
+        Catchline
+      </small>
+      Title
+    </h2>
+    <p
+      className="service__lead"
+    >
+      
+    </p>
+    <div
+      className="service__body"
+    >
+      <p>
+        Content
+      </p>
+    </div>
+    <div
+      className="service__actions"
+    >
+      <Button
+        hasBorder={true}
+        isPrimary={false}
+        isWhite={true}
+        text="alle Projekte"
+        url="/projekte"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Service renders correctly 2`] = `
+<div
+  className="service col-xs-12 col-lg-6"
+>
+  <div
+    className="service__content"
+  >
+    <div
+      className="service__image"
+    >
+      <img
+        alt="Example"
+        src="example.jpg"
+      />
+    </div>
+    <h2>
+      <small
+        className="service__catchline"
+      >
+        Catchline
+      </small>
+      Title
+    </h2>
+    <p
+      className="service__lead"
+    >
+      
+    </p>
+    <div
+      className="service__body"
+    >
+      <p>
+        Content
+      </p>
+    </div>
+    <div
+      className="service__actions"
+    >
+      <Button
+        hasBorder={false}
+        isPrimary={true}
+        isWhite={false}
+        text="Case Link to Case"
+        url="/case"
+      />
+      <Button
+        hasBorder={true}
+        isPrimary={false}
+        isWhite={true}
+        text="alle Projekte"
+        url="/projekte"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Service renders correctly with lead 1`] = `
+<div
+  className="service col-xs-12 col-lg-6"
+>
+  <div
+    className="service__content"
+  >
+    <div
+      className="service__image"
+    >
+      <img
+        alt="Example"
+        src="example.jpg"
+      />
+    </div>
+    <h2>
+      <small
+        className="service__catchline"
+      >
+        Catchline
+      </small>
+      Title
+    </h2>
+    <p
+      className="service__lead"
+    >
+      Longer Lead Text
+    </p>
+    <div
+      className="service__body"
+    >
+      <p>
+        Content
+      </p>
+    </div>
+    <div
+      className="service__actions"
+    >
+      <Button
+        hasBorder={true}
+        isPrimary={false}
+        isWhite={true}
+        text="alle Projekte"
+        url="/projekte"
+      />
+    </div>
+  </div>
+</div>
+`;

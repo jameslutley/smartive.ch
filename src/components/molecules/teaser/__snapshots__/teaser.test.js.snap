@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Teaser renders correctly with content 1`] = `
+<div
+  className="teaser col-xs-12 col-sm-6 col-lg-4"
+>
+  <div
+    className="teaser__content"
+  >
+    <h2>
+      <small>
+        Subline
+      </small>
+      Title
+    </h2>
+    <div
+      className="description"
+    >
+      <p>
+        Content
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Teaser renders correctly without content 1`] = `
+<div
+  className="teaser col-xs-12 col-sm-6 col-lg-4"
+>
+  <div
+    className="teaser__content"
+  >
+    <h2>
+      <small>
+        Subline
+      </small>
+      Title
+    </h2>
+  </div>
+</div>
+`;

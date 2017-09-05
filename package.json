@@ -27,10 +27,13 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "test": "npm run lint",
+    "test": "jest",
     "lint": "eslint ."
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-jest": "^21.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-airbnb-base": "^11.3.2",
@@ -39,6 +42,14 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.0.0",
     "eslint-plugin-react": "^7.3.0",
-    "prettier": "^1.5.2"
+    "jest": "^21.0.1",
+    "jest-css-modules": "^1.1.0",
+    "prettier": "^1.5.2",
+    "react-test-renderer": "^15.6.1"
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/jest-css-modules"
+    }
   }
 }

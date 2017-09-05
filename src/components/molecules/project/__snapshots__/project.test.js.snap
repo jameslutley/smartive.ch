@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Project renders correctly 1`] = `
+<div
+  className="project col-xs-12 col-md-6"
+>
+  <img
+    alt="Example"
+    className="project__img"
+    src="example.jpg"
+  />
+  <div
+    className="project__text"
+  >
+    <h2>
+      <small>
+        Category
+      </small>
+       
+      Title
+    </h2>
+    <p>
+      Content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Project renders correctly with a «Case» Button 1`] = `
+<div
+  className="project col-xs-12 col-md-6"
+>
+  <img
+    alt="Example"
+    className="project__img"
+    src="example.jpg"
+  />
+  <div
+    className="project__text"
+  >
+    <h2>
+      <small>
+        Category
+      </small>
+       
+      Title
+    </h2>
+    <p>
+      Content
+    </p>
+    <Button
+      hasBorder={false}
+      isPrimary={true}
+      isWhite={false}
+      text="Case anschauen"
+      url="/case"
+    />
+  </div>
+</div>
+`;
