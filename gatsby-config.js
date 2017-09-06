@@ -5,15 +5,15 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `team`,
-        path: `${__dirname}/src/data/team/`,
+        name: 'data',
+        path: `${__dirname}/src/data/`,
       },
     },
-    'gatsby-transformer-json',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-medium',
       options: {

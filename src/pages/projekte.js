@@ -1,12 +1,12 @@
 import React from 'react';
-import projects from '../data/projects';
+import PropTypes from 'prop-types';
 import { CaseTeaser, Project, Stage } from '../components/molecules';
 import { getSiteHeader } from '../layouts';
 
 import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
 import workImage from '../data/work.png';
 
-export default () =>
+const Projects = ({ data }) =>
   (<div>
     {getSiteHeader(
       'Projekte',
@@ -52,18 +52,49 @@ export default () =>
     <div className="project-list">
       <div className="container">
         <div className="row">
-          {projects.map(project =>
+          {data.allProjectsJson.edges.map(({ node }) =>
             (<Project
-              key={project.title}
-              title={project.title}
-              category={project.category}
-              image={project.image}
-              caseUrl={project.caseUrl}
+              key={node.title}
+              title={node.title}
+              category={node.category}
+              image={{
+                src: node.image.childImageSharp.original.src,
+                alt: node.title,
+              }}
+              caseUrl={node.caseUrl}
             >
-              <p dangerouslySetInnerHTML={{ __html: project.description }} />
+              <p dangerouslySetInnerHTML={{ __html: node.description }} />
             </Project>),
           )}
         </div>
       </div>
     </div>
   </div>);
+
+Projects.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
+
+export default Projects;
+
+export const pageQuery = graphql`
+query ProjectsQuery {
+  allProjectsJson {
+    edges {
+      node {
+        title
+        category
+        description
+        image {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
+        caseUrl
+      }
+    }
+  }
+}
+`;
