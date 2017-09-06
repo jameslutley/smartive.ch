@@ -6,7 +6,7 @@ import logo from './smartive-negativ.svg';
 import './logo-negativ.scss';
 
 export const LogoNegativ = () =>
-  (<Link to="/" className="logo">
+  (<Link to="/" className="logo-negativ">
     <img src={logo} alt="smartive" />
   </Link>);
 
