@@ -66,7 +66,7 @@ const GSA = ({ data }) => {
           </p>
         </TextBlock>
         <TextBlock>
-          <p>Thilo Haas hat einem technischen Blogbeitrag auf Medium zu dieser Thematik veröffentlicht:</p>
+          <p>Thilo Haas hat einen technischen Blogbeitrag auf Medium zu dieser Thematik veröffentlicht:</p>
         </TextBlock>
       </div>
 
