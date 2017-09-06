@@ -2,9 +2,9 @@ import React from 'react';
 
 import { CaseBlock, Facts, Stage } from '../../components/molecules';
 
-import stageImg from '../../data/cases/cosmo-crm/case-study-cosmo.png';
-import featureImg from '../../data/cases/cosmo-crm/feature-stack-cosmo.png';
-import techImg from '../../data/cases/cosmo-crm/cosmo-tech-stack.png';
+import stageImg from './cosmo-crm-images/case-study-cosmo.png';
+import featureImg from './cosmo-crm-images/feature-stack-cosmo.png';
+import techImg from './cosmo-crm-images/cosmo-tech-stack.png';
 
 const CosmoCrmCase = () =>
   (<div>

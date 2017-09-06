@@ -2,10 +2,10 @@ import React from 'react';
 
 import { CaseBlock, Facts, Stage } from '../../components/molecules';
 
-import stageImg from '../../data/cases/migros-filialfinder/case-study-migros.png';
-import aggregationImg from '../../data/cases/migros-filialfinder/data-aggregation.png';
-import frontendImg from '../../data/cases/migros-filialfinder/filialfinder-frontend.png';
-import chartImg from '../../data/cases/migros-filialfinder/chart.png';
+import stageImg from './migros-filialfinder-images/case-study-migros.png';
+import aggregationImg from './migros-filialfinder-images/data-aggregation.png';
+import frontendImg from './migros-filialfinder-images/filialfinder-frontend.png';
+import chartImg from './migros-filialfinder-images/chart.png';
 
 const MigrosFilialfinderCase = () =>
   (<div>

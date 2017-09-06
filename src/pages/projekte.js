@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { CaseTeaser, Project, Stage } from '../components/molecules';
 import { getSiteHeader } from '../layouts';
 
-import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
+import caseImage from './cases/migros-filialfinder-images/case-study-migros.png';
 import workImage from '../data/work.png';
 
 const Projects = ({ data }) =>

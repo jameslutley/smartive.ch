@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { CaseTeaser, Stage, Teaser } from '../components/molecules';
 import { MediumTeaser, TeaserList } from '../components/organisms';
 
-import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
+import caseImage from './cases/migros-filialfinder-images/case-study-migros.png';
 import homeImage from '../data/home.jpg';
 
 const teasers = [
