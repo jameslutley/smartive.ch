@@ -6,15 +6,18 @@ import './button.scss';
 
 const mod = modifier => ` button--${modifier}`;
 
-export const Button = ({ url, text, isPrimary, isWhite, hasBorder }) =>
-  (<Link
+export const Button = ({ url, text, isPrimary, isWhite, hasBorder }) => (
+  <Link
     to={url}
     className={`button${isPrimary ? mod('primary') : ''}${isWhite ? mod('white') : ''}${hasBorder
       ? ' has-border'
       : ''}`}
   >
     {text}
-  </Link>);
+  </Link>
+);
+
+export default Button;
 
 Button.propTypes = {
   url: PropTypes.string.isRequired,
@@ -29,5 +32,3 @@ Button.defaultProps = {
   isWhite: false,
   hasBorder: false,
 };
-
-export default Button;
