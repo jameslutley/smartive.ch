@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Service, Stage } from '../components/molecules';
-import services from '../data/services';
 import { getSiteHeader } from '../layouts';
 
 import servicesImage from '../data/services.jpg';
 
-export default () =>
+const Services = ({ data }) =>
   (<div>
     {getSiteHeader(
       'Projekte',
@@ -42,18 +42,53 @@ export default () =>
     </Stage>
     <div className="container">
       <div className="row">
-        {services.map(service =>
+        {data.allServicesJson.edges.map(({ node }) =>
           (<Service
-            key={service.title}
-            title={service.title}
-            catchline={service.catchline}
-            lead={service.lead}
-            image={service.image}
-            linkedCase={service.linkedCase}
+            key={node.title}
+            title={node.title}
+            catchline={node.catchline}
+            lead={node.lead}
+            image={{
+              src: node.image.childImageSharp.original.src,
+              alt: node.title,
+            }}
+            linkedCase={node.linkedCase}
           >
-            <div dangerouslySetInnerHTML={{ __html: service.body }} />
+            <div dangerouslySetInnerHTML={{ __html: node.body }} />
           </Service>),
         )}
       </div>
     </div>
   </div>);
+
+Services.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
+
+export default Services;
+
+export const pageQuery = graphql`
+query ServicesQuery {
+  allServicesJson {
+    edges {
+      node {
+        title
+        catchline
+        lead
+        body
+        image {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
+        linkedCase {
+          url
+          title
+        }
+      }
+    }
+  }
+}
+`;
