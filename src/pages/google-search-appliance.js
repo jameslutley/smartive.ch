@@ -41,8 +41,8 @@ const GSA = ({ data }) => {
         <TextBlock>
           <p>
             Eine qualitativ hochwertige All-in-One Lösung, wie sie Google bisher angeboten hatte, ist schwer zu finden.
-            Es existieren zahlreiche Tools zur Suche und Indexierung von Webseiten. Mit <strong>Apache Nutch</strong>
-            als bewährtem Crawler zur Indexierung im Zusammenspiel mit <strong>Elasticsearch</strong> zur Volltextsuche
+            Es existieren zahlreiche Tools zur Suche und Indexierung von Webseiten. Mit <strong>Apache Nutch</strong> als
+            bewährtem Crawler zur Indexierung im Zusammenspiel mit <strong>Elasticsearch</strong> zur Volltextsuche
             haben wir zwei Open Source Systeme mit weiter Verbreitung gefunden, welche gut harmonieren und somit eine
             nahezu gleichwertige Alternative zur Google Suche bieten.
           </p>
