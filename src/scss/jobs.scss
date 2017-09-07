@@ -23,6 +23,11 @@
     .logo:hover img {
       text-decoration: none;
       border: none !important;
+      margin: 0 auto 6rem;
+
+      img {
+        height: 8rem;
+      }
     }
 
     h2 {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LogoNegativ } from '../components/atoms';
+import { Logo } from '../components/atoms';
 
 import '../scss/jobs.scss';
 
@@ -9,7 +9,7 @@ const Jobs = () =>
     <div className="job" itemScope itemType="http://schema.org/JobPosting">
       <header>
         <div className="content">
-          <LogoNegativ />
+          <Logo isNegativ />
 
           <h2>Finde den Job, den du liebst!</h2>
 

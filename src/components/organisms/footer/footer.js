@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LogoPositiv } from '../../atoms';
+import { Logo } from '../../atoms';
 
 import './footer.scss';
 
@@ -27,7 +27,7 @@ export const Footer = () =>
     <div className="container">
       <div className="footer__row--logo row">
         <div className="col-xs-12">
-          <LogoPositiv />
+          <Logo />
         </div>
       </div>
       <div className="footer__row--contact row center-xs start-md middle-lg">
