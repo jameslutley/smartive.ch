@@ -3465,6 +3465,13 @@ gatsby-plugin-sitemap@^1.2.2:
     babel-runtime "^6.26.0"
     sitemap "^1.12.0"
 
+gatsby-source-medium@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-medium/-/gatsby-source-medium-1.0.3.tgz#d9e035f310c60fc7c8b3dbdfca952dd2cba0d019"
+  dependencies:
+    axios "^0.16.2"
+    babel-runtime "^6.26.0"
+
 gatsby@^1.9.18:
   version "1.9.18"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.18.tgz#07335b177cf618b99a8eec259c6275d5aa3780a0"
