@@ -15,13 +15,14 @@ export const Member = ({ name, job, image, education, children, links = [] }) =>
       </h3>
       {children}
       <p>
-        {links
-          .map(link =>
+        {links.length > 0
+          ? links.map(link =>
             (<a key={link.url} href={link.url}>
               {link.text}
             </a>),
           )
-          .reduce((pre, cur) => [pre, ', ', cur])}
+            .reduce((pre, cur) => [pre, ', ', cur])
+          : null}
       </p>
     </div>
   </div>);
