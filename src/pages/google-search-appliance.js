@@ -4,35 +4,26 @@ import PropTypes from 'prop-types';
 import { Button, TextBlock } from '../components/atoms';
 import { BlogTeaser, Stage } from '../components/molecules';
 
-import stageImage from '../data/laptop-sitzsack.jpg';
-
 const GSA = ({ data }) => {
   const post = data.allMediumPost.edges[0].node;
+  const stageData = data.allStagesJson.edges[0].node;
 
   return (
     <div>
       <Stage
         modifiers={['landing-page', 'left-highlighted']}
         image={{
-          src: stageImage,
-          alt: 'Mitarbeiter an einem Laptop, drei Zimmerpflanzen im Hintergrund',
+          src: stageData.imageSrc.childImageSharp.original.src,
+          alt: stageData.imageAlt,
         }}
         title={
-          <h1>
-            <em>Auf der Suche</em> nach einer Alternative zu GSA?
-          </h1>
+          <h1 dangerouslySetInnerHTML={{ __html: stageData.title }} />
         }
       >
         <div>
-          <p>
-            Google stellt die Suchdienste Google Search Appliance (GSA) und Google Site Search (GSS) ein. Daher machten
-            wir uns für unsere Kunden auf die Suche nach einer Alternative. Dabei entschieden wir uns für eine Auswahl
-            an Open Source Tools für die Datenbeschaffung, die Indizierung der Daten und die Suche an sich.
-          </p>
-          <p>
-            Dieses Setup unterstützt auch die Verwendung von dynamischen JavaScript-Inhalten, mehrsprachigen Webseiten
-            und die Erkennung von Mikroformaten wie beispielsweise JSON-LD.
-          </p>
+          {stageData.contentBlocks.map(block =>
+            <p key={block.id}>{block.value}</p>,
+          )}
         </div>
       </Stage>
 
@@ -115,6 +106,28 @@ export const pageQuery = graphql`
               imageId
             }
           }
+        }
+      }
+    }
+    allStagesJson(filter: {siteTitle: {eq: "GSA"}}) {
+      edges {
+        node {
+          id
+          siteTitle
+          siteDescription
+          title
+          contentBlocks {
+            id
+            value
+          }
+          imageSrc {
+            childImageSharp {
+              original {
+                src
+              }
+            }
+          }
+          imageAlt
         }
       }
     }

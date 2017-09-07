@@ -73,5 +73,21 @@
     ],
     "imageSrc": "./contact.jpg",
     "imageAlt": "smartive Büro bei Regen"
+  },
+  {
+    "siteTitle": "GSA",
+    "title": "<em>Auf der Suche</em> nach einer Alternative zu GSA?",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Google stellt die Suchdienste Google Search Appliance (GSA) und Google Site Search (GSS) ein. Daher machten wir uns für unsere Kunden auf die Suche nach einer Alternative. Dabei entschieden wir uns für eine Auswahl an Open Source Tools für die Datenbeschaffung, die Indizierung der Daten und die Suche an sich."
+      },
+      {
+        "id": "2",
+        "value": "Dieses Setup unterstützt auch die Verwendung von dynamischen JavaScript-Inhalten, mehrsprachigen Webseiten und die Erkennung von Mikroformaten wie beispielsweise JSON-LD."
+      }
+    ],
+    "imageSrc": "./laptop-sitzsack.jpg",
+    "imageAlt": "Mitarbeiter an einem Laptop, drei Zimmerpflanzen im Hintergrund"
   }
 ]
