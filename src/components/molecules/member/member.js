@@ -21,7 +21,7 @@ export const Member = ({ name, job, image, education, children, links = [] }) =>
               {link.text}
             </a>),
           )
-          .reduce((pre, cur) => [pre, ', ', cur], '')}
+          .reduce((pre, cur) => [pre, ', ', cur])}
       </p>
     </div>
   </div>);
