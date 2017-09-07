@@ -1,33 +1,63 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Map, Stage } from '../components/molecules';
 import { getSiteHeader } from '../layouts';
 
-import contactImage from '../data/contact.jpg';
+const Contact = ({ data }) => {
+  const stageData = data.allStagesJson.edges[0].node;
 
-export default function Contact() {
   return (
     <div>
-      {getSiteHeader('Kontakt', 'Nehmen Sie mit uns Kontakt auf - wir freuen uns auf Ihren Anruf!')}
+      {getSiteHeader(stageData.siteTitle, stageData.siteDescription)}
 
       <Stage
         modifiers={['left-highlighted', 'contact', 'gradient']}
         image={{
-          src: contactImage,
-          alt: 'smartive Büro bei Regen',
+          src: stageData.imageSrc.childImageSharp.original.src,
+          alt: stageData.imageAlt,
         }}
       >
         <h1>
-          <p>
-            smartive AG<br />Schiffbaustrasse 7<br />CH-8005 Zürich
-          </p>
-          <p>
-            <a href="mailto:hello@smartive.ch">hello@smartive.ch</a>
-            <br />
-            <a href="tel:0041445335953">+41 44 533 59 53</a>
-          </p>
+          {stageData.contentBlocks.map(block =>
+            <p key={block.id} dangerouslySetInnerHTML={{ __html: block.value }} />,
+          )}
         </h1>
       </Stage>
       <Map />
     </div>
   );
+};
+
+Contact.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
+
+export default Contact;
+
+export const pageQuery = graphql`
+query ContactQuery {
+  allStagesJson(filter: {siteTitle: {eq: "Kontakt"}}) {
+    edges {
+      node {
+        id
+        siteTitle
+        siteDescription
+        title
+        contentBlocks {
+          id
+          value
+        }
+        imageSrc {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
+        imageAlt
+      }
+    }
+  }
 }
+`;

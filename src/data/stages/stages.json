@@ -1,0 +1,77 @@
+[
+  {
+    "siteTitle": "Index",
+    "title": "Zukunfts­weisende <em>Web­applikationen</em> für anspruchs­volle Unternehmen.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die Realisierung zeitgemässer Weblösungen gehört genauso zu unserer Passion, wie die konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden. Gerne begleiten wir Sie von der ersten Idee über die Konzeption bis hin zur Umsetzung."
+      }
+    ],
+    "imageSrc": "./home.jpg",
+    "imageAlt": "Zwei smartive Mitarbeiter bei einer Besprechung"
+  },
+  {
+    "siteTitle": "Agentur",
+    "siteDescription": "Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen weiterzuentwickeln.",
+    "title": "Creating a <em>smarter</em> web, together.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen weiterzuentwickeln."
+      }
+    ],
+    "imageSrc": "../team/thilo-peter-meeting.jpg",
+    "imageAlt": "Zwei smartive Mitarbeiter bei einer Besprechung"
+  },
+  {
+    "siteTitle": "Leistungen",
+    "siteDescription": "Wir lieben es, unsere Erfahrungen und unser Wissen mit Ihnen zu teilen und schrecken nicht vor anspruchsvollen Aufgaben innerhalb der Umsetzung ehrgeiziger Projekte zurück.",
+    "title": "<em>Digital</em> by default.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Wir schätzen uns glücklich, im Zeitalter des Internets aufgewachsen zu sein und so dessen Entwicklung selbst mitverfolgt und im kleinen Rahmen mitgestaltet zu haben. Wir glauben an das Potenzial, welches das Web für unsere Kundinnnen und Kunden mit sich bringt."
+      },
+      {
+        "id": "2",
+        "value": "Als Digital Natives teilen wir uns alle bei smartive unsere Passion für die Entwicklung von Webapplikationen unter Einsatz angesagter Technologien — sowohl am Arbeitsplatz, als auch in unserer Freizeit."
+      },
+      {
+        "id": "3",
+        "value": "Wir lieben es, unsere Erfahrungen und unser Wissen mit Ihnen zu teilen und schrecken nicht vor anspruchsvollen Aufgaben innerhalb der Umsetzung ehrgeiziger Projekte zurück."
+      }
+    ],
+    "imageSrc": "./services.jpg",
+    "imageAlt": "Zwei smartive Mitarbeiter bei einer Besprechung"
+  },
+  {
+    "siteTitle": "Projekte",
+    "siteDescription": "Wir lieben es, unsere Erfahrungen und unser Wissen mit Ihnen zu teilen und schrecken nicht vor anspruchsvollen Aufgaben innerhalb der Umsetzung ehrgeiziger Projekte zurück.",
+    "title": "Creating a <em>smarter</em> web, together.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "In enger Zusammenarbeit mit unseren Kundinnen und Kunden entwickeln wir lösungsorientierte Systeme mit viel Liebe zum Detail. Wir setzen dabei auf innovative Technologien wie Node.js, Angular, React, D3.js, Symfony, Docker und Elasticsearch, wobei wir auf Qualität viel Wert legen. Diese stellen wir mittels gegenseitiger Code Reviews sowie Unit- und Functional Testings, zusammen mit Continuous Integration, sicher."
+      }
+    ],
+    "imageSrc": "./work.png",
+    "imageAlt": "Unsere Kunden"
+  },
+  {
+    "siteTitle": "Kontakt",
+    "siteDescription": "Nehmen Sie mit uns Kontakt auf - wir freuen uns auf Ihren Anruf!",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "smartive AG<br />Schiffbaustrasse 7<br />CH-8005 Zürich"
+      },
+      {
+        "id": "2",
+        "value": "<a href=\"mailto:hello@smartive.ch\">hello@smartive.ch</a><br /><a href=\"tel:0041445335953\">+41 44 533 59 53</a>"
+      }
+    ],
+    "imageSrc": "./contact.jpg",
+    "imageAlt": "smartive Büro bei Regen"
+  }
+]

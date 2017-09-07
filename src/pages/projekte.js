@@ -4,34 +4,26 @@ import { CaseTeaser, Project, Stage } from '../components/molecules';
 import { getSiteHeader } from '../layouts';
 
 import caseImage from './cases/migros-filialfinder-images/case-study-migros.png';
-import workImage from '../data/work.png';
 
-const Projects = ({ data }) =>
-  (<div>
-    {getSiteHeader(
-      'Projekte',
-      'Wir lieben es, unsere Erfahrungen und unser Wissen mit Ihnen zu teilen und schrecken nicht vor anspruchsvollen Aufgaben innerhalb der Umsetzung ehrgeiziger Projekte zurück.',
-    )}
+const Projects = ({ data }) => {
+  const stageData = data.allStagesJson.edges[0].node;
+
+  return (<div>
+    {getSiteHeader(stageData.siteTitle, stageData.siteDescription)}
 
     <Stage
       modifiers={['gradient']}
       image={{
-        src: workImage,
-        alt: 'Unsere Kunden',
+        src: stageData.imageSrc.childImageSharp.original.src,
+        alt: stageData.imageAlt,
       }}
       title={
-        <h1>
-          Let&apos;s <em>do</em> it!
-        </h1>
+        <h1 dangerouslySetInnerHTML={{ __html: stageData.title }} />
       }
     >
-      <p>
-        In enger Zusammenarbeit mit unseren Kundinnen und Kunden entwickeln wir lösungsorientierte
-        Systeme mit viel Liebe zum Detail. Wir setzen dabei auf innovative Technologien wie Node.js,
-        Angular, React, D3.js, Symfony, Docker und Elasticsearch, wobei wir auf Qualität viel Wert
-        legen. Diese stellen wir mittels gegenseitiger Code Reviews sowie Unit- und Functional
-        Testings, zusammen mit Continuous Integration, sicher.
-      </p>
+      {stageData.contentBlocks.map(block =>
+        <p key={block.id}>{block.value}</p>,
+      )}
     </Stage>
 
     <CaseTeaser
@@ -70,6 +62,7 @@ const Projects = ({ data }) =>
       </div>
     </div>
   </div>);
+};
 
 Projects.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
@@ -93,6 +86,28 @@ query ProjectsQuery {
           }
         }
         caseUrl
+      }
+    }
+  }
+  allStagesJson(filter: {siteTitle: {eq: "Projekte"}}) {
+    edges {
+      node {
+        id
+        siteTitle
+        siteDescription
+        title
+        contentBlocks {
+          id
+          value
+        }
+        imageSrc {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
+        imageAlt
       }
     }
   }

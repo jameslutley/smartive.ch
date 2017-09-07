@@ -5,31 +5,25 @@ import { getSiteHeader } from '../layouts';
 import { Member, Stage } from '../components/molecules';
 import { MediumTeaser } from '../components/organisms';
 
-import teamStageSrc from '../data/team/thilo-peter-meeting.jpg';
+const Agency = ({ data }) => {
+  const stageData = data.allStagesJson.edges[0].node;
 
-const Agency = ({ data }) =>
-  (<div>
-    {getSiteHeader(
-      'Agentur',
-      'Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen weiterzuentwickeln.',
-    )}
+  return (<div>
+    {getSiteHeader(stageData.siteTitle, stageData.siteDescription)}
+
     <Stage
       modifiers={['gradient', 'right-highlighted']}
       image={{
-        src: teamStageSrc,
-        alt: 'Zwei smartive Mitarbeiter bei einer Besprechung',
+        src: stageData.imageSrc.childImageSharp.original.src,
+        alt: stageData.imageAlt,
       }}
       title={
-        <h1>
-          Creating a <em>smarter</em> web, together.
-        </h1>
+        <h1 dangerouslySetInnerHTML={{ __html: stageData.title }} />
       }
     >
-      <p>
-        Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes
-        Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen
-        weiterzuentwickeln.
-      </p>
+      {stageData.contentBlocks.map(block =>
+        <p key={block.id}>{block.value}</p>,
+      )}
     </Stage>
 
     <div className="container">
@@ -54,6 +48,7 @@ const Agency = ({ data }) =>
 
     <MediumTeaser posts={data.allMediumPost} />
   </div>);
+};
 
 Agency.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
@@ -99,6 +94,28 @@ export const pageQuery = graphql`
             text
             url
           }
+        }
+      }
+    }
+    allStagesJson(filter: {siteTitle: {eq: "Agentur"}}) {
+      edges {
+        node {
+          id
+          siteTitle
+          siteDescription
+          title
+          contentBlocks {
+            id
+            value
+          }
+          imageSrc {
+            childImageSharp {
+              original {
+                src
+              }
+            }
+          }
+          imageAlt
         }
       }
     }
