@@ -55,6 +55,9 @@
   "jest": {
     "transform": {
       ".*": "<rootDir>/node_modules/jest-css-modules"
+    },
+    "moduleNameMapper": {
+      "\\.(svg)$": "<rootDir>/mock.js"
     }
   }
 }
