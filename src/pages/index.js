@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { CaseTeaser, Stage, Teaser } from '../components/molecules';
 import { MediumTeaser, TeaserList } from '../components/organisms';
 
-import caseImage from './cases/migros-filialfinder-images/case-study-migros.png';
-
 const teasers = [
   {
     title: 'Die akkurate Daten­aufbereitung.',
@@ -28,6 +26,7 @@ const teasers = [
 
 const Index = ({ data }) => {
   const stageData = data.allStagesJson.edges[0].node;
+  const caseImage = data.allImageSharp.edges[0].node.resize.src;
 
   return (<div>
     <Stage
@@ -120,6 +119,16 @@ export const pageQuery = graphql`
             }
           }
           imageAlt
+        }
+      }
+    }
+    allImageSharp(filter: {id: {regex: "/case-study-migros.png/"}}) {
+      edges {
+        node {
+          id
+          resize(width: 1025) {
+            src
+          }
         }
       }
     }

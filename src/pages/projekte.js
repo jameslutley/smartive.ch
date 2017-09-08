@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import { CaseTeaser, Project, Stage } from '../components/molecules';
 import { getSiteHeader } from '../layouts';
 
-import caseImage from './cases/migros-filialfinder-images/case-study-migros.png';
-
 const Projects = ({ data }) => {
   const stageData = data.allStagesJson.edges[0].node;
+  const caseImage = data.allImageSharp.edges[0].node.resize.src;
 
   return (<div>
     {getSiteHeader(stageData.siteTitle, stageData.siteDescription)}
@@ -108,6 +107,16 @@ query ProjectsQuery {
           }
         }
         imageAlt
+      }
+    }
+  }
+  allImageSharp(filter: {id: {regex: "/case-study-migros.png/"}}) {
+    edges {
+      node {
+        id
+        resize(width: 1025) {
+          src
+        }
       }
     }
   }
