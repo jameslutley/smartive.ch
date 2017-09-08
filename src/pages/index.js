@@ -75,7 +75,7 @@ const Index = ({ data }) =>
       </p>
     </CaseTeaser>
 
-    <MediumTeaser posts={data.allMediumPost} users={data.allMediumUser} />
+    <MediumTeaser posts={data.allMediumPost} />
   </div>);
 Index.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
@@ -90,23 +90,16 @@ export const pageQuery = graphql`
         node {
           id
           title
-          creatorId
-          slug
           uniqueSlug
+          author {
+            name
+          }
           virtuals {
             subtitle
             previewImage {
               imageId
             }
           }
-        }
-      }
-    }
-    allMediumUser {
-      edges {
-        node {
-          id
-          name
         }
       }
     }
