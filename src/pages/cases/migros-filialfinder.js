@@ -1,40 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { CaseBlock, Facts, Stage } from '../../components/molecules';
 
-import stageImg from './migros-filialfinder-images/case-study-migros.png';
 import aggregationImg from './migros-filialfinder-images/data-aggregation.png';
 import frontendImg from './migros-filialfinder-images/filialfinder-frontend.png';
 import chartImg from './migros-filialfinder-images/chart.png';
 
-const MigrosFilialfinderCase = () =>
-  (<div>
+const MigrosFilialfinderCase = ({ data }) => {
+  const stageData = data.allStagesJson.edges[0].node;
+
+  return (<div>
     <Stage
       modifiers={['gradient', 'case']}
       image={{
-        src: stageImg,
-        alt: 'Migros Logo auf einem Laptop',
+        src: stageData.imageSrc.childImageSharp.resize.src,
+        alt: stageData.imageAlt,
       }}
       title={
-        <h1>
-          Auf der Suche nach der nächsten <em>Migros-Filiale</em>.
-        </h1>
+        <h1 dangerouslySetInnerHTML={{ __html: stageData.title }} />
       }
     >
       <div>
-        <p>
-          Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt. Ziel war es, eine
-          responsive und ansprechende Lösung zu entwickeln, die es dem Kunden erlaubt, zu Hause oder unterwegs für ihn interessante Informationen zu
-          Filialen in der Nähe schnell und einfach abrufen zu können.
-        </p>
-        <ul>
-          <li>Elasticsearch</li>
-          <li>Varnish</li>
-          <li>SEO</li>
-          <li>BackboneJS</li>
-          <li>Symfony2</li>
-          <li>Google Maps mit Clustering</li>
-        </ul>
+        {stageData.contentBlocks.map(block =>
+          <p key={block.id} dangerouslySetInnerHTML={{ __html: block.value }} />,
+        )}
       </div>
     </Stage>
 
@@ -111,5 +101,38 @@ const MigrosFilialfinderCase = () =>
       </p>
     </CaseBlock>
   </div>);
+};
+
+MigrosFilialfinderCase.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
+
 
 export default MigrosFilialfinderCase;
+
+export const migrosCaseQuery = graphql`
+  query MigrosCaseQuery {
+    allStagesJson(filter: {siteTitle: {eq: "Migros Filialfinder"}}) {
+      edges {
+        node {
+          id
+          siteTitle
+          siteDescription
+          title
+          contentBlocks {
+            id
+            value
+          }
+          imageSrc {
+            childImageSharp {
+              resize(width: 1025) {
+                src
+              }
+            }
+          }
+          imageAlt
+        }
+      }
+    }
+  }
+`;

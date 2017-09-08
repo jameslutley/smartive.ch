@@ -89,5 +89,41 @@
     ],
     "imageSrc": "./laptop-sitzsack.jpg",
     "imageAlt": "Mitarbeiter an einem Laptop, drei Zimmerpflanzen im Hintergrund"
+  },
+  {
+    "siteTitle": "Migros Filialfinder",
+    "title": "Auf der Suche nach der nächsten <em>Migros-Filiale</em>.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt. Ziel war es, eine responsive und ansprechende Lösung zu entwickeln, die es dem Kunden erlaubt, zu Hause oder unterwegs für ihn interessante Informationen zu Filialen in der Nähe schnell und einfach abrufen zu können."
+      },
+      {
+        "id": "2",
+        "value": "<ul><li>Elasticsearch</li><li>Varnish</li><li>SEO</li><li>BackboneJS</li><li>Symfony2</li><li>Google Maps mit Clustering</li></ul>"
+      }
+    ],
+    "imageSrc": "./case-study-migros.png",
+    "imageAlt": "Migros Logo auf einem Laptop"
+  },
+  {
+    "siteTitle": "Cosmo Crm",
+    "title": "Digitale Geschäftsprozesse als <em>Herzstück</em>.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Für die Cosmopolitan Vermögensverwaltungs AG konzipierten wir ein CRM System, welches die spezifischen Geschäftsprozesse genau abbildet. Der Wunsch, die Daten von einigen Excel Files in eine ausgereifte Datenstruktur zu überführen, hat zu einer Webapplikation geführt, welche mittlerweile das Herzstück der Firma bildet - alle Daten werden zentral und einheitlich verwaltet."
+      },
+      {
+        "id": "2",
+        "value": "Die Webapplikation bietet, unter anderen, die folgenden Features:"
+      },
+      {
+        "id": "3",
+        "value": "<ul><li>Erfassungsassistenten</li><li>Datenprüfungen mit Aufgaben-, und Warnsystem</li><li>SIX API-Anbindung (Aktienkurse)</li><li>Verwaltung von Anlagen</li><li>Reports</li></ul>"
+      }
+    ],
+    "imageSrc": "./case-study-cosmo.png",
+    "imageAlt": "Cosmopolitan Logo auf einem Laptop"
   }
 ]

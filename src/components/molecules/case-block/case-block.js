@@ -28,7 +28,7 @@ export const CaseBlock = ({ title, subtitle, children, graphic }) =>
 CaseBlock.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
   graphic: PropTypes.element,
 };
 
