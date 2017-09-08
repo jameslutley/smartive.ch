@@ -8,7 +8,6 @@ import stageImage from '../data/laptop-sitzsack.jpg';
 
 const GSA = ({ data }) => {
   const post = data.allMediumPost.edges[0].node;
-  const user = data.allMediumUser.edges[0].node;
 
   return (
     <div>
@@ -75,7 +74,7 @@ const GSA = ({ data }) => {
           <div className="row">
             <BlogTeaser
               url={`https://blog.smartive.ch/${post.uniqueSlug}`}
-              subline={user.name}
+              subline={post.author.name}
               title={post.title}
               lead={post.virtuals.subtitle}
               img={`https://cdn-images-1.medium.com/max/1200/${post.virtuals.previewImage.imageId}`}
@@ -106,23 +105,16 @@ export const pageQuery = graphql`
         node {
           id
           title
-          creatorId
-          slug
           uniqueSlug
+          author {
+            name
+          }
           virtuals {
             subtitle
             previewImage {
               imageId
             }
           }
-        }
-      }
-    }
-    allMediumUser(limit: 1, filter: { id: { eq: "e6cb4e49f496" } }) {
-      edges {
-        node {
-          id
-          name
         }
       }
     }
