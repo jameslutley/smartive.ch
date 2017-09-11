@@ -8,15 +8,6 @@
   background: $white;
   padding: 2.5rem 0;
 
-  .logo {
-    height: 1.5rem;
-    width: auto;
-
-    @media #{$large-up}  {
-      height: 2rem;
-    }
-  }
-
   .footer__row--logo {
     display: none;
 
@@ -29,17 +20,19 @@
     margin-bottom: 2.5rem;
   }
 
-  a {
+  .link {
     color: $smartive-dark-blue;
     font-weight: 300;
     text-decoration: none;
+    border-bottom: .0625rem solid transparent;
+    transition: border-bottom-color .2s ease-in-out;
+
+    &:hover {
+      border-bottom: .0625rem solid $light-gray;
+    }
   }
 
   .social {
-    a {
-      border-bottom: none;
-    }
-
     ul {
       list-style: none;
     }

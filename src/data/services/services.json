@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Webapplikationen",
+    "catchline": "Smart, interaktiv und responsive",
+    "lead": "Wir schaffen massgeschneiderte Visualisierungen, die Menschen verbinden, unterstützen und begeistern.",
+    "body": "<p>Wir konzipieren und entwickeln zeitgemässe, interaktive und responsive Webapplikationen. Mit massgeschneiderten Content Management Systemen (CMS), Customer Relationship Management (CRM) Systemen und interaktiven Visualisierungen bieten wir Ihnen vollkommen auf Ihre Bedürfnisse zugeschnittene Lösungen.</p> <p>Für eine elegante Präsentation Ihrer Daten in Form von interaktiven, responsiven Webapplikationen sorgen wir mit unserer Expertise in AngularJS, BackboneJS, React und D3.</p> <p>Wir stellen den Benutzer ins Zentrum und entwickeln moderne Webapplikationen mit dem Ziel, Prozesse zu vereinfachen und Informationen effizient zu finden und zu verarbeiten.</p>",
+    "image": "./apps.svg",
+    "linkedCase": {
+      "url": "/cases/migros-filialfinder",
+      "title": "Filialfinder"
+    }
+  },
+  {
+    "title": "API-Entwicklung",
+    "catchline": "Nutzen Sie Ihre Daten",
+    "lead": "Steigern Sie Effizienz und Innovation durch die richtige Anwendung und Bereitstellung Ihrer Daten.",
+    "body": "<p>Mit unserer Erfahrung in der Verarbeitung und Aggregation verschiedener Datenformate aus unterschiedlichen Systemen helfen wir Ihnen, Ihre Daten effizient und zielgerichtet zu nutzen. Ob Volltextsuche oder Produktdatenbanken — wir entwickeln sichere und performante Schnittstellen für die Verwendung im Web.</p> <p>Wir stellen hohe Qualitätsansprüche an Software, die wir entwickeln. Unit und Functional Testing zusammen mit Continuous Integration unterstützen uns dabei, diesen Anspruch zu jedem Zeitpunkt aufrecht zu erhalten.</p> <p>Greifen Sie auf unsere Expertise in Varnish Caching zurück und wir versichern Ihnen, Ihre Daten zum fliegen zu bringen.</p>",
+    "image": "./api.svg",
+    "linkedCase": {
+      "url": "/cases/cosmo-crm",
+      "title": "Cosmo CRM"
+    }
+  },
+  {
+    "title": "Konzeption & Beratung",
+    "catchline": "Wir finden Lösungen",
+    "body": "<p>Wir unterstützen Sie in der Konzeption und Umsetzung und begleiten Ihr Projekt als innovativer Partner von der Idee bis ins Web.</p> <p>Aufgrund unserer langjährigen Erfahrung in der Entwicklung von Applikationen für das Web, sowie unseren akademischen Hintergründen sind wir es uns gewohnt, komplexe Systemarchitekturen zu analysieren, konzipieren und umzusetzen. Ein hoher Wissensgrad im Bezug auf verfügbare Technologien, deren Einsatzmöglichkeiten und Verbreitung hilft uns, für Sie die massgeschneiderte Lösung zu erarbeiten, die Sie sich wünschen.</p> <p>Wir beraten Sie gerne auch bei Fragen zu Suchmaschinenoptimierung (SEO). Mit der Verknüpfung ins Semantic Web und den Einsatz von strukturierten Daten helfen wir Ihnen, Ihre Seiten innerhalb von Suchmaschinenergebnissen besser zu positionieren.</p>",
+    "image": "./concepts.svg"
+  },
+  {
+    "title": "Open Source",
+    "catchline": "Social Sharing",
+    "body": "<p>Wir glauben an Open Source Software und profitieren tagtäglich von deren Entwicklungen und Innovationen. Aus diesem Grund sind wir auch selbst aktiv in der Open Source Community und tragen unseren Teil zu einer innovativen und nachhaltigen Weiterentwicklung der Tools bei.</p> <p>Wir engagieren uns für Node.js und Typescript mit Projekten wie <a href=\"https://github.com/smartive/giuseppe\">giuseppe</a>, <a href=\"https://github.com/smartive/proc-that\">proc-that</a> oder <a href=\"https://github.com/smartive/graylog-ts\">graylog-ts</a> und unterstützen Symfony mit diversen Bundles wie zum Beispiel eine <a href=\"https://github.com/smartive/SmartiveHandlebarsBundle\">Integration des Renderings von Handlebars Templates</a> oder einen <a href=\"https://github.com/smartive/SmartiveCronCommandBundle\">Konfigurator für Cronjobs</a>.</p> <p>Die vollständige Liste unseres Engagements ist auf unserem <a href=\"https://github.com/smartive\">GitHub Profil</a> ersichtlich.</p>",
+    "image": "./oss.svg"
+  }
+]

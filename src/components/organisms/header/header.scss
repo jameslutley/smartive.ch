@@ -32,17 +32,6 @@
     text-transform: uppercase;
   }
 
-  .logo {
-    display: inline-block;
-    border: none;
-    line-height: 1;
-
-    img {
-      height: 2rem;
-      width: auto;
-    }
-  }
-
   .header__col--logo {
     text-align: center;
     @media #{$large-up} {

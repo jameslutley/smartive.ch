@@ -11,8 +11,12 @@
     "gatsby-plugin-google-analytics": "^1.0.4",
     "gatsby-plugin-react-helmet": "^1.0.1",
     "gatsby-plugin-sass": "^1.0.1",
+    "gatsby-plugin-sharp": "^1.6.6",
     "gatsby-plugin-sitemap": "^1.2.2",
     "gatsby-source-medium": "^1.0.3",
+    "gatsby-source-filesystem": "^1.4.12",
+    "gatsby-transformer-json": "^1.0.6",
+    "gatsby-transformer-sharp": "^1.6.5",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-google-maps": "next",
@@ -51,6 +55,9 @@
   "jest": {
     "transform": {
       ".*": "<rootDir>/node_modules/jest-css-modules"
+    },
+    "moduleNameMapper": {
+      "\\.(svg)$": "<rootDir>/mock.js"
     }
   }
 }

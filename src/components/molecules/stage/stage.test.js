@@ -30,4 +30,17 @@ describe('Stage', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders correctly with multiple children', () => {
+    const tree = renderer
+      .create(
+        <Stage image={{ src: 'example.jpg', alt: 'Example' }}>
+          <p>Content 1</p>
+          <p>Content 2</p>
+          <p>Content 3</p>
+        </Stage>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

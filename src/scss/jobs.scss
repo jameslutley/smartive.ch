@@ -17,22 +17,17 @@
       margin: 0 auto;
     }
 
-    .logo {
-      display: block;
-      margin: 0 auto 6rem;
-
-      img {
-        width: auto;
-        height: 8rem;
-      }
-    }
-
     .logo,
     .logo:hover,
     .logo img,
     .logo:hover img {
       text-decoration: none;
       border: none !important;
+      margin: 0 auto 6rem;
+
+      img {
+        height: 8rem;
+      }
     }
 
     h2 {
