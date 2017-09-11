@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog Teaser renders default correctly 1`] = `
+<div
+  className="blog-teaser col-xs-12 col-lg-5 first-lg"
+>
+  <a
+    className="blog-teaser__link"
+    href="http://example.com"
+  >
+    <div
+      className="blog-teaser__content"
+    >
+      <h2>
+        <small>
+          Subline
+        </small>
+        Title
+      </h2>
+      <p>
+        Longer lead text
+      </p>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Blog Teaser renders default correctly with an img 1`] = `
+<div
+  className="blog-teaser col-xs-12 blog-teaser--image col-lg-7"
+  style={
+    Object {
+      "backgroundImage": "url(image.jpg)",
+    }
+  }
+>
+  <a
+    className="blog-teaser__link"
+    href="http://example.com"
+  >
+    <div
+      className="blog-teaser__content"
+    >
+      <h2>
+        <small>
+          Subline
+        </small>
+        Title
+      </h2>
+      <p>
+        Longer lead text
+      </p>
+    </div>
+  </a>
+</div>
+`;

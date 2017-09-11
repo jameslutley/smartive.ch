@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { CaseTeaser, Stage, Teaser } from '../components/molecules';
 import { MediumTeaser, TeaserList } from '../components/organisms';
 
-import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
-import homeImage from '../data/home.jpg';
-
 const teasers = [
   {
     title: 'Die akkurate Daten­aufbereitung.',
@@ -27,26 +24,24 @@ const teasers = [
   },
 ];
 
-const Index = ({ data }) =>
-  (<div>
+const Index = ({ data }) => {
+  const stageData = data.allStagesJson.edges[0].node;
+  const caseImage = data.allImageSharp.edges[0].node.resize.src;
+
+  return (<div>
     <Stage
       modifiers={['landing-page', 'left-highlighted']}
       image={{
-        src: homeImage,
-        alt: 'Zwei smartive Mitarbeiter bei einer Besprechung',
+        src: stageData.imageSrc.childImageSharp.original.src,
+        alt: stageData.imageAlt,
       }}
       title={
-        <h1>
-          Zukunfts­weisende <em>Web­applikationen</em> für anspruchs­volle Unternehmen.
-        </h1>
+        <h1 dangerouslySetInnerHTML={{ __html: stageData.title }} />
       }
     >
-      <p>
-        Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die
-        Realisierung zeitgemässer Weblösungen gehört genauso zu unserer Passion, wie die
-        konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden. Gerne begleiten wir Sie von
-        der ersten Idee über die Konzeption bis hin zur Umsetzung.
-      </p>
+      {stageData.contentBlocks.map(block =>
+        <p key={block.id}>{block.value}</p>,
+      )}
     </Stage>
 
     <TeaserList>
@@ -75,8 +70,10 @@ const Index = ({ data }) =>
       </p>
     </CaseTeaser>
 
-    <MediumTeaser posts={data.allMediumPost} users={data.allMediumUser} />
+    <MediumTeaser posts={data.allMediumPost} />
   </div>);
+};
+
 Index.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
@@ -90,9 +87,10 @@ export const pageQuery = graphql`
         node {
           id
           title
-          creatorId
-          slug
           uniqueSlug
+          author {
+            name
+          }
           virtuals {
             subtitle
             previewImage {
@@ -102,11 +100,35 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMediumUser {
+    allStagesJson(filter: {siteTitle: {eq: "Index"}}) {
       edges {
         node {
           id
-          name
+          siteTitle
+          siteDescription
+          title
+          contentBlocks {
+            id
+            value
+          }
+          imageSrc {
+            childImageSharp {
+              original {
+                src
+              }
+            }
+          }
+          imageAlt
+        }
+      }
+    }
+    allImageSharp(filter: {id: {regex: "/case-study-migros.png/"}}) {
+      edges {
+        node {
+          id
+          resize(width: 1025) {
+            src
+          }
         }
       }
     }

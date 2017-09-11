@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders default correctly 1`] = `
+<GatsbyLink
+  className="button"
+  to="http://example.com"
+>
+  Button
+</GatsbyLink>
+`;
+
+exports[`Button renders primary correctly 1`] = `
+<GatsbyLink
+  className="button button--primary"
+  to="http://example.com"
+>
+  Primary
+</GatsbyLink>
+`;
+
+exports[`Button renders white with border correctly 1`] = `
+<GatsbyLink
+  className="button button--white has-border"
+  to="http://example.com"
+>
+  White w/ Border
+</GatsbyLink>
+`;

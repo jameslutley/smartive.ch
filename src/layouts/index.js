@@ -13,7 +13,7 @@ class Index extends React.Component {
     if (!document.getElementById('webfontloader')) {
       const wf = document.createElement('script');
       const s = document.scripts[0];
-      wf.src = 'webfont-1.6.26.js';
+      wf.src = '/webfont-1.6.26.js';
       wf.async = true;
       wf.id = 'webfontloader';
       wf.onload = () => {

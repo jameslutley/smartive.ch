@@ -1,0 +1,129 @@
+[
+  {
+    "siteTitle": "Index",
+    "title": "Zukunfts­weisende <em>Web­applikationen</em> für anspruchs­volle Unternehmen.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Wir sind smartive — eine dynamische, innovative Schweizer Webentwicklungsagentur. Die Realisierung zeitgemässer Weblösungen gehört genauso zu unserer Passion, wie die konstruktive Zusammenarbeit mit unseren Kundinnen und Kunden. Gerne begleiten wir Sie von der ersten Idee über die Konzeption bis hin zur Umsetzung."
+      }
+    ],
+    "imageSrc": "./home.jpg",
+    "imageAlt": "Zwei smartive Mitarbeiter bei einer Besprechung"
+  },
+  {
+    "siteTitle": "Agentur",
+    "siteDescription": "Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen weiterzuentwickeln.",
+    "title": "Creating a <em>smarter</em> web, together.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Wir sind ein junges, dynamisches Team, bestehend aus acht Leuten. Unser breit gestreutes Wissen in sämtlichen Webbereichen unterstützt Sie dabei, sich und Ihr Unternehmen weiterzuentwickeln."
+      }
+    ],
+    "imageSrc": "../team/thilo-peter-meeting.jpg",
+    "imageAlt": "Zwei smartive Mitarbeiter bei einer Besprechung"
+  },
+  {
+    "siteTitle": "Leistungen",
+    "siteDescription": "Wir lieben es, unsere Erfahrungen und unser Wissen mit Ihnen zu teilen und schrecken nicht vor anspruchsvollen Aufgaben innerhalb der Umsetzung ehrgeiziger Projekte zurück.",
+    "title": "<em>Digital</em> by default.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Wir schätzen uns glücklich, im Zeitalter des Internets aufgewachsen zu sein und so dessen Entwicklung selbst mitverfolgt und im kleinen Rahmen mitgestaltet zu haben. Wir glauben an das Potenzial, welches das Web für unsere Kundinnnen und Kunden mit sich bringt."
+      },
+      {
+        "id": "2",
+        "value": "Als Digital Natives teilen wir uns alle bei smartive unsere Passion für die Entwicklung von Webapplikationen unter Einsatz angesagter Technologien — sowohl am Arbeitsplatz, als auch in unserer Freizeit."
+      },
+      {
+        "id": "3",
+        "value": "Wir lieben es, unsere Erfahrungen und unser Wissen mit Ihnen zu teilen und schrecken nicht vor anspruchsvollen Aufgaben innerhalb der Umsetzung ehrgeiziger Projekte zurück."
+      }
+    ],
+    "imageSrc": "./services.jpg",
+    "imageAlt": "Zwei smartive Mitarbeiter bei einer Besprechung"
+  },
+  {
+    "siteTitle": "Projekte",
+    "siteDescription": "Wir lieben es, unsere Erfahrungen und unser Wissen mit Ihnen zu teilen und schrecken nicht vor anspruchsvollen Aufgaben innerhalb der Umsetzung ehrgeiziger Projekte zurück.",
+    "title": "Let's <em>do</em> it!",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "In enger Zusammenarbeit mit unseren Kundinnen und Kunden entwickeln wir lösungsorientierte Systeme mit viel Liebe zum Detail. Wir setzen dabei auf innovative Technologien wie Node.js, Angular, React, D3.js, Symfony, Docker und Elasticsearch, wobei wir auf Qualität viel Wert legen. Diese stellen wir mittels gegenseitiger Code Reviews sowie Unit- und Functional Testings, zusammen mit Continuous Integration, sicher."
+      }
+    ],
+    "imageSrc": "./work.png",
+    "imageAlt": "Unsere Kunden"
+  },
+  {
+    "siteTitle": "Kontakt",
+    "siteDescription": "Nehmen Sie mit uns Kontakt auf - wir freuen uns auf Ihren Anruf!",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "smartive AG<br />Schiffbaustrasse 7<br />CH-8005 Zürich"
+      },
+      {
+        "id": "2",
+        "value": "<a href=\"mailto:hello@smartive.ch\">hello@smartive.ch</a><br /><a href=\"tel:0041445335953\">+41 44 533 59 53</a>"
+      }
+    ],
+    "imageSrc": "./contact.jpg",
+    "imageAlt": "smartive Büro bei Regen"
+  },
+  {
+    "siteTitle": "GSA",
+    "title": "<em>Auf der Suche</em> nach einer Alternative zu GSA / GSS?",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Google stellt die Suchdienste Google Search Appliance (GSA) und Google Site Search (GSS) ein. Daher machten wir uns für unsere Kunden auf die Suche nach einer Alternative. Dabei entschieden wir uns für eine Auswahl an Open Source Tools für die Datenbeschaffung, die Indizierung der Daten und die Suche an sich."
+      },
+      {
+        "id": "2",
+        "value": "Dieses Setup unterstützt auch die Verwendung von dynamischen JavaScript-Inhalten, mehrsprachigen Webseiten und die Erkennung von Mikroformaten wie beispielsweise JSON-LD."
+      }
+    ],
+    "imageSrc": "./laptop-sitzsack.jpg",
+    "imageAlt": "Mitarbeiter an einem Laptop, drei Zimmerpflanzen im Hintergrund"
+  },
+  {
+    "siteTitle": "Migros Filialfinder",
+    "title": "Auf der Suche nach der nächsten <em>Migros-Filiale</em>.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Für den grössten Schweizer Detailhändler, den Migros-Genossenschafts-Bund, haben wir den neuen Filialfinder umgesetzt. Ziel war es, eine responsive und ansprechende Lösung zu entwickeln, die es dem Kunden erlaubt, zu Hause oder unterwegs für ihn interessante Informationen zu Filialen in der Nähe schnell und einfach abrufen zu können."
+      },
+      {
+        "id": "2",
+        "value": "<ul><li>Elasticsearch</li><li>Varnish</li><li>SEO</li><li>BackboneJS</li><li>Symfony2</li><li>Google Maps mit Clustering</li></ul>"
+      }
+    ],
+    "imageSrc": "./case-study-migros.png",
+    "imageAlt": "Migros Logo auf einem Laptop"
+  },
+  {
+    "siteTitle": "Cosmo Crm",
+    "title": "Digitale Geschäftsprozesse als <em>Herzstück</em>.",
+    "contentBlocks": [
+      {
+        "id": "1",
+        "value": "Für die Cosmopolitan Vermögensverwaltungs AG konzipierten wir ein CRM System, welches die spezifischen Geschäftsprozesse genau abbildet. Der Wunsch, die Daten von einigen Excel Files in eine ausgereifte Datenstruktur zu überführen, hat zu einer Webapplikation geführt, welche mittlerweile das Herzstück der Firma bildet - alle Daten werden zentral und einheitlich verwaltet."
+      },
+      {
+        "id": "2",
+        "value": "Die Webapplikation bietet, unter anderen, die folgenden Features:"
+      },
+      {
+        "id": "3",
+        "value": "<ul><li>Erfassungsassistenten</li><li>Datenprüfungen mit Aufgaben-, und Warnsystem</li><li>SIX API-Anbindung (Aktienkurse)</li><li>Verwaltung von Anlagen</li><li>Reports</li></ul>"
+      }
+    ],
+    "imageSrc": "./case-study-cosmo.png",
+    "imageAlt": "Cosmopolitan Logo auf einem Laptop"
+  }
+]

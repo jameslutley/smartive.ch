@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stage renders correctly with multiple children 1`] = `
+<div
+  className=""
+>
+  <div
+    className="stage"
+  >
+    <div
+      className="container container--stage"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="stage__col--img col-xs-12 col-lg-6"
+        >
+          <div
+            className="img-container"
+          >
+            <img
+              alt="Example"
+              className="teaser-image"
+              src="example.jpg"
+            />
+          </div>
+        </div>
+        <div
+          className="stage__col--body col-xs-12 col-lg-6"
+        >
+          <div
+            className="stage__text"
+          >
+            <div
+              className="stage__description"
+            >
+              <p>
+                Content 1
+              </p>
+              <p>
+                Content 2
+              </p>
+              <p>
+                Content 3
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Stage renders correctly with title and text 1`] = `
+<div
+  className=""
+>
+  <div
+    className="stage"
+  >
+    <div
+      className="container container--stage"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="stage__col--img col-xs-12 col-lg-6"
+        >
+          <div
+            className="img-container"
+          >
+            <img
+              alt="Example"
+              className="teaser-image"
+              src="example.jpg"
+            />
+          </div>
+        </div>
+        <div
+          className="stage__col--body col-xs-12 col-lg-6"
+        >
+          <div
+            className="stage__text"
+          >
+            <h1>
+              Hello World!
+            </h1>
+            <div
+              className="stage__description"
+            >
+              <p>
+                Content
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Stage renders correctly with title, text and a list of modifiers 1`] = `
+<div
+  className="stage--foo stage--bar"
+>
+  <div
+    className="stage"
+  >
+    <div
+      className="container container--stage"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="stage__col--img col-xs-12 col-lg-6"
+        >
+          <div
+            className="img-container"
+          >
+            <img
+              alt="Example"
+              className="teaser-image"
+              src="example.jpg"
+            />
+          </div>
+        </div>
+        <div
+          className="stage__col--body col-xs-12 col-lg-6"
+        >
+          <div
+            className="stage__text"
+          >
+            <h1>
+              Hello World!
+            </h1>
+            <div
+              className="stage__description"
+            >
+              <p>
+                Content
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Stage renders correctly without content 1`] = `
+<div
+  className=""
+>
+  <div
+    className="stage"
+  >
+    <div
+      className="container container--stage"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="stage__col--img col-xs-12 col-lg-6"
+        >
+          <div
+            className="img-container"
+          >
+            <img
+              alt="Example"
+              className="teaser-image"
+              src="example.jpg"
+            />
+          </div>
+        </div>
+        <div
+          className="stage__col--body col-xs-12 col-lg-6"
+        >
+          <div
+            className="stage__text"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

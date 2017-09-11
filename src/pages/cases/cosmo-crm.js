@@ -1,35 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { CaseBlock, Facts, Stage } from '../../components/molecules';
 
-import stageImg from '../../data/cases/cosmo-crm/case-study-cosmo.png';
-import featureImg from '../../data/cases/cosmo-crm/feature-stack-cosmo.png';
-import techImg from '../../data/cases/cosmo-crm/cosmo-tech-stack.png';
+import featureImg from './cosmo-crm-images/feature-stack-cosmo.png';
+import techImg from './cosmo-crm-images/cosmo-tech-stack.png';
 
-const CosmoCrmCase = () =>
-  (<div>
+const CosmoCrmCase = ({ data }) => {
+  const stageData = data.allStagesJson.edges[0].node;
+
+  return (<div>
     <Stage
       modifiers={['gradient', 'case']}
       image={{
-        src: stageImg,
-        alt: 'Cosmopolitan Logo auf einem Laptop',
+        src: stageData.imageSrc.childImageSharp.resize.src,
+        alt: stageData.imageAlt,
       }}
-      title={<h1>Digitale Geschäftsprozesse als <em>Herzstück</em>.</h1>}
+      title={
+        <h1 dangerouslySetInnerHTML={{ __html: stageData.title }} />
+      }
     >
       <div>
-        <p>
-          Für die Cosmopolitan Vermögensverwaltungs AG konzipierten wir ein CRM System, welches die spezifischen Geschäftsprozesse genau abbildet. Der
-          Wunsch, die Daten von einigen Excel Files in eine ausgereifte Datenstruktur zu überführen, hat zu einer Webapplikation geführt, welche
-          mittlerweile das Herzstück der Firma bildet - alle Daten werden zentral und einheitlich verwaltet.
-        </p>
-        <p>Die Webapplikation bietet, unter anderen, die folgenden Features:</p>
-        <ul>
-          <li>Erfassungsassistenten</li>
-          <li>Datenprüfungen mit Aufgaben-, und Warnsystem</li>
-          <li>SIX API-Anbindung (Aktienkurse)</li>
-          <li>Verwaltung von Anlagen</li>
-          <li>Reports</li>
-        </ul>
+        {stageData.contentBlocks.map(block =>
+          <p key={block.id} dangerouslySetInnerHTML={{ __html: block.value }} />,
+        )}
       </div>
     </Stage>
 
@@ -79,5 +73,38 @@ const CosmoCrmCase = () =>
       </p>
     </CaseBlock>
   </div>);
+};
+
+CosmoCrmCase.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
+
 
 export default CosmoCrmCase;
+
+export const cosmoCrmQuery = graphql`
+query CosmoCrmQuery {
+  allStagesJson(filter: {siteTitle: {eq: "Cosmo Crm"}}) {
+    edges {
+      node {
+        id
+        siteTitle
+        siteDescription
+        title
+        contentBlocks {
+          id
+          value
+        }
+        imageSrc {
+          childImageSharp {
+            resize(width: 1025) {
+              src
+            }
+          }
+        }
+        imageAlt
+      }
+    }
+  }
+}
+`;

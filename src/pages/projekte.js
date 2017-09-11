@@ -1,37 +1,28 @@
 import React from 'react';
-import projects from '../data/projects';
+import PropTypes from 'prop-types';
 import { CaseTeaser, Project, Stage } from '../components/molecules';
 import { getSiteHeader } from '../layouts';
 
-import caseImage from '../data/cases/migros-filialfinder/case-study-migros.png';
-import workImage from '../data/work.png';
+const Projects = ({ data }) => {
+  const stageData = data.allStagesJson.edges[0].node;
+  const caseImage = data.allImageSharp.edges[0].node.resize.src;
 
-export default () =>
-  (<div>
-    {getSiteHeader(
-      'Projekte',
-      'Wir lieben es, unsere Erfahrungen und unser Wissen mit Ihnen zu teilen und schrecken nicht vor anspruchsvollen Aufgaben innerhalb der Umsetzung ehrgeiziger Projekte zurück.',
-    )}
+  return (<div>
+    {getSiteHeader(stageData.siteTitle, stageData.siteDescription)}
 
     <Stage
       modifiers={['gradient']}
       image={{
-        src: workImage,
-        alt: 'Unsere Kunden',
+        src: stageData.imageSrc.childImageSharp.original.src,
+        alt: stageData.imageAlt,
       }}
       title={
-        <h1>
-          Let&apos;s <em>do</em> it!
-        </h1>
+        <h1 dangerouslySetInnerHTML={{ __html: stageData.title }} />
       }
     >
-      <p>
-        In enger Zusammenarbeit mit unseren Kundinnen und Kunden entwickeln wir lösungsorientierte
-        Systeme mit viel Liebe zum Detail. Wir setzen dabei auf innovative Technologien wie Node.js,
-        Angular, React, D3.js, Symfony, Docker und Elasticsearch, wobei wir auf Qualität viel Wert
-        legen. Diese stellen wir mittels gegenseitiger Code Reviews sowie Unit- und Functional
-        Testings, zusammen mit Continuous Integration, sicher.
-      </p>
+      {stageData.contentBlocks.map(block =>
+        <p key={block.id}>{block.value}</p>,
+      )}
     </Stage>
 
     <CaseTeaser
@@ -52,18 +43,82 @@ export default () =>
     <div className="project-list">
       <div className="container">
         <div className="row">
-          {projects.map(project =>
+          {data.allProjectsJson.edges.map(({ node }) =>
             (<Project
-              key={project.title}
-              title={project.title}
-              category={project.category}
-              image={project.image}
-              caseUrl={project.caseUrl}
+              key={node.title}
+              title={node.title}
+              category={node.category}
+              image={{
+                src: node.image.childImageSharp.original.src,
+                alt: node.title,
+              }}
+              caseUrl={node.caseUrl}
             >
-              <p dangerouslySetInnerHTML={{ __html: project.description }} />
+              <p dangerouslySetInnerHTML={{ __html: node.description }} />
             </Project>),
           )}
         </div>
       </div>
     </div>
   </div>);
+};
+
+Projects.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
+
+export default Projects;
+
+export const pageQuery = graphql`
+query ProjectsQuery {
+  allProjectsJson {
+    edges {
+      node {
+        title
+        category
+        description
+        image {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
+        caseUrl
+      }
+    }
+  }
+  allStagesJson(filter: {siteTitle: {eq: "Projekte"}}) {
+    edges {
+      node {
+        id
+        siteTitle
+        siteDescription
+        title
+        contentBlocks {
+          id
+          value
+        }
+        imageSrc {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
+        imageAlt
+      }
+    }
+  }
+  allImageSharp(filter: {id: {regex: "/case-study-migros.png/"}}) {
+    edges {
+      node {
+        id
+        resize(width: 1025) {
+          src
+        }
+      }
+    }
+  }
+}
+`;

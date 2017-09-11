@@ -1,17 +1,15 @@
 import React from 'react';
-import Link from 'gatsby-link';
+
+import { Logo } from '../components/atoms';
 
 import '../scss/jobs.scss';
-import logo from '../data/smartive-negativ.svg';
 
 const Jobs = () =>
   (<div className="quick-jobs-page">
     <div className="job" itemScope itemType="http://schema.org/JobPosting">
       <header>
         <div className="content">
-          <Link to="/" className="logo">
-            <img src={logo} alt="smartive" />
-          </Link>
+          <Logo isNegativ />
 
           <h2>Finde den Job, den du liebst!</h2>
 

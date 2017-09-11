@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../../../data/smartive.svg';
+import { Logo } from '../../atoms';
 
 import './footer.scss';
 
@@ -27,7 +27,7 @@ export const Footer = () =>
     <div className="container">
       <div className="footer__row--logo row">
         <div className="col-xs-12">
-          <img className="logo" src={logo} alt="smartive AG" />
+          <Logo />
         </div>
       </div>
       <div className="footer__row--contact row center-xs start-md middle-lg">
@@ -39,9 +39,9 @@ export const Footer = () =>
         </div>
         <div className="contact col-xs-12 col-md-3">
           <p>
-            <a href="tel:+41 44 533 59 53">+41 44 533 59 53</a>
+            <a href="tel:+41 44 533 59 53" className="link">+41 44 533 59 53</a>
             <br />
-            <a href="mailto:hello@smartive.ch">hello@smartive.ch</a>
+            <a href="mailto:hello@smartive.ch" className="link">hello@smartive.ch</a>
           </p>
         </div>
         <div className="footer__navigation col-xs-12 col-md-6">

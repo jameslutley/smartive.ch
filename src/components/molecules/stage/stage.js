@@ -36,15 +36,15 @@ Stage.propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
   }).isRequired,
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
 };
 
 Stage.defaultProps = {
   modifiers: [],
   title: null,
-  isHighlighted: false,
-  left: false,
-  modifier: null,
   children: null,
 };
 
